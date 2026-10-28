@@ -1,0 +1,4 @@
+{
+  "headers": [{ "source": "/(.*)", "headers": [{ "key": "Access-Control-Allow-Origin", "value": "*" }] }],
+  "redirects": [{ "source": "/es-ar/producto/hotel-ads", "destination": "/", "permanent": false }]
+}

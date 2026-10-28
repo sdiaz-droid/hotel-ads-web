@@ -1,0 +1,15 @@
+<svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_py_flag)">
+<rect width="22" height="16" rx="2" fill="white"/>
+<rect width="22" height="5.33333" fill="#D52B1E"/>
+<rect y="5.33333" width="22" height="5.33333" fill="white"/>
+<rect y="10.6667" width="22" height="5.33333" fill="#0038A8"/>
+<circle cx="11" cy="8" r="2.2" fill="white" stroke="#009B3A" stroke-width="0.6"/>
+<path d="M11 6.4L11.4674 7.44721L12.5217 7.55279L11.7391 8.29443L11.9348 9.44721L11 8.88L10.0652 9.44721L10.2609 8.29443L9.47826 7.55279L10.5326 7.44721L11 6.4Z" fill="#FEDF00"/>
+</g>
+<defs>
+<clipPath id="clip0_py_flag">
+<rect width="22" height="16" rx="2" fill="white"/>
+</clipPath>
+</defs>
+</svg>
