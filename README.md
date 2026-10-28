@@ -12,3 +12,5 @@ preview para verlo. Al mergear a `main` se publica en https://hotel-ads-web.verc
 Lo que se apruebe acá después se porta al sitio real (Nexus).
 
 Preview automática: cada push a una rama o a `main` dispara un deploy en Vercel.
+
+Cada push a `main` publica solo; no hace falta correr nada.
