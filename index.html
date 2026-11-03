@@ -6012,6 +6012,20 @@ body.no-scroll{overflow: hidden;}
 @media (prefers-reduced-motion:reduce){
   .ha-embed .hab-gpt *{transition:none!important}
 }
+/* Casos reales en celular: la tarjeta de texto cierra sus cuatro esquinas y las flechas
+   van al centro de la foto, donde no tapan el texto. */
+@media (max-width:767px){
+  .ha-embed .px-shCasosReales__column.--left{border-radius:20px;box-shadow:0 2px 12px 0 rgba(1,14,61,.1)}
+  .ha-embed .px-shCasosReales__cases .owl-nav>div{top:194px;background:#fff;box-shadow:0 4px 16px rgba(1,14,61,.18)}
+  .ha-embed .px-shCasosReales__cases .owl-prev{left:-8px}
+  .ha-embed .px-shCasosReales__cases .owl-next{right:-8px}
+}
+/* La ventaja Pxsol en celular: la rueda gira y sus etiquetas se salían del borde;
+   se achica al 76 % y el título y la bajada toman margen lateral. */
+@media (max-width:767px){
+  .ha-embed .px-shVentajasPxsol__title,.ha-embed .px-shVentajasPxsol__subtitle{padding:0 16px}
+  .ha-embed .px-shVentajasPxsol__wheel{transform:scale(.76);transform-origin:50% 50%;margin-top:8px;margin-bottom:-37px}
+}
 
 /* ── Capa de motion (nov 2026) · tokens §4b: fade + 8 px, 500 ms, easing del DS, una sola vez ── */
 .ha-embed{--hm-e:cubic-bezier(.22,.61,.36,1)}
@@ -6644,6 +6658,47 @@ body.no-scroll{overflow: hidden;}
   }
   var io3=new IntersectionObserver(function(es){ if(es[0].isIntersecting){ io3.disconnect(); later(run,400); } },{threshold:.45});
   io3.observe(root);
+})();
+</script>
+<script>
+/* Casos reales: la copia estática trae el HTML que armó Owl Carousel, pero no su script.
+   Esto le devuelve flechas, puntos, teclado y deslizamiento, con el loop de los clones. */
+(function(){
+  var car=document.getElementById('shCasosRealesCarousel'); if(!car) return;
+  var outer=car.querySelector('.owl-stage-outer'), stage=car.querySelector('.owl-stage'),
+      items=[].slice.call(stage.children), dots=[].slice.call(car.querySelectorAll('.owl-dot')),
+      prev=car.querySelector('.owl-prev'), next=car.querySelector('.owl-next');
+  var clonesAntes=0; while(items[clonesAntes]&&items[clonesAntes].classList.contains('cloned')) clonesAntes++;
+  var reales=items.filter(function(it){ return !it.classList.contains('cloned'); }).length;
+  if(!reales) return;
+  var idx=clonesAntes, w=0, busy=false, E='cubic-bezier(.22,.61,.36,1)';
+  function place(anim){
+    stage.style.transition=anim?'transform .6s '+E:'none';
+    stage.style.transform='translate3d('+(-idx*w)+'px,0,0)';
+    var real=((idx-clonesAntes)%reales+reales)%reales;
+    dots.forEach(function(d,k){ d.classList.toggle('active',k===real); d.setAttribute('aria-current',k===real?'true':'false'); });
+    items.forEach(function(it,k){ it.classList.toggle('active',k===idx); it.setAttribute('aria-hidden',k===idx?'false':'true'); });
+  }
+  function size(){ w=outer.clientWidth; items.forEach(function(it){ it.style.width=w+'px'; it.style.marginRight='0px'; }); stage.style.width=(w*items.length)+'px'; place(false); }
+  function go(to){ if(busy||to===idx) return; busy=true; idx=to; place(true); }
+  stage.addEventListener('transitionend',function(e){
+    if(e.target!==stage) return; busy=false;
+    if(idx>=clonesAntes+reales){ idx-=reales; place(false); }
+    else if(idx<clonesAntes){ idx+=reales; place(false); }
+  });
+  function btn(el,label,fn){ if(!el) return; el.setAttribute('role','button'); el.setAttribute('tabindex','0'); el.setAttribute('aria-label',label); el.style.cursor='pointer';
+    el.addEventListener('click',fn); el.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); fn(); } }); }
+  btn(prev,'Caso anterior',function(){ go(idx-1); });
+  btn(next,'Caso siguiente',function(){ go(idx+1); });
+  dots.forEach(function(d,k){ btn(d,'Ver caso '+(k+1),function(){ go(clonesAntes+k); }); });
+  /* deslizar con el dedo o el mouse */
+  var x0=null;
+  outer.addEventListener('pointerdown',function(e){ x0=e.clientX; });
+  outer.addEventListener('pointerup',function(e){ if(x0===null) return; var dx=e.clientX-x0; x0=null; if(Math.abs(dx)>50) go(idx+(dx<0?1:-1)); });
+  outer.addEventListener('pointercancel',function(){ x0=null; });
+  outer.style.touchAction='pan-y';
+  var t; window.addEventListener('resize',function(){ clearTimeout(t); t=setTimeout(size,120); });
+  size();
 })();
 </script>
 </body></html>
