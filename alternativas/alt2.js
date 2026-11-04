@@ -119,7 +119,7 @@
       svg.appendChild(p); paths.push(p);
     });
     var o = rel(out), a2, b2, d2;
-    if(mob){ a2 = {x:hc.x, y:H.y+H.h-4}; b2 = {x:hc.x, y:o.y+o.h-90}; }
+    if(mob){ a2 = {x:hc.x, y:H.y+H.h-4}; b2 = {x:hc.x, y:o.y-6}; }
     else { a2 = {x:H.x+H.w-6, y:hc.y}; b2 = {x:o.x-4, y:hc.y}; }
     d2 = 'M'+a2.x+' '+a2.y+' L '+b2.x+' '+b2.y;
     outPath = document.createElementNS(NS,'path'); outPath.setAttribute('class','fb out'); outPath.setAttribute('d',d2);
@@ -141,10 +141,10 @@
   /* pila de avisos tipo iPhone */
   var notes = $$('.m-notif', out), shown = 0;
   function stack(){
+    /* cada aviso tiene su lugar en la lista: aparecen de a uno y se suman, sin taparse */
     notes.forEach(function(el,i){
-      var k = shown-1-i;
-      if(i >= shown){ gsap.set(el,{opacity:0,y:30,scale:.95}); return; }
-      gsap.to(el,{opacity:k>2?0:1,y:-k*16,scale:1-k*.05,zIndex:10-k,duration:.55});
+      if(i >= shown) gsap.to(el,{opacity:0,y:14,scale:.98,duration:.35});
+      else gsap.to(el,{opacity:1,y:0,scale:1,duration:.55});
     });
   }
   draw();
@@ -159,7 +159,7 @@
        .add(function(){ pulse(outPath, true); }, i*2.6+1.45)
        .call(function(){ shown = Math.min(notes.length, shown+1); stack(); }, null, i*2.6+2.05);
   });
-  ftl.call(function(){}, null, '+=2.6')
+  ftl.call(function(){}, null, '+=4.5')
      .call(function(){ shown = 0; notes.forEach(function(el){ gsap.to(el,{opacity:0,y:-10,duration:.4}); }); })
      .call(function(){}, null, '+=.6');
   /* los avisos aparecen en orden: el más nuevo adelante */
