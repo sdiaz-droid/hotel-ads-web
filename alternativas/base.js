@@ -57,6 +57,18 @@
     gsap.to(o,{v:to,duration:1.6,delay:delay||0,ease:'power2.out',onUpdate:function(){ el.textContent = pre+AX.fmt(o.v)+suf; }});
   };
 
+
+  /* ecosistema: las tarjetas reciben su evento de a una, en loop, sólo en pantalla */
+  AX.$$('.eco-set').forEach(function(set){
+    var cs = AX.$$('.eco-c', set), i = 0, t = null;
+    if(!cs.length || rm) return;
+    function step(){ cs.forEach(function(c,k){ c.classList.toggle('on', k===i); }); i = (i+1)%cs.length; }
+    ScrollTrigger.create({trigger:set,start:'top 75%',end:'bottom 25%',onToggle:function(s){
+      clearInterval(t);
+      if(s.isActive){ step(); t = setInterval(step, 2300); }
+    }});
+  });
+
   if(rm){
     AX.$$('[data-count]').forEach(function(el){ AX.count(el); });
     return;

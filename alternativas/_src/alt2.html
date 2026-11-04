@@ -234,6 +234,43 @@
   .a2-pick button{padding:0 6px;font-size:13.5px}
   .a2-note{flex-direction:column;align-items:flex-start}
 }
+
+/* ---------- ANUNCIOS REALES: dos equipos de formatos ---------- */
+.a2-sets{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:clamp(22px,2.6vw,40px)}
+.a2-set{padding:clamp(22px,2.4vw,32px);display:flex;flex-direction:column}
+.a2-set .hd{display:flex;align-items:center;gap:14px}
+.a2-set .hd small{display:block;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--red);font-weight:500;margin-bottom:4px}
+.a2-set .hd .ax-h3{font-weight:300;font-size:clamp(22px,1.8vw,27px)}
+.a2-casc{position:relative;display:flex;justify-content:center;align-items:flex-end;margin:34px auto 30px;width:100%;max-width:600px}
+.a2-casc .pe.c{--pe:clamp(10.5px,1vw,13.5px);z-index:2}
+.a2-casc .pe.sd{position:absolute;bottom:5%;--pe:clamp(9px,.84vw,11.4px);z-index:1}
+.a2-casc .pe.l{left:0}
+.a2-casc .pe.r{right:0}
+.a2-set .kpi{display:flex;gap:10px;align-items:flex-start;font-size:15px;color:var(--body);line-height:1.45;border-top:1px solid var(--stroke);padding-top:16px;margin-top:auto}
+.a2-set .kpi .lc{font-size:18px;color:var(--ads-d);margin-top:2px}
+.a2-link{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:4;display:inline-flex;align-items:center;gap:8px;height:42px;padding:0 18px;border-radius:999px;background:var(--graf);color:#fff;font-size:14px;white-space:nowrap;box-shadow:0 14px 30px -10px rgba(0,0,23,.5),0 0 0 6px rgba(246,247,251,.9)}
+.a2-link .lc{font-size:16px;color:var(--ads)}
+/* ---------- ECOSISTEMA ---------- */
+.a2-ecos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(14px,1.6vw,22px)}
+.a2-ecos .eco-c .pr{font-size:12.5px;letter-spacing:.04em;gap:10px}
+.a2-ecos .eco-c{padding:24px 20px 20px}
+@media (max-width:1100px){
+  .a2-ecos{grid-template-columns:1fr 1fr}
+}
+@media (max-width:900px){
+  .a2-sets{grid-template-columns:1fr;gap:0}
+  .a2-link{position:relative;left:auto;top:auto;transform:none;justify-self:center;margin:-8px 0;}
+  .a2-casc .pe.c{--pe:12px}
+  .a2-casc .pe.sd{--pe:10px}
+  .a2-casc{max-width:440px}
+}
+@media (max-width:560px){
+  .a2-casc{margin:28px auto 24px}
+  .a2-casc .pe.c{--pe:11px}
+  .a2-casc .pe.sd{--pe:9px}
+  .a2-ecos{grid-template-columns:1fr}
+  .a2-set .hd small{letter-spacing:.08em;font-size:12px}
+}
 </style>
 <!--BODY-->
 <div class="ax no-js" id="ax">
@@ -414,6 +451,22 @@
     </div>
   </section>
 
+  <!-- ===================== ANUNCIOS REALES ===================== -->
+  <section class="ax-sec" id="anuncios">
+    <div class="ax-wrap">
+      <div class="ax-head ax-center">
+        <p class="ax-eyebrow" data-r>Así se ven tus anuncios</p>
+        <h2 class="ax-h2" data-r=".08">Seis formatos, <em>una sola historia.</em></h2>
+        <p class="ax-lead" data-r=".16">Meta genera la demanda y Google la captura. Lo que aprende una plataforma mejora a la otra, y todo termina en tu sitio oficial.</p>
+      </div>
+      <div class="a2-sets">
+<article class="a2-set ax-card" data-r=""><div class="hd"><span class="ax-med"><img src="/alternativas/assets/meta.png" alt=""></span><div><small>Meta · Genera demanda</small><h3 class="ax-h3">Que te conozcan <em>antes de buscar.</em></h3></div></div><div class="a2-casc"><div class="pe sd l"><div class="ph"><div class="scr"><div class="sb"><span>9:41</span><i class="isl"></i><i class="bt"></i></div><div class="ab"><span class="ax-logo"><img src="/alternativas/assets/instagram.svg" alt=""></span><b>Instagram</b><span class="r"><i data-ic="heart"></i><i data-ic="send"></i></span></div><div class="ad t"><img src="/producto/assets/ha-anuncio-instagram-feed.jpg" width="802" height="1100" alt="Anuncio en el feed de Instagram: Hotel Las Acacias, escapada a los viñedos" loading="lazy"></div><div class="nav"><i data-ic="search"></i><i data-ic="play"></i><i data-ic="heart"></i><i data-ic="user-round"></i></div></div></div></div><div class="pe c"><div class="ph"><div class="scr dk"><div class="sb"><span>9:41</span><i class="isl"></i><i class="bt"></i></div><div class="ad t"><img src="/producto/assets/ha-anuncio-instagram-stories.jpg" width="802" height="1100" alt="Anuncio en historias de Instagram: Tu domo frente al lago, Bariloche" loading="lazy"></div><div class="reply"><span>Enviar mensaje</span><i data-ic="heart"></i><i data-ic="send"></i></div></div></div></div><div class="pe sd r"><div class="ph"><div class="scr"><div class="sb"><span>9:41</span><i class="isl"></i><i class="bt"></i></div><div class="ab"><span class="ax-logo"><img src="/alternativas/assets/meta.png" alt=""></span><b>Facebook</b><span class="r"><i data-ic="search"></i><i data-ic="message-circle"></i></span></div><div class="ad t"><img src="/producto/assets/ha-anuncio-facebook-feed.jpg" width="802" height="1100" alt="Anuncio en el feed de Facebook: Lodge Selva Alta, reservá sin comisiones" loading="lazy"></div><div class="nav"><i data-ic="users"></i><i data-ic="play"></i><i data-ic="bell"></i><i data-ic="user-round"></i></div></div></div></div></div><p class="kpi"><i data-ic="chart-column"></i>Historias y feed de Instagram y Facebook. Se mide en visitas al sitio, conversaciones por WhatsApp y costo por conversación.</p></article>
+<span class="a2-link"><i data-ic="refresh-cw"></i>Audiencias compartidas</span>
+<article class="a2-set ax-card" data-r=".12"><div class="hd"><span class="ax-med"><img src="/alternativas/assets/google-g.svg" alt=""></span><div><small>Google · Captura demanda</small><h3 class="ax-h3">Que te elijan <em>cuando buscan.</em></h3></div></div><div class="a2-casc"><div class="pe sd l"><div class="ph"><div class="scr"><div class="sb"><span>9:41</span><i class="isl"></i><i class="bt"></i></div><div class="ab"><span class="ax-logo"><img src="/alternativas/assets/google-g.svg" alt=""></span><b>Discover</b><span class="r"><i data-ic="bell"></i><i data-ic="user-round"></i></span></div><div class="ad s"><img src="/producto/assets/ha-anuncio-performance-max.jpg" width="802" height="840" alt="Anuncio de Performance Max: Lodge frente a la selva nubosa" loading="lazy"></div><div class="sk"><i class="u"></i><i class="h"></i><i></i><i class="s"></i><i class="gap"></i><i class="u"></i><i class="h"></i><i></i></div></div></div></div><div class="pe c"><div class="ph"><div class="scr"><div class="sb"><span>9:41</span><i class="isl"></i><i class="bt"></i></div><div class="ab"><div class="sq"><span class="ax-logo"><img src="/alternativas/assets/google-g.svg" alt=""></span><span>hotel boutique en mendoza</span><i data-ic="search"></i></div></div><div class="tabs"><b>Todo</b><span>Imágenes</span><span>Maps</span><span>Noticias</span></div><div class="ad s"><img src="/producto/assets/ha-anuncio-search.jpg" width="802" height="840" alt="Anuncio de Google Search: Hotel boutique en Mendoza, reserva directa sin comisiones" loading="lazy"></div><div class="sk"><i class="u"></i><i class="h"></i><i></i><i class="s"></i><i class="gap"></i><i class="u"></i><i class="h"></i><i></i></div></div></div></div><div class="pe sd r"><div class="ph"><div class="scr"><div class="sb"><span>9:41</span><i class="isl"></i><i class="bt"></i></div><div class="ab"><span class="ax-logo"><img src="/alternativas/assets/google-g.svg" alt=""></span><b>YouTube</b><span class="r"><i data-ic="search"></i><i data-ic="bell"></i></span></div><div class="ad s"><img src="/producto/assets/ha-anuncio-remarketing-youtube.jpg" width="802" height="840" alt="Anuncio de remarketing en YouTube: ¿Seguís buscando en Bariloche?" loading="lazy"></div><div class="sk"><i class="u"></i><i class="h"></i><i></i><i class="s"></i><i class="gap"></i><i class="u"></i><i class="h"></i><i></i></div></div></div></div></div><p class="kpi"><i data-ic="chart-column"></i>Búsqueda, Performance Max y remarketing en YouTube. Se mide en reservas directas atribuidas a tu motor.</p></article>
+      </div>
+    </div>
+  </section>
+
   <!-- ===================== PROCESO ===================== -->
   <section class="ax-sec" id="proceso">
     <div class="ax-wrap">
@@ -432,7 +485,23 @@
         <div class="a2-step" data-r=".2"><span class="ax-med"><i data-ic="sliders-horizontal"></i></span><span class="wk">Todos los días</span><h3>Gestión diaria</h3><p>Optimizamos pujas, presupuesto y anuncios según tu disponibilidad y tarifa.</p></div>
         <div class="a2-step" data-r=".3"><span class="ax-med fin"><i data-ic="trending-up"></i></span><span class="wk">Cada mes</span><h3>Resultados y escala</h3><p>Reporte de reservas y ahorro en comisiones, y escalamos juntos lo que funciona.</p></div>
       </div>
-      <div class="a2-eco" data-r=".1">Conectado de forma nativa con <span class="ax-chip">Motor de reservas</span><span class="ax-chip">PMS</span><span class="ax-chip">Channel Manager</span><span class="ax-chip">CRM</span></div>
+    </div>
+  </section>
+
+  <!-- ===================== ECOSISTEMA ===================== -->
+  <section class="ax-sec" id="ecosistema">
+    <div class="ax-wrap">
+      <div class="ax-head ax-center">
+        <p class="ax-eyebrow" data-r>Frente a una agencia externa</p>
+        <h2 class="ax-h2" data-r=".08">La diferencia no es el Ads. <em>Es la integración con tu hotel.</em></h2>
+        <p class="ax-lead" data-r=".16">Somos un ecosistema integral: lo que pasa en tu operación llega a tus campañas, y cada reserva vuelve medida.</p>
+      </div>
+      <div class="a2-ecos eco-set">
+<article class="eco-c ax-card" data-r=""><div class="pr"><span class="ax-med"><i data-ic="bed-double"></i></span><span><b>PMS</b> <em>+ Ads</em></span></div><h3 class="ax-h3">Tarifas y disponibilidad reales</h3><p>Sincronización total de disponibilidad y tarifas en tiempo real: tus campañas siempre con información actualizada.</p><div class="live"><div><span class="e"><i class="dt"></i>Quedan 2 habitaciones para el finde largo</span><small><i data-ic="arrow-right"></i>La campaña se ajusta a tu disponibilidad</small></div></div></article>
+<article class="eco-c ax-card" data-r=".9"><div class="pr"><span class="ax-med"><i data-ic="refresh-cw"></i></span><span><b>Channel Manager</b> <em>+ Ads</em></span></div><h3 class="ax-h3">Sin overbooking ni errores de paridad</h3><p>Tu inventario siempre actualizado en Google Hotel Ads. Eliminamos el riesgo de overbooking y errores de paridad.</p><div class="live"><div><span class="e"><i class="dt"></i>Cambiaste la tarifa del fin de semana</span><small><i data-ic="arrow-right"></i>Hotel Ads muestra la misma tarifa</small></div></div></article>
+<article class="eco-c ax-card" data-r=".18"><div class="pr"><span class="ax-med"><i data-ic="calendar-days"></i></span><span><b>Motor de reservas</b> <em>+ Ads</em></span></div><h3 class="ax-h3">Sin fugas de conversión</h3><p>El tráfico llega a una plataforma optimizada para convertir visitas en huéspedes, y cada reserva vuelve medida.</p><div class="live"><div><span class="e"><i class="dt"></i>Nueva reserva directa, 3 noches</span><small><i data-ic="arrow-right"></i>Atribuida a la campaña que la trajo</small></div></div></article>
+<article class="eco-c ax-card" data-r=".27"><div class="pr"><span class="ax-med"><i data-ic="users"></i></span><span><b>CRM</b> <em>+ Ads</em></span></div><h3 class="ax-h3">Fidelización alineada con tus anuncios</h3><p>Campañas de email marketing y fidelización alineadas con tus anuncios, para un ecosistema de conversión completo.</p><div class="live"><div><span class="e"><i class="dt"></i>Huésped nuevo en tu base</span><small><i data-ic="arrow-right"></i>Se suma a tus campañas de fidelización</small></div></div></article>
+      </div>
     </div>
   </section>
 

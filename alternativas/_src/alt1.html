@@ -129,6 +129,37 @@
 .a1-report .shot img{width:100%}
 .a1-report .cap{font-size:13px;color:var(--grey);margin-top:10px}
 
+
+/* ---------- ANUNCIOS REALES en su entorno ---------- */
+.a1-ads{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(16px,2vw,28px);align-items:start;padding-top:14px}
+.a1-ad{display:flex;flex-direction:column;align-items:center;text-align:center}
+.a1-ad:nth-child(even){margin-top:46px}
+.a1-ad .pe{--pe:clamp(11px,.95vw,13.4px)}
+.a1-ad .pe-cap{align-items:center;max-width:250px}
+/* ---------- ECOSISTEMA ---------- */
+.a1-eco .ax-wrap{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:clamp(28px,4vw,64px);align-items:center}
+.a1-eco-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(14px,1.6vw,22px)}
+.a1-vs{display:flex;flex-direction:column;gap:12px;margin-top:26px}
+.a1-vs > div{display:flex;align-items:center;gap:14px;padding:14px 18px;border-radius:16px;background:rgba(255,255,255,.55);box-shadow:inset 0 0 0 1px var(--stroke)}
+.a1-vs > div.on{background:#fff;box-shadow:var(--sh-lo),0 0 0 2px rgba(60,174,231,.35)}
+.a1-vs p{font-size:15px;line-height:1.4;color:var(--body)}
+.a1-vs b{display:block;font-weight:500;color:var(--ink)}
+.a1-vs .ax-med .lc{color:var(--g4)}
+.a1-vs .ax-med img{width:56%}
+@media (max-width:1100px){
+  .a1-eco .ax-wrap{grid-template-columns:1fr}
+}
+@media (max-width:900px){
+  .a1-ads{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:18px;margin:0 calc(var(--gut)*-1);padding:18px var(--gut) 30px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .a1-ads::-webkit-scrollbar{display:none}
+  .a1-ad{flex:0 0 min(66%,280px);scroll-snap-align:center;margin-top:0!important}
+  .a1-ad .pe{--pe:13px}
+}
+@media (max-width:560px){
+  .a1-ad .pe{--pe:12.4px}
+  .a1-eco-grid{grid-template-columns:1fr}
+}
+
 /* ---------- RESULTADOS ---------- */
 .a1-cases{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,2vw,28px)}
 
@@ -410,6 +441,23 @@
     </div>
   </section>
 
+  <!-- ===================== ANUNCIOS REALES ===================== -->
+  <section class="ax-sec" id="anuncios">
+    <div class="ax-wrap">
+      <div class="ax-head ax-center">
+        <p class="ax-eyebrow" data-r>Así se ven tus anuncios</p>
+        <h2 class="ax-h2" data-r=".08">El mismo hotel, <em>en cada pantalla donde te buscan.</em></h2>
+        <p class="ax-lead" data-r=".16">Cada formato tiene un trabajo dentro de la estrategia, y todos llevan al mismo lugar: tu sitio oficial, sin comisiones.</p>
+      </div>
+      <div class="a1-ads">
+<figure class="a1-ad" data-r=""><div class="pe "><span class="pe-tag">Se inspira</span><div class="ph"><div class="scr dk"><div class="sb"><span>9:41</span><i class="isl"></i><i class="bt"></i></div><div class="ad t"><img src="/producto/assets/ha-anuncio-instagram-stories.jpg" width="802" height="1100" alt="Anuncio en historias de Instagram: Tu domo frente al lago, Bariloche" loading="lazy"></div><div class="reply"><span>Enviar mensaje</span><i data-ic="heart"></i><i data-ic="send"></i></div></div></div></div><figcaption class="pe-cap"><span class="pl"><span class="ax-logo"><img src="/alternativas/assets/instagram.svg" alt=""></span>Instagram · Historias</span><p>Despierta el deseo en viajeros que todavía no te buscan.</p></figcaption></figure>
+<figure class="a1-ad" data-r=".9"><div class="pe "><span class="pe-tag">Descubre</span><div class="ph"><div class="scr"><div class="sb"><span>9:41</span><i class="isl"></i><i class="bt"></i></div><div class="ab"><span class="ax-logo"><img src="/alternativas/assets/google-g.svg" alt=""></span><b>Discover</b><span class="r"><i data-ic="bell"></i><i data-ic="user-round"></i></span></div><div class="ad s"><img src="/producto/assets/ha-anuncio-performance-max.jpg" width="802" height="840" alt="Anuncio de Performance Max: Lodge frente a la selva nubosa" loading="lazy"></div><div class="sk"><i class="u"></i><i class="h"></i><i></i><i class="s"></i><i class="gap"></i><i class="u"></i><i class="h"></i><i></i></div></div></div></div><figcaption class="pe-cap"><span class="pl"><span class="ax-logo"><img src="/alternativas/assets/google-g.svg" alt=""></span>Google · Performance Max</span><p>Te muestra en Search, Maps, YouTube, Gmail y Display con una sola campaña.</p></figcaption></figure>
+<figure class="a1-ad" data-r=".18"><div class="pe "><span class="pe-tag">Decide</span><div class="ph"><div class="scr"><div class="sb"><span>9:41</span><i class="isl"></i><i class="bt"></i></div><div class="ab"><div class="sq"><span class="ax-logo"><img src="/alternativas/assets/google-g.svg" alt=""></span><span>hotel boutique en mendoza</span><i data-ic="search"></i></div></div><div class="tabs"><b>Todo</b><span>Imágenes</span><span>Maps</span><span>Noticias</span></div><div class="ad s"><img src="/producto/assets/ha-anuncio-search.jpg" width="802" height="840" alt="Anuncio de Google Search: Hotel boutique en Mendoza, reserva directa sin comisiones" loading="lazy"></div><div class="sk"><i class="u"></i><i class="h"></i><i></i><i class="s"></i><i class="gap"></i><i class="u"></i><i class="h"></i><i></i></div></div></div></div><figcaption class="pe-cap"><span class="pl"><span class="ax-logo"><img src="/alternativas/assets/google-g.svg" alt=""></span>Google · Búsqueda</span><p>Aparece arriba cuando buscan alojamiento en tu destino.</p></figcaption></figure>
+<figure class="a1-ad" data-r=".27"><div class="pe "><span class="pe-tag">Vuelve</span><div class="ph"><div class="scr"><div class="sb"><span>9:41</span><i class="isl"></i><i class="bt"></i></div><div class="ab"><span class="ax-logo"><img src="/alternativas/assets/google-g.svg" alt=""></span><b>YouTube</b><span class="r"><i data-ic="search"></i><i data-ic="bell"></i></span></div><div class="ad s"><img src="/producto/assets/ha-anuncio-remarketing-youtube.jpg" width="802" height="840" alt="Anuncio de remarketing en YouTube: ¿Seguís buscando en Bariloche?" loading="lazy"></div><div class="sk"><i class="u"></i><i class="h"></i><i></i><i class="s"></i><i class="gap"></i><i class="u"></i><i class="h"></i><i></i></div></div></div></div><figcaption class="pe-cap"><span class="pl"><span class="ax-logo"><img src="/alternativas/assets/google-g.svg" alt=""></span>YouTube · Remarketing</span><p>Le recuerda tu tarifa directa a quien no terminó de reservar.</p></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
   <!-- ===================== NOSOTROS ===================== -->
   <section class="ax-sec a1-team" id="equipo">
     <div class="ax-wrap">
@@ -442,19 +490,34 @@
       </div>
       <div class="a1-report ax-card" data-r=".1">
         <div>
-          <h3 class="ax-h2" style="font-size:clamp(26px,2.4vw,36px)">Conectado con <em>tu operación.</em></h3>
-          <p class="ax-lead" style="margin-top:12px;font-size:17px">Somos el mismo ecosistema que tu PMS y tu motor: los anuncios muestran tarifas y disponibilidad reales, y cada reserva vuelve medida.</p>
-          <div class="eco">
-            <span class="ax-chip">PMS</span>
-            <span class="ax-chip">Motor de reservas</span>
-            <span class="ax-chip">Channel Manager</span>
-            <span class="ax-chip">CRM</span>
-          </div>
+          <h3 class="ax-h2" style="font-size:clamp(26px,2.4vw,36px)">Un reporte claro, <em>todos los meses.</em></h3>
+          <p class="ax-lead" style="margin-top:12px;font-size:17px">Reservas directas atribuidas, inversión y conversiones de cada plataforma en un solo panel, con reuniones estratégicas con tu CSM.</p>
         </div>
         <figure>
           <div class="shot"><img src="/producto/assets/ha-reporte-pxsol-studio.jpg" width="1998" height="1196" alt="Reporte mensual de Pxsol Studio" loading="lazy"></div>
           <figcaption class="cap">El reporte de Pxsol Studio que vas a ver todos los meses. Datos de ejemplo.</figcaption>
         </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ECOSISTEMA ===================== -->
+  <section class="ax-sec a1-eco" id="ecosistema">
+    <div class="ax-wrap">
+      <div>
+        <p class="ax-eyebrow" data-r>Por qué con Pxsol</p>
+        <h2 class="ax-h2" data-r=".08">Una agencia ve clics. <em>Nosotros vemos tu hotel.</em></h2>
+        <p class="ax-lead" style="margin-top:14px" data-r=".16">Somos un ecosistema integral: la diferencia no es el Ads, es la integración total con tu operación hotelera.</p>
+        <div class="a1-vs" data-r=".22">
+          <div><span class="ax-med sm"><i data-ic="x"></i></span><p><b>Una agencia externa</b>Mira impresiones y clics, sin saber si tenés lugar.</p></div>
+          <div class="on"><span class="ax-med sm"><img src="/alternativas/assets/pxsol-isotipo.svg" alt=""></span><p><b>Pxsol</b>Ve tu disponibilidad, tus tarifas, tus reservas y tus huéspedes.</p></div>
+        </div>
+      </div>
+      <div class="a1-eco-grid eco-set">
+<article class="eco-c ax-card" data-r=""><div class="pr"><span class="ax-med"><i data-ic="bed-double"></i></span><span><b>PMS</b> <em>+ Ads</em></span></div><h3 class="ax-h3">Tarifas y disponibilidad reales</h3><p>Sincronización total de disponibilidad y tarifas en tiempo real: tus campañas siempre con información actualizada.</p><div class="live"><div><span class="e"><i class="dt"></i>Quedan 2 habitaciones para el finde largo</span><small><i data-ic="arrow-right"></i>La campaña se ajusta a tu disponibilidad</small></div></div></article>
+<article class="eco-c ax-card" data-r=".9"><div class="pr"><span class="ax-med"><i data-ic="refresh-cw"></i></span><span><b>Channel Manager</b> <em>+ Ads</em></span></div><h3 class="ax-h3">Sin overbooking ni errores de paridad</h3><p>Tu inventario siempre actualizado en Google Hotel Ads. Eliminamos el riesgo de overbooking y errores de paridad.</p><div class="live"><div><span class="e"><i class="dt"></i>Cambiaste la tarifa del fin de semana</span><small><i data-ic="arrow-right"></i>Hotel Ads muestra la misma tarifa</small></div></div></article>
+<article class="eco-c ax-card" data-r=".18"><div class="pr"><span class="ax-med"><i data-ic="calendar-days"></i></span><span><b>Motor de reservas</b> <em>+ Ads</em></span></div><h3 class="ax-h3">Sin fugas de conversión</h3><p>El tráfico llega a una plataforma optimizada para convertir visitas en huéspedes, y cada reserva vuelve medida.</p><div class="live"><div><span class="e"><i class="dt"></i>Nueva reserva directa, 3 noches</span><small><i data-ic="arrow-right"></i>Atribuida a la campaña que la trajo</small></div></div></article>
+<article class="eco-c ax-card" data-r=".27"><div class="pr"><span class="ax-med"><i data-ic="users"></i></span><span><b>CRM</b> <em>+ Ads</em></span></div><h3 class="ax-h3">Fidelización alineada con tus anuncios</h3><p>Campañas de email marketing y fidelización alineadas con tus anuncios, para un ecosistema de conversión completo.</p><div class="live"><div><span class="e"><i class="dt"></i>Huésped nuevo en tu base</span><small><i data-ic="arrow-right"></i>Se suma a tus campañas de fidelización</small></div></div></article>
       </div>
     </div>
   </section>

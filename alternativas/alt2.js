@@ -81,6 +81,15 @@
     if(barTw) inView ? barTw.play() : barTw.pause();
   }});
 
+  /* ---------- ANUNCIOS: los formatos laterales salen de atrás del principal ---------- */
+  if(!AX.rm) $$('.a2-casc').forEach(function(c){
+    var l = $('.pe.l', c), r = $('.pe.r', c);
+    gsap.set(l,{xPercent:45,opacity:0}); gsap.set(r,{xPercent:-45,opacity:0});
+    ScrollTrigger.create({trigger:c,start:'top 78%',once:true,onEnter:function(){
+      gsap.to([l,r],{xPercent:0,opacity:1,duration:1,delay:.25,stagger:.08});
+    }});
+  });
+
   /* ---------- PROCESO: la línea se pinta con el scroll y no retrocede ---------- */
   var ln = $('#a2-ln');
   if(ln){
