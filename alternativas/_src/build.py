@@ -11,6 +11,10 @@ src = (R/'index.html').read_text(encoding='utf8')
 lines = src.split('\n')
 prefix = '\n'.join(lines[:5225]) + '\n</div></div>'
 suffix = src[src.index('<section class="trial" id="prueba-gratis">'):]
+# «También podría interesarte» (notas del blog) de la página oficial: va después del formulario
+_t = src.index('<section class="trial" id="prueba-gratis">')
+blog = src[src.rindex('<section class="sec sec--tight">', 0, _t):_t]
+assert 'interesarte' in blog
 # El hero nuevo es claro: el sitio va en su versión clara.
 prefix = prefix.replace('pxsite pxsite--dark', 'pxsite pxsite--light', 1)
 
@@ -54,7 +58,7 @@ for n in sys.argv[1:] or ['1', '2']:
         assert body.endswith('</div>'), 'el cuerpo tiene que cerrar con el </div> de .ax'
         body = body[:-6]
         k = suf.index('</section>') + len('</section>')
-        suf = suf[:k] + '\n</div><!-- /#ax -->' + suf[k:]
+        suf = suf[:k] + '\n</div><!-- /#ax -->\n' + blog + suf[k:]
 
     suf =suf.replace('</body>', scripts + '</body>', 1)
 
