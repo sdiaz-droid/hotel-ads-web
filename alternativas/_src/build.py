@@ -10,6 +10,10 @@ R = pathlib.Path(__file__).resolve().parents[2]
 src = (R/'index.html').read_text(encoding='utf8')
 lines = src.split('\n')
 prefix = '\n'.join(lines[:5225]) + '\n</div></div>'
+# Menú: la copia sólo traía el menú mobile viejo. Va el menú v2 real de la web (fijo, se pinta
+# claro u oscuro según lo que tenga detrás), guardado en _src/menu-v2.html.
+_h = prefix.index('<div data-pxsol-global="header"')
+prefix = prefix[:_h] + (R/'alternativas/_src/menu-v2.html').read_text(encoding='utf8')
 suffix = src[src.index('<section class="trial" id="prueba-gratis">'):]
 # «También podría interesarte» (notas del blog) de la página oficial: va después del formulario
 _t = src.index('<section class="trial" id="prueba-gratis">')

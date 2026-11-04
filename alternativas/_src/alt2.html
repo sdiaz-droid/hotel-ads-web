@@ -6,19 +6,20 @@
 /* ===================== ALTERNATIVA 2 · «Un sistema que trae reservas» ===================== */
 
 /* ---------- HERO centrado + confluencia ---------- */
-.a2-hero{padding:clamp(30px,5.5vh,72px) var(--gut) clamp(20px,3vh,40px);text-align:center}
+.a2-hero{text-align:center}
 .a2-chips{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-bottom:24px}
 .a2-chips .ax-chip{height:40px;font-size:15px}
 .a2-chips .ax-new{margin-left:2px}
-.a2-hero .ax-h1{max-width:15em;margin:0 auto;font-size:clamp(38px,4.3vw,64px)}
-.a2-hero .ax-lead{margin:20px auto 0;max-width:40em}
+.a2-hero .hx-title{max-width:16em;margin:0 auto}
+.a2-hero .hx-desc{margin:20px auto 0;max-width:40em}
+.a2-hero .hx-btns{justify-content:center}
 .a2-ctas{display:flex;justify-content:center;align-items:center;gap:22px;margin-top:30px;flex-wrap:wrap}
 .a2-hero .ax-facts{justify-content:center}
 
 .a2-flow{position:relative;max-width:1120px;margin:clamp(26px,4vh,44px) auto 0;display:grid;grid-template-columns:minmax(0,360px) 200px minmax(0,360px);justify-content:space-between;gap:40px;align-items:center;text-align:left;min-height:330px}
 .a2-flow svg.fib{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none;z-index:0}
-.a2-flow .fb{fill:none;stroke:#D5DAE3;stroke-width:2;stroke-linecap:round}
-.a2-flow .fb.out{stroke-dasharray:2 7;stroke:#B9C0CC}
+.a2-flow .fb{fill:none;stroke:rgba(255,255,255,.22);stroke-width:2;stroke-linecap:round}
+.a2-flow .fb.out{stroke-dasharray:2 7;stroke:rgba(255,255,255,.4)}
 .a2-flow .pl{fill:var(--ads)}
 .a2-flow .plh{fill:rgba(60,174,231,.22)}
 .a2-flow .pl.r{fill:var(--red)}
@@ -31,7 +32,11 @@
 .a2-s b{display:block;font-weight:400;font-size:16px;color:var(--ink);line-height:1.3;margin-top:2px}
 .a2-s i.q{font-style:italic;font-weight:300}
 .a2-hub{position:relative;z-index:2;justify-self:center;width:200px;aspect-ratio:1/1;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;background:radial-gradient(120% 90% at 80% 0%,rgba(33,69,90,.25),rgba(33,69,90,0) 60%),radial-gradient(90% 80% at 10% 110%,rgba(140,15,26,.22),rgba(140,15,26,0) 60%),#1A1A1A;box-shadow:0 30px 70px -18px rgba(60,174,231,.6),var(--sh-hi);color:#fff}
-.a2-hub::before{content:"";position:absolute;inset:-14px;border-radius:50%;border:1.5px dashed rgba(0,0,23,.14)}
+.a2-hub::before{content:"";position:absolute;inset:-14px;border-radius:50%;border:1.5px dashed rgba(255,255,255,.22)}
+.a2-hub{background:#fff!important;color:var(--ink)!important;box-shadow:0 30px 70px -18px rgba(0,177,237,.55),0 0 0 1px rgba(255,255,255,.6)!important}
+#ax .a2-hub b{color:var(--ink)}
+#ax .a2-hub span:not(.px){color:var(--grey)}
+.a2-hub .px{box-shadow:0 0 0 1px var(--stroke),0 6px 16px -8px rgba(0,0,23,.3)!important}
 .a2-hub .px{width:64px;height:64px;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 6px 16px -6px rgba(0,0,0,.5)}
 .a2-hub .px img{width:62%}
 .a2-hub b{font-weight:400;font-size:16px;line-height:1.2;color:#fff}
@@ -205,12 +210,10 @@
   .a2-rep{grid-template-columns:1fr}
 }
 @media (max-width:560px){
-  .a2-hero{padding-top:20px}
   .a2-chips{gap:6px;margin-bottom:18px}
   .a2-chips .ax-chip{height:34px;font-size:13px;padding:0 11px 0 7px;gap:6px}
   .a2-chips .ax-chip .ax-logo{font-size:15px}
   .a2-chips .ax-new{height:18px;font-size:9.5px;padding:0 6px}
-  .a2-hero .ax-h1{font-size:clamp(33px,9vw,38px)}
   .a2-ctas{gap:6px}
   .a2-hero .ax-facts{gap:6px 18px}
   .a2-tabs{gap:6px}
@@ -285,17 +288,17 @@
   </div>
 
   <!-- ===================== HERO ===================== -->
-  <section class="a2-hero">
+  <section class="a2-hero ax-hcard dk">
     <div class="a2-chips" data-r>
       <span class="ax-chip"><span class="ax-logo"><img src="/alternativas/assets/google-g.svg" alt=""></span>Google</span>
       <span class="ax-chip"><span class="ax-logo"><img src="/alternativas/assets/meta.png" alt=""></span>Meta</span>
       <span class="ax-chip"><span class="ax-logo"><img src="/alternativas/assets/chatgpt.svg" alt=""></span>ChatGPT <span class="ax-new">Nuevo</span></span>
     </div>
-    <h1 class="ax-h1" data-r=".08">Una sola estrategia para que tu hotel <em>sume consultas y reservas directas.</em></h1>
-    <p class="ax-lead" data-r=".16">Diseñamos y gestionamos tu publicidad en Google, Meta y ChatGPT como un único plan. Cada plataforma cumple su rol y todas apuntan a lo mismo: que el huésped reserve en <strong>tu sitio oficial</strong>.</p>
-    <div class="a2-ctas" data-r=".24">
-      <a class="ax-cta" href="#prueba-gratis">Solicitar auditoría gratuita</a>
-      <a class="ax-link" href="#integral">Ver la estrategia <i data-ic="arrow-down"></i></a>
+    <h1 class="hx-title" data-r=".08">Una sola estrategia para que tu hotel <span class="ac">sume consultas y reservas directas.</span></h1>
+    <p class="hx-desc" data-r=".16">Diseñamos y gestionamos tu publicidad en Google, Meta y ChatGPT como un único plan. Cada plataforma cumple su rol y todas apuntan a lo mismo: que el huésped reserve en <strong>tu sitio oficial</strong>.</p>
+    <div class="hx-btns" data-r=".24">
+      <a class="hx-btn pri" href="#prueba-gratis">Solicitar auditoría gratuita</a>
+      <a class="hx-btn sec" href="#integral">Ver la estrategia <i data-ic="arrow-down"></i></a>
     </div>
     <div class="ax-facts" data-r=".3">
       <div class="ax-fact"><b>0%</b> comisión por reserva</div>
