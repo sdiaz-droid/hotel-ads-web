@@ -1,0 +1,535 @@
+<title>Pxsol Ads · Estrategia integral en Google, Meta y ChatGPT | Alternativa 2</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="/alternativas/vendor/lenis.css">
+<link rel="stylesheet" href="/alternativas/base.css">
+<style>
+/* ===================== ALTERNATIVA 2 · «Un sistema que trae reservas» ===================== */
+
+/* ---------- HERO centrado + confluencia ---------- */
+.a2-hero{padding:clamp(30px,5.5vh,72px) var(--gut) clamp(20px,3vh,40px);text-align:center}
+.a2-chips{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-bottom:24px}
+.a2-chips .ax-chip{height:40px;font-size:15px}
+.a2-chips .ax-new{margin-left:2px}
+.a2-hero .ax-h1{max-width:15em;margin:0 auto;font-size:clamp(38px,4.3vw,64px)}
+.a2-hero .ax-lead{margin:20px auto 0;max-width:40em}
+.a2-ctas{display:flex;justify-content:center;align-items:center;gap:22px;margin-top:30px;flex-wrap:wrap}
+.a2-hero .ax-facts{justify-content:center}
+
+.a2-flow{position:relative;max-width:1120px;margin:clamp(26px,4vh,44px) auto 0;display:grid;grid-template-columns:minmax(0,360px) 200px minmax(0,360px);justify-content:space-between;gap:40px;align-items:center;text-align:left;min-height:330px}
+.a2-flow svg.fib{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none;z-index:0}
+.a2-flow .fb{fill:none;stroke:#D5DAE3;stroke-width:2;stroke-linecap:round}
+.a2-flow .fb.out{stroke-dasharray:2 7;stroke:#B9C0CC}
+.a2-flow .pl{fill:var(--ads)}
+.a2-flow .plh{fill:rgba(60,174,231,.22)}
+.a2-flow .pl.r{fill:var(--red)}
+.a2-flow .plh.r{fill:rgba(210,10,17,.16)}
+.a2-src{display:flex;flex-direction:column;gap:16px;position:relative;z-index:1}
+.a2-s{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:18px;background:#fff;box-shadow:var(--sh);transition:box-shadow 400ms var(--ease),transform 400ms var(--ease)}
+.a2-s.on{box-shadow:var(--sh-hi),0 0 0 2px rgba(60,174,231,.35);transform:translateY(-3px)}
+.a2-s .ax-med{width:46px;height:46px}
+.a2-s small{display:block;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--grey)}
+.a2-s b{display:block;font-weight:400;font-size:16px;color:var(--ink);line-height:1.3;margin-top:2px}
+.a2-s i.q{font-style:italic;font-weight:300}
+.a2-hub{position:relative;z-index:2;justify-self:center;width:200px;aspect-ratio:1/1;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;background:radial-gradient(120% 90% at 80% 0%,rgba(33,69,90,.25),rgba(33,69,90,0) 60%),radial-gradient(90% 80% at 10% 110%,rgba(140,15,26,.22),rgba(140,15,26,0) 60%),#1A1A1A;box-shadow:0 30px 70px -18px rgba(60,174,231,.6),var(--sh-hi);color:#fff}
+.a2-hub::before{content:"";position:absolute;inset:-14px;border-radius:50%;border:1.5px dashed rgba(0,0,23,.14)}
+.a2-hub .px{width:64px;height:64px;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 6px 16px -6px rgba(0,0,0,.5)}
+.a2-hub .px img{width:62%}
+.a2-hub b{font-weight:400;font-size:16px;line-height:1.2;color:#fff}
+.a2-hub span{font-size:12.5px;color:#C9D0D8;letter-spacing:.04em}
+.a2-out{position:relative;z-index:1;height:300px;font-size:16px}
+.a2-out .m-notif{position:absolute;left:0;right:0;bottom:50%;margin-bottom:-38px;transform-origin:50% 100%}
+
+/* ---------- prueba social ---------- */
+.a2-proof{padding:clamp(20px,3vh,36px) var(--gut) 0}
+.a2-proof .ax-marquee img{height:36px}
+
+/* ---------- DIFERENCIA ---------- */
+.a2-vs{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:clamp(16px,2vw,28px);align-items:center}
+.a2-col{padding:clamp(24px,2.6vw,36px)}
+.a2-col h3{display:flex;align-items:center;gap:12px;font-weight:400;font-size:clamp(20px,1.6vw,24px);color:var(--ink)}
+.a2-col ul{margin-top:22px;display:flex;flex-direction:column;gap:14px}
+.a2-col li{display:flex;gap:14px;align-items:flex-start;font-size:16px;line-height:1.45;color:var(--body)}
+.a2-col li .mk{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;flex:none;margin-top:-1px}
+.a2-col li .mk .lc{font-size:15px;stroke-width:2.2}
+.a2-col.off{background:#EEF0F4;box-shadow:inset 0 2px 6px rgba(0,0,23,.06),inset 0 -1px 0 #fff}
+.a2-col.off::before{display:none}
+.a2-col.off h3{color:var(--grey)}
+.a2-col.off li{color:var(--grey)}
+.a2-col.off .mk{background:#E1E4EA;color:#8A909C}
+.a2-col.off .scat{display:flex;gap:8px;margin-top:22px}
+.a2-col.off .scat span{width:40px;height:40px;border-radius:12px;background:#fff;display:grid;place-items:center;box-shadow:var(--sh-lo)}
+.a2-col.off .scat img{width:20px;height:20px;object-fit:contain}
+.a2-col.on{box-shadow:var(--sh-hi),0 26px 60px -24px rgba(60,174,231,.55)}
+.a2-col.on .mk{background:#EAF5FD;color:var(--ads-d)}
+.a2-col.on li{color:var(--ink)}
+.a2-col.on .tri{display:flex;align-items:center;gap:0;margin-top:22px}
+.a2-col.on .tri .ax-med{width:44px;height:44px;margin-left:-8px;box-shadow:0 0 0 3px #fff,0 6px 14px -6px rgba(0,0,23,.3)}
+.a2-col.on .tri .ax-med:first-child{margin-left:0}
+.a2-col.on .tri em{margin-left:14px;font-size:15px;color:var(--grey);font-style:normal;font-weight:400}
+
+/* ---------- ROLES (pestañas) ---------- */
+.a2-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:18px}
+.a2-tab{position:relative;display:flex;align-items:center;gap:14px;text-align:left;padding:16px 18px;border-radius:18px;border:0;background:#fff;box-shadow:var(--sh-lo);cursor:pointer;font:inherit;color:var(--ink);overflow:hidden;transition:box-shadow 200ms var(--ease)}
+.a2-tab .ax-med{width:44px;height:44px;box-shadow:none;background:var(--paper3)}
+.a2-tab small{display:block;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--grey)}
+.a2-tab b{display:block;font-weight:400;font-size:17px;line-height:1.25;margin-top:2px}
+.a2-tab .bar{position:absolute;left:18px;right:18px;bottom:0;height:3px;border-radius:3px;background:var(--red);transform:scaleX(0);transform-origin:0 50%}
+.a2-tab[aria-selected=true]{box-shadow:var(--sh-hi),0 0 0 2px rgba(60,174,231,.3)}
+.a2-tab[aria-selected=true] .ax-med{background:#fff;box-shadow:0 6px 14px -6px rgba(0,0,23,.28)}
+.a2-panels{position:relative}
+.a2-pane{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);gap:clamp(24px,4vw,64px);align-items:center;padding:clamp(24px,3vw,44px)}
+.a2-pane[hidden]{display:none}
+.a2-pane .ax-h3{font-size:clamp(24px,2.1vw,32px);font-weight:300;line-height:1.15}
+.a2-pane .ax-h3 em{font-weight:300}
+.a2-pane .who{display:inline-flex;align-items:center;gap:8px;margin-bottom:14px;font-size:14px;color:var(--grey);background:var(--paper3);border-radius:999px;padding:6px 14px;font-style:italic}
+.a2-pane p.d{margin-top:12px;font-size:16.5px;line-height:1.55;color:var(--body);max-width:32em}
+.a2-pane .lst{margin-top:20px;display:flex;flex-direction:column;gap:10px}
+.a2-pane .lst li{display:flex;gap:12px;align-items:flex-start;font-size:15.5px;color:var(--ink);line-height:1.4}
+.a2-pane .lst li i{width:22px;height:22px;border-radius:50%;background:#EAF5FD;color:var(--ads-d);display:grid;place-items:center;flex:none}
+.a2-pane .lst li i .lc{font-size:13px;stroke-width:2.2}
+.a2-pane .where{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.a2-pane .where .ax-chip{height:34px;font-size:13.5px;padding:0 13px 0 9px}
+.a2-pane .where .ax-chip.t{padding:0 13px}
+.a2-pane .flags{display:flex;align-items:center;gap:8px;margin-top:18px;font-size:14px;color:var(--grey)}
+.a2-pane .viz{position:relative;justify-self:center;width:100%;max-width:380px;font-size:17px}
+.a2-pane .viz .m-ig{max-width:300px;margin:0 auto}
+.a2-pane .viz .m-notif{position:absolute;right:-18px;bottom:-22px;width:260px;font-size:15px}
+
+/* ---------- PROCESO ---------- */
+.a2-steps{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(14px,2vw,28px)}
+.a2-steps svg.ln{position:absolute;left:0;right:0;top:0;width:100%;height:72px;overflow:visible;pointer-events:none}
+.a2-steps .ln .b{fill:none;stroke:#C5CAD6;stroke-width:2;stroke-dasharray:2 8;stroke-linecap:round}
+.a2-steps .ln .l{fill:none;stroke:var(--red);stroke-width:2.4;stroke-linecap:round}
+.a2-step{position:relative;z-index:1}
+.a2-step .ax-med{width:72px;height:72px;margin-bottom:22px}
+.a2-step .ax-med .lc{font-size:28px;color:var(--ads-d)}
+.a2-step .ax-med.fin{background:var(--red);color:#fff}
+.a2-step .ax-med.fin .lc{color:#fff}
+.a2-step .wk{display:inline-block;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--grey);margin-bottom:6px}
+.a2-step h3{font-weight:400;font-size:20px;color:var(--ink);line-height:1.25}
+.a2-step p{margin-top:8px;font-size:15.5px;line-height:1.5;color:var(--body)}
+.a2-eco{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:clamp(28px,4vh,44px);font-size:15px;color:var(--grey)}
+.a2-eco .ax-chip{height:34px;font-size:14px;padding:0 14px}
+
+/* ---------- RESULTADOS (bento) ---------- */
+.a2-bento{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.1fr) minmax(0,1.1fr);gap:clamp(14px,1.6vw,22px)}
+.a2-big{border-radius:22px;padding:clamp(24px,2.4vw,34px);color:#fff;display:flex;flex-direction:column;background:radial-gradient(120% 90% at 80% 0%,rgba(33,69,90,.25),rgba(33,69,90,0) 60%),radial-gradient(90% 80% at 10% 110%,rgba(140,15,26,.22),rgba(140,15,26,0) 60%),#1A1A1A;box-shadow:0 30px 60px -22px rgba(60,174,231,.55),var(--sh-hi)}
+.a2-big .n{font-size:clamp(56px,5.4vw,84px);font-weight:600;letter-spacing:-.04em;line-height:1;font-variant-numeric:tabular-nums}
+.a2-big p{margin-top:12px;font-size:17px;color:#D6DAE0;line-height:1.4;font-weight:300}
+.a2-big .pt{margin-top:18px;font-size:14px;color:#B9C3CF}
+.a2-big .bd{display:flex;gap:10px;margin-top:auto;padding-top:24px}
+.a2-big .bd img{height:44px;width:auto;border-radius:8px}
+.a2-bento .ax-case{grid-template-columns:1fr;padding:16px;align-content:start}
+.a2-bento .ax-case .ph{aspect-ratio:16/9;object-position:50% 45%}
+.a2-rep{grid-column:1 / span 3;display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:20px;align-items:center;padding:20px}
+.a2-rep h3{font-weight:300;font-size:clamp(22px,1.9vw,28px);color:var(--ink);line-height:1.2}
+.a2-rep p{margin-top:8px;font-size:15px;color:var(--body);line-height:1.5}
+.a2-rep img{border-radius:12px;box-shadow:0 3.2px 6.5px rgba(0,0,0,.2)}
+.a2-rep .ax-logo{width:auto;height:28px;margin-bottom:12px}
+.a2-rep .ax-logo img{width:auto;height:28px}
+
+/* ---------- PLANES: simulador ---------- */
+.a2-sim{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(20px,3vw,48px);align-items:center;padding:clamp(24px,3vw,44px)}
+.a2-sim .lbl{font-size:15px;color:var(--grey)}
+.a2-sim .val{font-size:clamp(46px,4.6vw,68px);font-weight:600;color:var(--ink);letter-spacing:-.03em;line-height:1;margin-top:8px;font-variant-numeric:tabular-nums}
+.a2-sim .val small{font-size:18px;font-weight:400;color:var(--grey);letter-spacing:0}
+.a2-range{position:relative;margin-top:28px;height:44px}
+.a2-range input{-webkit-appearance:none;appearance:none;width:100%;height:44px;background:transparent;margin:0;position:relative;z-index:2;cursor:pointer}
+.a2-range input::-webkit-slider-runnable-track{height:8px;border-radius:8px;background:transparent}
+.a2-range input::-moz-range-track{height:8px;border-radius:8px;background:transparent}
+.a2-range input::-webkit-slider-thumb{-webkit-appearance:none;width:30px;height:30px;border-radius:50%;background:#fff;margin-top:-11px;box-shadow:0 0 0 6px rgba(210,10,17,.14),0 6px 14px -4px rgba(0,0,23,.4);border:0}
+.a2-range input::-moz-range-thumb{width:30px;height:30px;border-radius:50%;background:#fff;box-shadow:0 0 0 6px rgba(210,10,17,.14),0 6px 14px -4px rgba(0,0,23,.4);border:0}
+.a2-range input:focus-visible{outline:3px solid var(--red);outline-offset:4px;border-radius:12px}
+.a2-range .tr{position:absolute;left:0;right:0;top:18px;height:8px;border-radius:8px;background:#E6E9EF;box-shadow:inset 0 1px 2px rgba(0,0,23,.12);overflow:hidden}
+.a2-range .tr i{position:absolute;left:0;top:0;bottom:0;background:var(--red);border-radius:8px}
+.a2-range .tr b{position:absolute;top:0;bottom:0;width:2px;background:#fff}
+.a2-ticks{display:flex;justify-content:space-between;margin-top:6px;font-size:13px;color:var(--grey)}
+.a2-pick{display:flex;gap:8px;margin-top:22px;flex-wrap:wrap}
+.a2-pick button{height:38px;padding:0 16px;border-radius:999px;border:0;background:var(--paper3);font:inherit;font-size:14.5px;color:var(--body);cursor:pointer;transition:background 200ms var(--ease),color 200ms var(--ease)}
+.a2-pick button[aria-pressed=true]{background:var(--ink);color:#fff}
+.a2-plan{border-radius:22px;padding:clamp(22px,2.4vw,32px);background:#fff;box-shadow:var(--sh-hi),0 0 0 2px rgba(60,174,231,.3);min-height:330px;display:flex;flex-direction:column}
+.a2-plan .nm{display:flex;align-items:center;justify-content:space-between;font-size:15px;color:var(--grey);letter-spacing:.04em}
+.a2-plan .nm b{font-size:22px;font-weight:400;color:var(--ink);letter-spacing:-.01em}
+.a2-plan .pr{margin-top:12px;font-size:clamp(32px,3vw,42px);font-weight:600;color:var(--ink);letter-spacing:-.02em;line-height:1}
+.a2-plan .pr small{font-size:15px;font-weight:400;color:var(--grey);letter-spacing:0}
+.a2-plan .fx{margin-top:6px;font-size:14px;color:var(--grey)}
+.a2-plan .chs{display:flex;flex-direction:column;gap:10px;margin-top:18px;padding-top:18px;border-top:1px solid var(--stroke)}
+.a2-plan .ch{display:flex;gap:10px;align-items:flex-start;font-size:15px;line-height:1.4;color:var(--body)}
+.a2-plan .ch .ax-logo{font-size:18px;margin-top:1px}
+.a2-plan .zero{margin-top:auto;padding-top:18px;display:flex;align-items:center;gap:10px;font-size:14.5px;color:var(--grey)}
+.a2-plan .zero b{font-size:22px;font-weight:600;color:var(--ink)}
+.a2-plan .sw{transition:opacity 200ms var(--ease)}
+.a2-note{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:center;margin-top:26px;font-size:15px;color:var(--body)}
+.a2-note span{display:flex;align-items:center;gap:10px}
+.a2-note .lc{font-size:18px;color:var(--ads-d)}
+
+/* ---------- formulario ---------- */
+.a2-trio{display:flex;align-items:center;gap:0;margin-top:30px;color:var(--g4)}
+.a2-trio .ax-med{width:52px;height:52px;margin-left:-8px;box-shadow:0 0 0 3px #F6F7FB,0 8px 18px -8px rgba(0,0,23,.3)}
+.a2-trio .ax-med:first-child{margin-left:0}
+.a2-trio .lc{font-size:20px;margin:0 14px}
+.a2-trio .px{margin-left:0;width:60px;height:60px}
+
+/* ===================== celular ===================== */
+@media (max-width:1100px){
+  .a2-bento{grid-template-columns:1fr 1fr}
+  .a2-big{grid-row:auto;grid-column:1 / span 2}
+  .a2-rep{grid-column:1 / span 2}
+}
+@media (max-width:900px){
+  .a2-flow{grid-template-columns:1fr;gap:44px;min-height:0;max-width:420px}
+  .a2-src{flex-direction:row;gap:8px}
+  .a2-s{flex:1;flex-direction:column;align-items:center;text-align:center;gap:8px;padding:12px 6px}
+  .a2-s .ax-med{width:40px;height:40px}
+  .a2-s small{font-size:10.5px;letter-spacing:.06em}
+  .a2-s b{font-size:13px}
+  .a2-s b .q{display:none}
+  .a2-hub{width:150px}
+  .a2-hub .px{width:50px;height:50px}
+  .a2-hub b{font-size:14px}
+  .a2-hub span{font-size:11.5px}
+  .a2-out{height:104px;font-size:15px}
+  .a2-out .m-notif{bottom:0;margin-bottom:0}
+  .a2-vs{grid-template-columns:1fr}
+  .a2-col.on{order:-1}
+  .a2-pane{grid-template-columns:1fr}
+  .a2-pane .viz{max-width:330px;margin-top:8px}
+  .a2-steps{grid-template-columns:1fr;gap:26px}
+  .a2-steps svg.ln{display:none}
+  .a2-step{display:grid;grid-template-columns:auto 1fr;column-gap:18px}
+  .a2-step .ax-med{grid-row:span 3;width:56px;height:56px;margin:0}
+  .a2-step .ax-med .lc{font-size:22px}
+  .a2-step::after{content:"";position:absolute;left:27px;top:64px;bottom:-22px;border-left:2px dotted #C5CAD6}
+  .a2-step:last-child::after{display:none}
+  .a2-sim{grid-template-columns:1fr}
+  .a2-rep{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  .a2-hero{padding-top:20px}
+  .a2-chips{gap:6px;margin-bottom:18px}
+  .a2-chips .ax-chip{height:34px;font-size:13px;padding:0 11px 0 7px;gap:6px}
+  .a2-chips .ax-chip .ax-logo{font-size:15px}
+  .a2-chips .ax-new{height:18px;font-size:9.5px;padding:0 6px}
+  .a2-hero .ax-h1{font-size:clamp(33px,9vw,38px)}
+  .a2-ctas{gap:6px}
+  .a2-hero .ax-facts{gap:6px 18px}
+  .a2-tabs{gap:6px}
+  .a2-tab{flex-direction:column;align-items:center;text-align:center;gap:6px;padding:12px 4px 14px}
+  .a2-tab .ax-med{width:38px;height:38px}
+  .a2-tab small{display:none}
+  .a2-tab b{font-size:13px}
+  .a2-tab .bar{left:12px;right:12px}
+  .a2-pane{padding:22px 18px 26px}
+  .a2-pane .viz{font-size:15px}
+  .a2-pane .viz .m-notif{right:-6px;bottom:-26px;width:230px;font-size:14px}
+  .a2-bento{grid-template-columns:1fr}
+  .a2-big{grid-column:auto}
+  .a2-rep{grid-column:auto;padding:16px}
+  .a2-col{padding:22px 18px}
+  .a2-col li{font-size:15.5px}
+  .a2-sim{padding:22px 18px}
+  .a2-plan{min-height:0}
+  .a2-plan .nm{flex-direction:column;align-items:flex-start;gap:4px}
+  .a2-pick{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+  .a2-pick button{padding:0 6px;font-size:13.5px}
+  .a2-note{flex-direction:column;align-items:flex-start}
+}
+</style>
+<!--BODY-->
+<div class="ax no-js" id="ax">
+  <div class="ax-bg" aria-hidden="true">
+    <i class="hs" style="width:1300px;height:1000px;left:50%;margin-left:-650px;top:-420px"></i>
+    <i class="hr" style="width:900px;height:800px;right:-340px;top:420px"></i>
+    <i class="hs" style="width:1100px;height:1000px;left:-420px;top:1300px"></i>
+    <i class="hr" style="width:900px;height:800px;right:-300px;top:2300px"></i>
+    <i class="hs" style="width:1200px;height:1000px;right:-400px;top:3300px"></i>
+    <i class="hs" style="width:1100px;height:1000px;left:-400px;top:4400px"></i>
+    <i class="hr" style="width:900px;height:800px;right:-320px;top:5500px"></i>
+  </div>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="a2-hero">
+    <div class="a2-chips" data-r>
+      <span class="ax-chip"><span class="ax-logo"><img src="/alternativas/assets/google-g.svg" alt=""></span>Google</span>
+      <span class="ax-chip"><span class="ax-logo"><img src="/alternativas/assets/meta.png" alt=""></span>Meta</span>
+      <span class="ax-chip"><span class="ax-logo"><img src="/alternativas/assets/chatgpt.svg" alt=""></span>ChatGPT <span class="ax-new">Nuevo</span></span>
+    </div>
+    <h1 class="ax-h1" data-r=".08">Una sola estrategia para que tu hotel <em>sume consultas y reservas directas.</em></h1>
+    <p class="ax-lead" data-r=".16">Diseñamos y gestionamos tu publicidad en Google, Meta y ChatGPT como un único plan. Cada plataforma cumple su rol y todas apuntan a lo mismo: que el huésped reserve en <strong>tu sitio oficial</strong>.</p>
+    <div class="a2-ctas" data-r=".24">
+      <a class="ax-cta" href="#prueba-gratis">Solicitar auditoría gratuita</a>
+      <a class="ax-link" href="#integral">Ver la estrategia <i data-ic="arrow-down"></i></a>
+    </div>
+    <div class="ax-facts" data-r=".3">
+      <div class="ax-fact"><b>0%</b> comisión por reserva</div>
+      <div class="ax-fact">Fee fijo desde <b>USD&nbsp;100</b>/mes</div>
+    </div>
+
+    <div class="a2-flow" id="a2-flow" aria-label="Google, Meta y ChatGPT llevan al huésped a tu sitio oficial, donde entran consultas y reservas">
+      <svg class="fib" id="a2-fib" aria-hidden="true"></svg>
+      <div class="a2-src">
+        <div class="a2-s" data-r=".1"><span class="ax-med"><img src="/alternativas/assets/meta.png" alt="Meta"></span><div><small>Despierta</small><b>Un reel <span class="q">de una escapada</span></b></div></div>
+        <div class="a2-s" data-r=".18"><span class="ax-med"><img src="/alternativas/assets/chatgpt.svg" alt="ChatGPT"></span><div><small>Acompaña</small><b>Una pregunta <span class="q">sobre dónde quedarse</span></b></div></div>
+        <div class="a2-s" data-r=".26"><span class="ax-med"><img src="/alternativas/assets/google-g.svg" alt="Google"></span><div><small>Captura</small><b>Una búsqueda <span class="q">con tu nombre</span></b></div></div>
+      </div>
+      <div class="a2-hub" data-r=".2"><span class="px"><img src="/alternativas/assets/pxsol-isotipo.svg" alt="Pxsol"></span><b>Tu sitio oficial</b><span>motor de reservas</span></div>
+      <div class="a2-out" id="a2-out" aria-hidden="true">
+        <div class="m-notif"><span class="ic"><img src="/alternativas/assets/whatsapp.svg" alt=""></span><div><b>Nueva consulta por WhatsApp</b><span>¿Tienen lugar para el finde largo?</span><small>desde Instagram</small></div></div>
+        <div class="m-notif"><span class="ic"><img src="/alternativas/assets/pxsol-isotipo.svg" alt=""></span><div><b>Nueva reserva directa</b><span>Sitio oficial · 3 noches</span><small>desde ChatGPT</small></div></div>
+        <div class="m-notif"><span class="ic"><img src="/alternativas/assets/pxsol-isotipo.svg" alt=""></span><div><b>Nueva reserva directa</b><span>Sitio oficial · 2 noches</span><small>desde Google</small></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PRUEBA SOCIAL ===================== -->
+  <section class="a2-proof" aria-label="Alojamientos que confían en Pxsol">
+    <div class="ax-wrap">
+      <div class="ax-marquee" data-r><div class="tr">
+        <img src="/producto/assets/del-bono-central-logo-1.png" alt="Del Bono Central"><img src="/producto/assets/amerian-1.svg" alt="Amerian"><img src="/producto/assets/diplomatic-1.svg" alt="Diplomatic"><img src="/producto/assets/city-center-1.svg" alt="City Center"><img src="/producto/assets/estancia-la-mantilla.svg" alt="Estancia La Mantilla"><img src="/producto/assets/andesmar-logo.png" alt="Andesmar"><img src="/producto/assets/quinto-centenario-hotel-logo.png" alt="Quinto Centenario"><img src="/producto/assets/casino-magig-hotel-y-casino-logo.png" alt="Casino Magic"><img src="/producto/assets/del-bono-central-logo-1.png" alt="" aria-hidden="true"><img src="/producto/assets/amerian-1.svg" alt="" aria-hidden="true"><img src="/producto/assets/diplomatic-1.svg" alt="" aria-hidden="true"><img src="/producto/assets/city-center-1.svg" alt="" aria-hidden="true"><img src="/producto/assets/estancia-la-mantilla.svg" alt="" aria-hidden="true"><img src="/producto/assets/andesmar-logo.png" alt="" aria-hidden="true"><img src="/producto/assets/quinto-centenario-hotel-logo.png" alt="" aria-hidden="true"><img src="/producto/assets/casino-magig-hotel-y-casino-logo.png" alt="" aria-hidden="true">
+      </div></div>
+    </div>
+  </section>
+
+  <!-- ===================== DIFERENCIA ===================== -->
+  <section class="ax-sec" id="integral">
+    <div class="ax-wrap">
+      <div class="ax-head ax-center">
+        <p class="ax-eyebrow" data-r>Por qué integral</p>
+        <h2 class="ax-h2" data-r=".08">Tres campañas sueltas <em>no son una estrategia.</em></h2>
+        <p class="ax-lead" data-r=".16">Cuando cada plataforma va por su lado, se pisan entre sí y nadie mira la reserva final. Nosotros las pensamos juntas, desde tu hotel.</p>
+      </div>
+      <div class="a2-vs">
+        <article class="a2-col ax-card off" data-r>
+          <h3>Campañas por separado</h3>
+          <div class="scat"><span><img src="/alternativas/assets/google-g.svg" alt="Google"></span><span><img src="/alternativas/assets/meta.png" alt="Meta"></span><span><img src="/alternativas/assets/chatgpt.svg" alt="ChatGPT"></span></div>
+          <ul>
+            <li><span class="mk"><i data-ic="x"></i></span>Cada plataforma con su presupuesto y su agencia</li>
+            <li><span class="mk"><i data-ic="x"></i></span>Un reporte distinto por canal</li>
+            <li><span class="mk"><i data-ic="x"></i></span>Mensajes que no se hablan entre sí</li>
+            <li><span class="mk"><i data-ic="x"></i></span>Se mide en clics, no en reservas</li>
+          </ul>
+        </article>
+        <article class="a2-col ax-card on" data-r=".12">
+          <h3>Estrategia integral con Pxsol</h3>
+          <div class="tri"><span class="ax-med"><img src="/alternativas/assets/google-g.svg" alt="Google"></span><span class="ax-med"><img src="/alternativas/assets/meta.png" alt="Meta"></span><span class="ax-med"><img src="/alternativas/assets/chatgpt.svg" alt="ChatGPT"></span><em>un solo plan</em></div>
+          <ul>
+            <li><span class="mk"><i data-ic="check"></i></span>Un equipo especializado en hotelería para las tres plataformas</li>
+            <li><span class="mk"><i data-ic="check"></i></span>La inversión se mueve según la temporada y tu disponibilidad</li>
+            <li><span class="mk"><i data-ic="check"></i></span>Lo que aprende una plataforma mejora a las otras</li>
+            <li><span class="mk"><i data-ic="check"></i></span>Se mide en reservas y noches vendidas en tu motor</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ROLES ===================== -->
+  <section class="ax-sec" id="roles">
+    <div class="ax-wrap">
+      <div class="ax-head">
+        <p class="ax-eyebrow" data-r>Cómo se complementan</p>
+        <h2 class="ax-h2" data-r=".08">Cada plataforma, <em>un rol en la decisión.</em></h2>
+      </div>
+      <div class="a2-tabs" role="tablist" aria-label="Plataformas" data-r=".1">
+        <button class="a2-tab" role="tab" id="t-meta" aria-controls="p-meta" aria-selected="true"><span class="ax-med"><img src="/alternativas/assets/meta.png" alt=""></span><span><small>Meta</small><b>Despertar el interés</b></span><span class="bar"></span></button>
+        <button class="a2-tab" role="tab" id="t-gpt" aria-controls="p-gpt" aria-selected="false" tabindex="-1"><span class="ax-med"><img src="/alternativas/assets/chatgpt.svg" alt=""></span><span><small>ChatGPT</small><b>Estar en la conversación</b></span><span class="bar"></span></button>
+        <button class="a2-tab" role="tab" id="t-goo" aria-controls="p-goo" aria-selected="false" tabindex="-1"><span class="ax-med"><img src="/alternativas/assets/google-g.svg" alt=""></span><span><small>Google</small><b>Capturar la búsqueda</b></span><span class="bar"></span></button>
+      </div>
+      <div class="a2-panels ax-card" data-r=".16">
+        <div class="a2-pane" role="tabpanel" id="p-meta" aria-labelledby="t-meta">
+          <div>
+            <span class="who"><i data-ic="eye"></i>Todavía no te conoce</span>
+            <h3 class="ax-h3">Que tu hotel exista <em>antes de que comparen.</em></h3>
+            <p class="d">Con fotos y video en Instagram y Facebook llegamos a viajeros que todavía no buscan, y abrimos un canal directo por WhatsApp para cerrar la reserva.</p>
+            <ul class="lst">
+              <li><i><i data-ic="check"></i></i>Tráfico calificado a tu sitio oficial</li>
+              <li><i><i data-ic="check"></i></i>Consultas directas por WhatsApp</li>
+              <li><i><i data-ic="check"></i></i>Audiencias de remarketing para Google</li>
+            </ul>
+            <div class="where"><span class="ax-chip"><span class="ax-logo"><img src="/alternativas/assets/instagram.svg" alt=""></span>Instagram</span><span class="ax-chip"><span class="ax-logo"><img src="/alternativas/assets/whatsapp.svg" alt=""></span>WhatsApp</span></div>
+          </div>
+          <div class="viz">
+            <div class="m m-ig">
+              <div class="m-top"><span class="av"><img src="/producto/assets/ha-gpt-acacias-avatar.webp" alt=""></span><span><b>hotellasacacias</b><br><small>Publicidad</small></span></div>
+              <img class="ph" src="/producto/assets/ha-gpt-acacias-hab.webp" alt="Habitación del Hotel Las Acacias">
+              <div class="bar">Enviar mensaje de WhatsApp <i data-ic="chevron-right"></i></div>
+              <div class="cap"><b>hotellasacacias</b> Viñedos, pileta y desayuno en Mendoza.</div>
+            </div>
+            <div class="m-notif"><span class="ic"><img src="/alternativas/assets/whatsapp.svg" alt=""></span><div><b>Nueva consulta</b><span>¿Tienen lugar para el finde?</span></div></div>
+          </div>
+        </div>
+        <div class="a2-pane" role="tabpanel" id="p-gpt" aria-labelledby="t-gpt" hidden>
+          <div>
+            <span class="who"><i data-ic="message-circle"></i>Está comparando opciones</span>
+            <h3 class="ax-h3">Tu hotel, <em>en la respuesta que lee.</em> <span class="ax-new" style="vertical-align:middle;margin-left:6px">Nuevo</span></h3>
+            <p class="d">Cada vez más viajeros le piden a ChatGPT que les recomiende dónde quedarse. Debajo de la respuesta aparece tu anuncio, identificado como patrocinado, con la invitación a reservar en tu sitio.</p>
+            <ul class="lst">
+              <li><i><i data-ic="check"></i></i>Anuncio debajo de la respuesta</li>
+              <li><i><i data-ic="check"></i></i>Lleva directo a tu sitio oficial</li>
+              <li><i><i data-ic="check"></i></i>Lo exploramos junto a tu equipo</li>
+            </ul>
+            <div class="flags"><span class="ax-flag"><img src="/producto/assets/ha-flag-ar.svg" alt="Argentina"></span><span class="ax-flag"><img src="/producto/assets/ha-flag-cl.svg" alt="Chile"></span><span class="ax-flag"><img src="/producto/assets/ha-flag-co.svg" alt="Colombia"></span>Ya llegó a Argentina, Chile y Colombia</div>
+          </div>
+          <div class="viz">
+            <div class="m m-gpt">
+              <div class="m-top"><span class="ax-logo"><img src="/alternativas/assets/chatgpt.svg" alt=""></span><b>ChatGPT</b></div>
+              <div class="q">Busco alojamiento en Mendoza para ir en familia, con pileta.</div>
+              <div class="a">Hay varias opciones que suelen funcionar bien para familias: alojamientos con pileta, habitaciones amplias y cerca de las bodegas.</div>
+              <div class="spon">
+                <img class="t" src="/producto/assets/ha-gpt-acacias-hab.webp" alt="">
+                <div><small>Patrocinado</small><b>Hotel Las Acacias</b><span>Mejor tarifa en el sitio oficial</span></div>
+                <span class="go">Reservar</span>
+              </div>
+            </div>
+            <div class="m-notif"><span class="ic"><img src="/alternativas/assets/pxsol-isotipo.svg" alt=""></span><div><b>Nueva reserva directa</b><span>Desde ChatGPT · 3 noches</span></div></div>
+          </div>
+        </div>
+        <div class="a2-pane" role="tabpanel" id="p-goo" aria-labelledby="t-goo" hidden>
+          <div>
+            <span class="who"><i data-ic="search"></i>Ya te eligió</span>
+            <h3 class="ax-h3">Que la reserva <em>no se vaya a una OTA.</em></h3>
+            <p class="d">Cuando buscan tu nombre, las OTAs pujan por tu marca. Te ponemos arriba en tu propia búsqueda y mostramos la tarifa de tu sitio oficial en Búsqueda, Maps y Google Travel.</p>
+            <ul class="lst">
+              <li><i><i data-ic="check"></i></i>Search de marca y de zona</li>
+              <li><i><i data-ic="check"></i></i>Hotel Ads con tu tarifa directa</li>
+              <li><i><i data-ic="check"></i></i>Performance Max y remarketing</li>
+            </ul>
+            <div class="where"><span class="ax-chip t">Búsqueda</span><span class="ax-chip t">Maps</span><span class="ax-chip t">YouTube</span><span class="ax-chip t">Google Travel</span></div>
+          </div>
+          <div class="viz">
+            <div class="m m-g">
+              <div class="sbar"><span class="ax-logo"><img src="/alternativas/assets/google-g.svg" alt=""></span>hotel las acacias precio<i data-ic="search"></i></div>
+              <div class="res">
+                <small><i>Patrocinado</i></small>
+                <span class="u">hotellasacacias.com</span>
+                <b>Hotel Las Acacias · Sitio oficial</b>
+                <span>Reservá directo con la mejor tarifa. Pileta, viñedos y desayuno.</span>
+              </div>
+              <div class="price"><b>Sitio oficial</b> Reserva directa <span class="tag">Mejor tarifa</span></div>
+            </div>
+            <div class="m-notif"><span class="ic"><img src="/alternativas/assets/pxsol-isotipo.svg" alt=""></span><div><b>Nueva reserva directa</b><span>Desde Google · 2 noches</span></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROCESO ===================== -->
+  <section class="ax-sec" id="proceso">
+    <div class="ax-wrap">
+      <div class="ax-head">
+        <p class="ax-eyebrow" data-r>Qué hacemos nosotros</p>
+        <h2 class="ax-h2" data-r=".08">De cero a canal directo <em>en menos de 7 días.</em></h2>
+        <p class="ax-lead" data-r=".16">Un especialista dedicado se ocupa de todo, sin que tengas que tocar nada. Las campañas necesitan un período de aprendizaje antes de estabilizarse.</p>
+      </div>
+      <div class="a2-steps" id="a2-steps">
+        <svg class="ln" viewBox="0 0 1240 72" preserveAspectRatio="none" aria-hidden="true">
+          <path class="b" d="M36 36 L1150 36"/>
+          <path class="l" id="a2-ln" d="M36 36 L1150 36"/>
+        </svg>
+        <div class="a2-step" data-r><span class="ax-med"><i data-ic="search"></i></span><span class="wk">Sin costo</span><h3>Análisis gratuito</h3><p>Auditamos tu presencia online, tu canal directo y tu set competitivo.</p></div>
+        <div class="a2-step" data-r=".1"><span class="ax-med"><i data-ic="compass"></i></span><span class="wk">Primera semana</span><h3>Estrategia y activación</h3><p>Diseñamos y lanzamos tus campañas, conectadas con tu motor de reservas.</p></div>
+        <div class="a2-step" data-r=".2"><span class="ax-med"><i data-ic="sliders-horizontal"></i></span><span class="wk">Todos los días</span><h3>Gestión diaria</h3><p>Optimizamos pujas, presupuesto y anuncios según tu disponibilidad y tarifa.</p></div>
+        <div class="a2-step" data-r=".3"><span class="ax-med fin"><i data-ic="trending-up"></i></span><span class="wk">Cada mes</span><h3>Resultados y escala</h3><p>Reporte de reservas y ahorro en comisiones, y escalamos juntos lo que funciona.</p></div>
+      </div>
+      <div class="a2-eco" data-r=".1">Conectado de forma nativa con <span class="ax-chip">Motor de reservas</span><span class="ax-chip">PMS</span><span class="ax-chip">Channel Manager</span><span class="ax-chip">CRM</span></div>
+    </div>
+  </section>
+
+  <!-- ===================== RESULTADOS ===================== -->
+  <section class="ax-sec" id="resultados">
+    <div class="ax-wrap">
+      <div class="ax-head">
+        <p class="ax-eyebrow" data-r>Resultados</p>
+        <h2 class="ax-h2" data-r=".08">Medido en reservas, <em>no en promesas.</em></h2>
+      </div>
+      <div class="a2-bento">
+        <div class="a2-big" data-r>
+          <span class="n" data-count="1800" data-pre="+">+1.800</span>
+          <p>alojamientos ya trabajan con Pxsol en Latinoamérica.</p>
+          <p class="pt">Partners certificados de Google y Meta</p><div class="bd"><img src="/producto/assets/ha-badge-google-partner.png" alt="Google Partner"><img src="/producto/assets/ha-badge-meta-business-partner.png" alt="Meta Business Partner"></div>
+        </div>
+        <article class="ax-case ax-card" data-r=".1">
+          <img class="ph" src="/producto/assets/ha-frame-1410127814-1.png" alt="Piattelli Wine Resort" loading="lazy">
+          <div>
+            <h3>Piattelli Wine Resort<small>Cafayate, Argentina</small></h3>
+            <div class="ax-stats"><div><b data-count="8940">8.940</b><span>clics</span></div><div><b data-count="94213">94.213</b><span>impresiones</span></div><div><b data-count="801">801</b><span>conversiones</span></div></div>
+          </div>
+        </article>
+        <article class="ax-case ax-card" data-r=".18">
+          <img class="ph" src="/producto/assets/ha-frame-1410127813-1.png" alt="Farnese Apart Hotel &amp; Spa" loading="lazy">
+          <div>
+            <h3>Farnese Apart Hotel &amp; Spa<small>Argentina</small></h3>
+            <div class="ax-stats"><div><b data-count="9130">9.130</b><span>clics</span></div><div><b data-count="150614">150.614</b><span>impresiones</span></div><div><b data-count="2039">2.039</b><span>conversiones</span></div></div>
+          </div>
+        </article>
+        <div class="a2-rep ax-card" data-r=".12">
+          <div>
+            <span class="ax-logo"><img src="/producto/assets/ha-logo-studio.png" alt="Pxsol Studio"></span>
+            <h3>Un reporte claro, <em>todos los meses.</em></h3>
+            <p>Reservas directas atribuidas, inversión y conversiones de cada plataforma en un solo panel, con reuniones estratégicas con tu CSM.</p>
+          </div>
+          <img src="/producto/assets/ha-reporte-pxsol-studio.jpg" width="1998" height="1196" alt="Reporte mensual de Pxsol Studio, con datos de ejemplo" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PLANES ===================== -->
+  <section class="ax-sec" id="planes">
+    <div class="ax-wrap">
+      <div class="ax-head ax-center">
+        <p class="ax-eyebrow" data-r>Planes</p>
+        <h2 class="ax-h2" data-r=".08">Elegí cuánto invertir. <em>El fee no cambia.</em></h2>
+        <p class="ax-lead" data-r=".16">El fee de gestión es fijo todos los meses. Dentro del rango de tu plan subís la inversión en temporada alta y la bajás en temporada baja.</p>
+      </div>
+      <div class="a2-sim ax-card" data-r=".1">
+        <div>
+          <label class="lbl" for="a2-inv">Inversión publicitaria mensual</label>
+          <div class="val"><span id="a2-val">USD 1.000</span> <small>/mes</small></div>
+          <div class="a2-range">
+            <div class="tr" aria-hidden="true"><i id="a2-fill"></i><b style="left:8.16%"></b><b style="left:59.18%"></b></div>
+            <input type="range" id="a2-inv" min="100" max="5000" step="50" value="1000" aria-describedby="a2-plan-nm">
+          </div>
+          <div class="a2-ticks"><span>USD 100</span><span>USD 5.000</span></div>
+          <div class="a2-pick" role="group" aria-label="Planes">
+            <button type="button" data-v="300" aria-pressed="false">Starter</button>
+            <button type="button" data-v="1000" aria-pressed="true">Professional</button>
+            <button type="button" data-v="4000" aria-pressed="false">Enterprise</button>
+          </div>
+        </div>
+        <div class="a2-plan" aria-live="polite">
+          <div class="nm"><b id="a2-plan-nm">Plan Professional</b><span id="a2-plan-rg">USD 500 a 3.000</span></div>
+          <div class="sw">
+            <div class="pr" id="a2-plan-pr">ARS 399.500 <small>/mes</small></div>
+            <div class="fx">Fee de gestión fijo</div>
+            <div class="chs" id="a2-plan-ch"></div>
+          </div>
+          <div class="zero"><b>0%</b> comisión por reserva, en todos los planes</div>
+        </div>
+      </div>
+      <div class="a2-note" data-r=".1">
+        <span><i data-ic="circle-dollar-sign"></i>La inversión la pagás con tu tarjeta o con Pxsol Pay, en una sola factura</span>
+        <span><span class="ax-logo"><img src="/alternativas/assets/chatgpt.svg" alt="ChatGPT"></span>ChatGPT Ads: te invitamos a explorarlo con nuestro equipo</span>
+      </div>
+    </div>
+  </section>
+</div>
+<!--TRIAL-->
+<div class="trial-copy ax-tc">
+  <span class="ey">Auditoría gratuita</span>
+  <h2>Contanos de tu alojamiento y <em>armamos tu estrategia.</em></h2>
+  <p class="lead">Revisamos tu presencia online, tu canal directo y tu set competitivo. Sin costo y sin compromiso.</p>
+  <ul class="ticks"><li>Google, Meta y ChatGPT en un solo plan</li><li>Un especialista dedicado a tu cuenta</li><li>0% comisión por reserva</li></ul>
+  <div class="a2-trio" aria-hidden="true">
+    <span class="ax-med"><img src="/alternativas/assets/google-g.svg" alt=""></span><span class="ax-med"><img src="/alternativas/assets/meta.png" alt=""></span><span class="ax-med"><img src="/alternativas/assets/chatgpt.svg" alt=""></span><i data-ic="arrow-right"></i><span class="ax-med px"><img src="/alternativas/assets/pxsol-isotipo.svg" alt=""></span>
+  </div>
+</div>
+<!--/TRIAL-->
+
+<script src="/alternativas/vendor/gsap.min.js"></script>
+<script src="/alternativas/vendor/ScrollTrigger.min.js"></script>
+<script src="/alternativas/vendor/CustomEase.min.js"></script>
+<script src="/alternativas/vendor/lenis.min.js"></script>
+<script src="/alternativas/base.js"></script>
+<script src="/alternativas/alt2.js"></script>

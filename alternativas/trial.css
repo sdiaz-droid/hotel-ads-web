@@ -1,0 +1,21 @@
+/* Formulario real del sitio, vestido para el fondo continuo de las alternativas (sin #ax: vive afuera) */
+.trial.ax-trial{position:relative;isolation:isolate;overflow:hidden;background:#F6F7FB;padding:clamp(44px,6.5vh,84px) 0 clamp(64px,9vh,110px);border-radius:0;margin:0}
+.ax-trial::before{content:"";position:absolute;z-index:-1;width:1100px;height:900px;left:-360px;top:-200px;border-radius:50%;background:radial-gradient(closest-side,rgba(204,231,255,.62),rgba(204,231,255,.24) 55%,rgba(204,231,255,0))}
+.ax-trial::after{content:"";position:absolute;z-index:-1;width:900px;height:800px;right:-300px;bottom:-300px;border-radius:50%;background:radial-gradient(closest-side,rgba(255,174,174,.24),rgba(255,174,174,.08) 55%,rgba(255,174,174,0))}
+.ax-trial .wrap.trial-grid{max-width:1240px;margin:0 auto;padding:0 clamp(16px,5vw,96px);box-sizing:content-box;grid-template-columns:minmax(0,1fr) 460px;gap:clamp(28px,5vw,80px)}
+.ax-tc{font-family:'Work Sans',system-ui,sans-serif}
+.ax-tc .ey{display:inline-block;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#D20A11;font-weight:500}
+.ax-tc h2{margin:14px 0 0;font-family:'Work Sans',system-ui,sans-serif;font-weight:300;color:#000017;font-size:clamp(32px,3.5vw,54px);line-height:1.06;letter-spacing:-.02em}
+.ax-tc h2 em{font-style:italic;font-weight:300}
+.ax-tc .lead{margin-top:16px;color:#2B2B33;font-weight:300;font-size:clamp(17px,1.3vw,20px);line-height:1.5;max-width:30em}
+.ax-tc .ticks{margin-top:22px;gap:12px}
+.ax-tc .ticks li{color:#000017;font-size:16px;padding-left:32px;line-height:1.4}
+.ax-tc .ticks li::before{width:20px;height:20px;top:1px;background:#EAF5FD;border:0}
+.ax-tc .ticks li::after{left:6px;top:7px;width:8px;height:4px;border-color:#0C73A6;border-width:0 0 2px 2px;border-style:solid}
+.ax-trial .formcard{border-radius:28px;box-shadow:0 2px 4px rgba(0,0,23,.06),0 18px 40px -8px rgba(0,0,23,.16),0 50px 90px -24px rgba(0,0,23,.20)}
+.ax-trial .formcard button[type=submit]{background:#D20A11;border-color:#D20A11;box-shadow:0 18px 40px -12px rgba(210,10,17,.34);letter-spacing:.06em;text-transform:uppercase;font-weight:500;font-size:15px}
+@media (max-width:900px){
+  .ax-trial .wrap.trial-grid{grid-template-columns:1fr;box-sizing:border-box;padding:0 16px}
+  .ax-tc h2{font-size:clamp(29px,8vw,34px);line-height:1.1}
+  .ax-tc .lead{font-size:17px}
+}

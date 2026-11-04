@@ -1,0 +1,181 @@
+/* ==========================================================================
+   Hotel Ads · replanteo integral · base compartida de las dos alternativas
+   Tokens del manual Pxsol (pxsol-design-system/sistema/tokens.md).
+   Todo vive dentro de .ax para no chocar con el CSS global del sitio.
+   ========================================================================== */
+.ax{
+  --ink:#000017; --body:#2B2B33; --grey:#555555; --g4:#999999; --stroke:#E4E4E7;
+  --paper:#FFFFFF; --paper2:#F9F9F9; --paper3:#F6F7FB; --red:#D20A11; --red600:#B3090F;
+  --sky:#CCE7FF; --ads:#3CAEE7; --ads-d:#0C73A6; --orange:#FF7316; --graf:#1A1A1A;
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --f:'Work Sans',system-ui,-apple-system,sans-serif;
+  --sh:0 1px 2px rgba(0,0,23,.06),0 10px 24px -6px rgba(0,0,23,.10),0 32px 64px -18px rgba(0,0,23,.14);
+  --sh-lo:0 1px 2px rgba(0,0,23,.05),0 8px 20px -8px rgba(0,0,23,.10);
+  --sh-hi:0 2px 4px rgba(0,0,23,.06),0 18px 40px -8px rgba(0,0,23,.16),0 50px 90px -24px rgba(0,0,23,.20);
+  --sh-red:0 18px 40px -12px rgba(210,10,17,.34);
+  --gut:clamp(16px,5vw,96px);
+  --max:1240px;
+  --secpad:clamp(44px,6.5vh,84px);
+  position:relative; isolation:isolate; overflow-x:clip;
+  background:var(--paper3); color:var(--body); font-family:var(--f);
+  font-size:17px; line-height:1.5; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+}
+.ax *,.ax *::before,.ax *::after{box-sizing:border-box}
+.ax h1,.ax h2,.ax h3,.ax h4,.ax p,.ax ul,.ax ol,.ax figure{margin:0;padding:0}
+.ax ul,.ax ol{list-style:none}
+.ax img{display:block;max-width:100%;height:auto}
+.ax a{color:inherit;text-decoration:none}
+.ax em{font-style:italic;font-weight:300}
+.ax b,.ax strong{font-weight:500;color:var(--ink)}
+.ax .lc{width:1em;height:1em;flex:none;display:block}
+.ax .nw{white-space:nowrap}
+
+/* ---------- fondo continuo: halos quietos que cruzan secciones ---------- */
+.ax-bg{position:absolute;inset:0;pointer-events:none;z-index:-1;overflow:hidden}
+.ax-bg i{position:absolute;border-radius:50%;display:block}
+.ax-bg .hs{background:radial-gradient(closest-side,rgba(204,231,255,.62),rgba(204,231,255,.24) 55%,rgba(204,231,255,0))}
+.ax-bg .hr{background:radial-gradient(closest-side,rgba(255,174,174,.26),rgba(255,174,174,.09) 55%,rgba(255,174,174,0))}
+
+/* ---------- tipografía ---------- */
+.ax-wrap{max-width:var(--max);margin:0 auto;position:relative}
+.ax-sec{position:relative;padding:var(--secpad) var(--gut)}
+.ax-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--red);font-weight:500;margin-bottom:14px}
+.ax-h1{font-weight:300;color:var(--ink);font-size:clamp(38px,4.3vw,66px);line-height:1.03;letter-spacing:-.025em}
+.ax-h2{font-weight:300;color:var(--ink);font-size:clamp(32px,3.5vw,54px);line-height:1.06;letter-spacing:-.02em;max-width:17em}
+.ax-h3{font-weight:400;color:var(--ink);font-size:clamp(20px,1.5vw,23px);line-height:1.25;letter-spacing:-.01em}
+.ax-lead{font-weight:300;font-size:clamp(17px,1.3vw,20px);line-height:1.5;color:var(--body);max-width:36em}
+.ax-lead strong{font-weight:400}
+.ax-center{text-align:center}
+.ax-center .ax-h2,.ax-center .ax-lead{margin-left:auto;margin-right:auto}
+.ax-head{margin-bottom:clamp(28px,4vh,48px)}
+.ax-head .ax-lead{margin-top:14px}
+
+/* ---------- CTA (estados del playbook §6) ---------- */
+.ax-cta{position:relative;isolation:isolate;display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 30px;border:0;border-radius:999px;background:var(--red);color:#fff!important;font:500 15px/1 var(--f);letter-spacing:.08em;text-transform:uppercase;cursor:pointer;box-shadow:var(--sh-red);transition:transform 200ms var(--ease),box-shadow 200ms var(--ease);overflow:hidden;white-space:nowrap}
+.ax-cta::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 30%,rgba(255,255,255,.32) 48%,transparent 66%);transform:translateX(-120%);transition:transform 700ms var(--ease);z-index:-1}
+.ax-cta .lc{font-size:18px}
+@media (hover:hover){
+  .ax-cta:hover{transform:translateY(-6px) scale(1.022);box-shadow:0 28px 48px -12px rgba(210,10,17,.40)}
+  .ax-cta:hover::after{transform:translateX(120%)}
+}
+.ax-cta:active{transform:translateY(-1px) scale(.982);box-shadow:0 8px 10px -6px rgba(210,10,17,.4)}
+.ax-cta:focus-visible,.ax-link:focus-visible,.ax button:focus-visible{outline:3px solid var(--red);outline-offset:4px}
+.ax-link{display:inline-flex;align-items:center;gap:8px;font-weight:500;color:var(--ink);font-size:16px;padding:8px 2px}
+.ax-link .lc{font-size:18px;transition:transform 200ms var(--ease)}
+@media (hover:hover){.ax-link:hover .lc{transform:translateY(3px)}}
+
+/* ---------- tarjetas con profundidad ---------- */
+.ax-card{position:relative;background:linear-gradient(180deg,#fff 0%,#F7F7FA 100%);border-radius:22px;box-shadow:var(--sh),inset 0 1px 0 #fff}
+.ax-card::before{content:"";position:absolute;left:10%;right:10%;bottom:-16px;height:26px;border-radius:50%;background:radial-gradient(closest-side,rgba(0,0,23,.14),rgba(0,0,23,0));filter:blur(4px);z-index:-1}
+.ax-med{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(180deg,#fff,#EEF0F5);box-shadow:0 1px 2px rgba(0,0,23,.08),0 10px 22px -8px rgba(0,0,23,.22),inset 0 -2px 4px rgba(0,0,23,.05),inset 0 1px 0 #fff;color:var(--ink);flex:none}
+.ax-med img{width:52%;height:auto}
+.ax-med .lc{font-size:24px}
+.ax-med.sm{width:40px;height:40px}
+.ax-med.sm .lc{font-size:18px}
+.ax-logo{display:inline-grid;place-items:center;width:1.25em;height:1.25em;flex:none}
+.ax-logo img{width:100%;height:100%;object-fit:contain}
+
+/* pill «NUEVO» y chips */
+.ax-new{display:inline-flex;align-items:center;height:22px;padding:0 9px;border-radius:999px;background:var(--red);color:#fff;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;line-height:1}
+.ax-chip{display:inline-flex;align-items:center;gap:8px;height:38px;padding:0 16px 0 10px;border-radius:999px;background:#fff;box-shadow:var(--sh-lo);font-size:14.5px;color:var(--ink);white-space:nowrap}
+.ax-chip .ax-logo{font-size:18px}
+
+/* banderas (flag-icons 1x1, disco en aro blanco) */
+.ax-flag{width:30px;height:30px;border-radius:50%;padding:3px;background:#fff;box-shadow:0 1px 2px rgba(0,0,23,.10),0 6px 14px -6px rgba(0,0,23,.25);flex:none}
+.ax-flag img{width:100%;height:100%;border-radius:50%;object-fit:cover;box-shadow:inset 0 0 0 1px rgba(0,0,23,.08)}
+
+/* datos del hero */
+.ax-facts{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:22px}
+.ax-fact{display:flex;align-items:baseline;gap:8px;color:var(--grey);font-size:14.5px}
+.ax-fact b{font-size:22px;font-weight:400;color:var(--ink);letter-spacing:-.01em}
+.ax-badges{display:flex;align-items:center;gap:14px;margin-top:22px}
+.ax-badges img{height:42px;width:auto}
+
+/* ==========================================================================
+   Maquetas de interfaz en HTML (texto vivo, nada de capturas)
+   ========================================================================== */
+.m{font-family:var(--f);color:#0d0d0d;background:#fff;border-radius:18px;box-shadow:var(--sh);overflow:hidden;font-size:1em}
+.m-top{display:flex;align-items:center;gap:.55em;padding:.7em .9em;font-size:.8em;color:#333}
+.m-top .ax-logo{font-size:1.15em}
+.m-top b{font-weight:600;color:#0d0d0d}
+.m-top small{color:#8a8a8a;font-size:.92em}
+/* Instagram */
+.m-ig .m-top{padding:.65em .8em}
+.m-ig .av{width:1.9em;height:1.9em;border-radius:50%;padding:2px;background:conic-gradient(from 210deg,#FEDA75,#FA7E1E,#D62976,#962FBF,#4F5BD5,#FEDA75);flex:none}
+.m-ig .av img{width:100%;height:100%;border-radius:50%;border:2px solid #fff;object-fit:cover}
+.m-ig .ph{aspect-ratio:1/1;width:100%;object-fit:cover}
+.m-ig .bar{display:flex;align-items:center;justify-content:space-between;padding:.62em .85em;background:#F3F5F8;font-size:.78em;font-weight:600;color:#0d0d0d}
+.m-ig .acts{display:flex;gap:.8em;padding:.6em .85em .2em;font-size:1.05em;color:#0d0d0d}
+.m-ig .cap{padding:.1em .85em .8em;font-size:.74em;color:#333;line-height:1.4}
+.m-ig .cap b{font-weight:600;color:#0d0d0d}
+/* ChatGPT */
+.m-gpt{padding-bottom:.85em}
+.m-gpt .q{margin:.2em .85em .6em auto;max-width:78%;background:#F1F1F1;border-radius:1.1em;padding:.6em .85em;font-size:.8em;line-height:1.4;width:fit-content}
+.m-gpt .a{padding:0 .95em;font-size:.8em;line-height:1.5;color:#1f1f1f}
+.m-gpt .spon{margin:.75em .85em 0;border:1px solid #E6E6E6;border-radius:.9em;padding:.6em;display:flex;gap:.65em;align-items:center;background:#fff;position:relative}
+.m-gpt .spon .t{width:3.2em;height:3.2em;border-radius:.6em;object-fit:cover;flex:none}
+.m-gpt .spon small{display:block;font-size:.66em;color:#8a8a8a;letter-spacing:.02em}
+.m-gpt .spon b{display:block;font-size:.84em;font-weight:600;color:#0d0d0d;line-height:1.25}
+.m-gpt .spon span{display:block;font-size:.72em;color:#555;line-height:1.3}
+.m-gpt .spon .go{margin-left:auto;align-self:center;font-size:.7em;font-weight:600;background:#0d0d0d;color:#fff;border-radius:999px;padding:.55em .9em;white-space:nowrap}
+/* Google */
+.m-g{padding-bottom:.9em}
+.m-g .sbar{display:flex;align-items:center;gap:.6em;margin:.85em .85em .7em;padding:.6em .9em;border-radius:999px;box-shadow:0 1px 6px rgba(32,33,36,.18);font-size:.8em;color:#202124}
+.m-g .sbar .ax-logo{font-size:1.1em}
+.m-g .sbar .lc{margin-left:auto;color:#4285F4;font-size:1.1em}
+.m-g .res{padding:0 1.05em}
+.m-g .res small{display:block;font-size:.66em;color:#202124}
+.m-g .res small i{font-style:normal;font-weight:700}
+.m-g .res .u{display:block;font-size:.68em;color:#4d5156}
+.m-g .res b{display:block;font-size:.95em;font-weight:400;color:#1a0dab;margin:.15em 0 .1em;line-height:1.25}
+.m-g .res span{display:block;font-size:.72em;color:#4d5156;line-height:1.4}
+.m-g .price{display:flex;align-items:center;gap:.6em;margin:.7em 1.05em 0;padding:.55em .7em;border-radius:.7em;background:#F1F6FE;font-size:.74em;color:#202124}
+.m-g .price b{color:#202124;font-weight:600}
+.m-g .price .tag{margin-left:auto;background:#fff;color:#137333;border-radius:999px;padding:.25em .65em;font-weight:600;font-size:.92em;box-shadow:0 1px 2px rgba(0,0,0,.1)}
+
+/* Aviso de reserva (fondo blanco, PX en color) */
+.m-notif{display:flex;align-items:center;gap:.8em;background:#fff;border-radius:1.15em;padding:.75em 1.1em .75em .75em;box-shadow:var(--sh-hi);font-size:1em}
+.m-notif .ic{width:2.6em;height:2.6em;border-radius:.75em;display:grid;place-items:center;flex:none;background:#fff;box-shadow:inset 0 0 0 1px var(--stroke)}
+.m-notif .ic img{width:62%}
+.m-notif b{display:block;font-size:.84em;font-weight:500;color:var(--ink);line-height:1.25}
+.m-notif span{display:block;font-size:.8em;color:var(--body);line-height:1.3}
+.m-notif small{display:block;font-size:.72em;color:var(--g4);margin-top:.1em}
+
+/* ---------- casos reales ---------- */
+.ax-case{display:grid;grid-template-columns:200px 1fr;gap:22px;padding:18px;align-items:center}
+.ax-case .ph{width:100%;aspect-ratio:502/572;object-fit:cover;border-radius:16px}
+.ax-case h3{font-size:21px;font-weight:400;color:var(--ink);line-height:1.25}
+.ax-case h3 small{display:block;font-size:14px;color:var(--grey);margin-top:2px}
+.ax-case p{font-size:15px;color:var(--body);margin-top:10px;line-height:1.45}
+.ax-stats{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:4px 26px;margin-top:16px}
+.ax-stats div{display:flex;flex-direction:column}
+.ax-stats b{font-size:28px;font-weight:600;color:var(--ink);letter-spacing:-.02em;line-height:1.1;font-variant-numeric:tabular-nums}
+.ax-stats span{font-size:13px;color:var(--grey)}
+
+/* ---------- logos de clientes (marquee) ---------- */
+.ax-marquee{overflow:hidden;-webkit-mask:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.ax-marquee .tr{display:flex;align-items:center;gap:clamp(36px,5vw,72px);width:max-content;will-change:transform}
+.ax-marquee img{height:40px;width:auto;max-width:150px;object-fit:contain;filter:grayscale(1);opacity:.62}
+
+/* ---------- reveals (una sola vez) ---------- */
+.ax [data-r]{opacity:0;transform:translateY(14px)}
+.ax.no-js [data-r],.ax.rm [data-r]{opacity:1;transform:none}
+
+/* ---------- celular ---------- */
+@media (max-width:900px){
+  .ax{font-size:16px}
+  .ax-case{grid-template-columns:110px 1fr;gap:16px;padding:14px}
+  .ax-stats b{font-size:22px}
+  .ax-stats{gap:2px 18px}
+}
+@media (max-width:560px){
+  .ax-h1{font-size:clamp(34px,9.4vw,40px);line-height:1.06}
+  .ax-h2{font-size:clamp(29px,8vw,34px);line-height:1.1}
+  .ax-lead{font-size:17px}
+  .ax-cta{width:100%;height:56px;font-size:14px;padding:0 18px}
+  .ax-fact b{font-size:20px}
+  .ax-badges img{height:36px}
+  .ax-case{grid-template-columns:1fr}
+  .ax-case .ph{aspect-ratio:16/9;object-position:50% 40%}
+  .ax-marquee img{height:32px;max-width:120px}
+}
