@@ -348,8 +348,69 @@
 #ax .a1-ad:nth-child(even){margin-top:46px}
 #ax .a1-ad .pe{--pe:clamp(11px,.95vw,13.4px)}
 #ax .a1-ad .pe-cap{align-items:center;max-width:250px}
-#ax .a1-eco .ax-wrap{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:clamp(28px,4vw,64px);align-items:center}
-#ax .a1-eco-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(14px,1.6vw,22px)}
+#ax .a1-eco .ax-head .ax-h2{max-width:22em;font-size:clamp(32px,3.4vw,48px)}
+#ax .a1-eco .ax-head .ax-lead{max-width:40em}
+#ax .a1-eco-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(14px,1.6vw,22px);padding-top:29px}
+#ax .a1-eco-grid .eco-c{position:relative;padding:46px 22px 22px;text-align:center;align-items:center}
+#ax .a1-eco-grid .eco-c > .ax-med{position:absolute;top:-29px;left:50%;transform:translateX(-50%)}
+#ax .a1-eco-grid .eco-c > .ax-med .lc{color:var(--ads-d)}
+#ax .a1-eco-grid .eco-c .ax-h3{max-width:12em}
+#ax .a1-eco-grid .eco-c .live{width:100%}
+#ax .a1-eco-grid .eco-c .live > div{display:flex;flex-direction:column;justify-content:center;align-items:center;min-height:76px;text-align:center}
+#ax .a1-eco-grid .eco-c .live .e{display:block}
+#ax .a1-eco-grid .eco-c .live .e .dt{display:inline-block;vertical-align:middle;margin:-2px 8px 0 0}
+#ax .a1-eco-grid .eco-c .live small{display:block;padding-left:0}
+#ax .a1-eco-grid .eco-c .live small .lc{display:inline-block;vertical-align:-2px;margin-right:4px}
+#ax .a1-eco .ax-h2,#ax .a1-proc .ax-h2,#ax .a1-eco-grid .ax-h3{text-wrap:balance}
+@media (max-width:1100px){#ax .a1-eco-grid{grid-template-columns:1fr 1fr;row-gap:50px}}
+#ax .a1-st .q{min-height:4.15em}
+#ax .a1-road{max-width:1180px;margin:0 auto}
+#ax .a1-opt{display:flex;justify-content:center;margin-bottom:22px}
+#ax .a1-opt span{font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ads-d);background:#EAF5FD;border-radius:999px;padding:6px 14px;font-weight:500}
+#ax .a1-tl{position:relative;--n:72px}
+#ax .a1-tl .trk{position:absolute;pointer-events:none;z-index:0;background:repeating-linear-gradient(90deg,#C5CAD6 0 2px,transparent 2px 10px)}
+#ax .a1-tl .fill{position:absolute;inset:0;background:var(--red);border-radius:2px;transform-origin:0 50%;transform:scaleX(0)}
+#ax.rm .a1-tl .fill,#ax.no-js .a1-tl .fill{transform:none}
+#ax .a1-tl .st{position:relative;z-index:1}
+#ax .a1-tl .ax-med{width:var(--n);height:var(--n);transition:box-shadow 500ms var(--ease)}
+#ax .a1-tl .ax-med .lc{font-size:28px;color:var(--ads-d);transition:color 500ms var(--ease)}
+#ax .a1-tl .ax-med.on .lc{color:var(--red)}
+#ax .a1-tl .ax-med.on{box-shadow:0 1px 2px rgba(0,0,23,.08),0 10px 22px -8px rgba(0,0,23,.22),0 0 0 6px rgba(210,10,17,.08)}
+#ax .a1-tl .ax-med.fin{background:var(--red)}
+#ax .a1-tl .ax-med.fin .lc{color:#fff}
+#ax .a1-tl .wk{display:inline-block;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--grey);margin-bottom:6px}
+#ax .a1-tl h3{font-weight:400;font-size:20px;color:var(--ink);line-height:1.25}
+#ax .a1-tl p{margin-top:8px;font-size:15.5px;line-height:1.5;color:var(--body)}
+#ax .tl-a,#ax .tl-b{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+#ax .tl-a .st,#ax .tl-b .st{text-align:center;padding:0 clamp(10px,1.4vw,22px);display:flex;flex-direction:column;align-items:center}
+#ax .tl-a .ax-med,#ax .tl-b .ax-med{margin-bottom:22px}
+#ax .tl-a .tx p,#ax .tl-b .tx p{max-width:17em;margin-left:auto;margin-right:auto}
+#ax .tl-a .trk,#ax .tl-b .trk{left:12.5%;right:12.5%;top:calc(var(--n)/2 - 1px);height:2px}
+#ax .tl-b{padding:96px clamp(10px,2vw,28px) 34px;border-radius:28px}
+#ax .tl-b .trk{top:calc(96px + var(--n)/2 - 1px);left:calc(12.5% + 6px);right:calc(12.5% + 6px)}
+#ax .tl-b .brk{position:absolute;top:44px;left:calc(12.5% + 4px);width:calc(25% - 8px);height:34px;border:1.5px solid rgba(210,10,17,.55);border-bottom:0;border-radius:14px 14px 0 0}
+#ax .tl-b .brk span{position:absolute;left:50%;top:0;transform:translate(-50%,-50%);display:inline-flex;align-items:center;gap:7px;height:32px;padding:0 14px;border-radius:999px;background:var(--red);color:#fff;font-size:13.5px;font-weight:500;white-space:nowrap;box-shadow:0 8px 18px -8px rgba(210,10,17,.6)}
+#ax .tl-b .brk .lc{font-size:15px}
+#ax .tl-c{display:grid;grid-template-columns:minmax(0,1fr) var(--n) minmax(0,1fr);column-gap:clamp(20px,3vw,40px);row-gap:clamp(26px,4vh,44px);max-width:900px;margin:0 auto}
+#ax .tl-c .st{display:contents}
+#ax .tl-c .st > *{grid-row:var(--r)}
+#ax .tl-c .ax-med{grid-column:2;position:relative;z-index:1}
+#ax .tl-c .st.l .tx{grid-column:1;text-align:right}
+#ax .tl-c .st.r .tx{grid-column:3;text-align:left}
+#ax .tl-c .tx{align-self:center}
+#ax .tl-c .trk{left:50%;margin-left:-1px;width:2px;top:calc(var(--n)/2);bottom:calc(var(--n)/2);background:repeating-linear-gradient(180deg,#C5CAD6 0 2px,transparent 2px 10px)}
+#ax .tl-c .fill{transform-origin:50% 0;transform:scaleY(0)}
+@media (max-width:900px){#ax .tl-a,#ax .tl-b{grid-template-columns:1fr;row-gap:44px}
+#ax .tl-a .trk,#ax .tl-b .trk,#ax .tl-b .brk{display:none}
+#ax .tl-b{padding:34px 16px}
+#ax .tl-a .st:not(:last-child)::after,#ax .tl-b .st:not(:last-child)::after{content:"";position:absolute;left:50%;bottom:-36px;height:28px;border-left:2px dotted #C5CAD6}
+#ax .a1-tl{--n:60px}
+#ax .a1-tl .ax-med .lc{font-size:24px}}
+@media (max-width:640px){#ax .tl-c{grid-template-columns:var(--n) minmax(0,1fr);column-gap:18px}
+#ax .tl-c .ax-med{grid-column:1}
+#ax .tl-c .st.l .tx,#ax .tl-c .st.r .tx{grid-column:2;text-align:left}
+#ax .tl-c .trk{left:calc(var(--n)/2)}}
+#ax .a1-eco-grid .eco-c .ax-med img{width:52%}
 #ax .a1-vs{display:flex;flex-direction:column;gap:12px;margin-top:26px}
 #ax .a1-vs > div{display:flex;align-items:center;gap:14px;padding:14px 18px;border-radius:16px;background:rgba(255,255,255,.55);box-shadow:inset 0 0 0 1px var(--stroke)}
 #ax .a1-vs > div.on{background:#fff;box-shadow:var(--sh-lo),0 0 0 2px rgba(60,174,231,.35)}
@@ -4634,10 +4695,10 @@ html.pxnv-lock, html.pxnv-lock body { overflow:hidden; }
   <!-- ===================== CAMINO ===================== -->
   <section class="ax-sec" id="camino">
     <div class="ax-wrap">
-      <div class="ax-head">
+      <div class="ax-head ax-center">
         <p class="ax-eyebrow" data-r>Cómo se complementan</p>
         <h2 class="ax-h2" data-r=".08">Cada plataforma llega <em>en un momento distinto.</em></h2>
-        <p class="ax-lead" data-r=".16">El huésped no decide de una vez. Por eso no alcanza con estar en un solo lugar: cada canal cumple su rol y le pasa la posta al siguiente, hasta la reserva en tu sitio.</p>
+        <p class="ax-lead" data-r=".16">El huésped no decide de una vez. Cada canal cumple su rol y le pasa la posta al siguiente, hasta la reserva en tu sitio.</p>
       </div>
       <div class="a1-road" id="a1-road">
                 <article class="a1-st ax-card" data-r>
@@ -4645,11 +4706,7 @@ html.pxnv-lock, html.pxnv-lock body { overflow:hidden; }
           <span class="mom">Se inspira</span>
           <p class="q"><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/><circle cx="12" cy="12" r="3"/></svg>Ve un reel de una escapada a la montaña.</p>
           <h3 class="ax-h3">Meta despierta el interés</h3>
-          <p>Instagram y Facebook ponen tu hotel en la cabeza de viajeros que todavía no te conocen, con fotos y video.</p>
-          <ul class="do">
-            <li><i><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></i>Campañas de alcance y de tráfico</li>
-            <li><i><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></i>Consultas directas por WhatsApp</li>
-          </ul>
+          <p>Instagram y Facebook ponen tu hotel en la cabeza de viajeros que todavía no te conocen.</p>
           <span class="a1-nx" aria-hidden="true"><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
         </article>
         <article class="a1-st ax-card" data-r=".1">
@@ -4657,10 +4714,7 @@ html.pxnv-lock, html.pxnv-lock body { overflow:hidden; }
           <span class="mom">Compara <span class="ax-new" style="margin-left:6px">Nuevo</span></span>
           <p class="q"><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/></svg>«¿Dónde me quedo en Mendoza con chicos?»</p>
           <h3 class="ax-h3">ChatGPT te suma a la conversación</h3>
-          <p>Debajo de la respuesta aparece tu anuncio, identificado como patrocinado, con la invitación a reservar en tu sitio.</p>
-          <ul class="do">
-            <li><i><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></i>Anuncio debajo de la respuesta</li>
-          </ul>
+          <p>Tu anuncio aparece debajo de la respuesta, con la invitación a reservar en tu sitio.</p>
           <div class="soon">
             <span class="ax-flag"><img src="/producto/assets/ha-flag-ar.svg" alt="Argentina"></span><span class="ax-flag"><img src="/producto/assets/ha-flag-cl.svg" alt="Chile"></span><span class="ax-flag"><img src="/producto/assets/ha-flag-co.svg" alt="Colombia"></span>
             Ya llegó a Argentina, Chile y Colombia
@@ -4672,18 +4726,14 @@ html.pxnv-lock, html.pxnv-lock body { overflow:hidden; }
           <span class="mom">Decide</span>
           <p class="q"><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>«hotel las acacias precio»</p>
           <h3 class="ax-h3">Google captura al que ya te busca</h3>
-          <p>Te ponemos arriba de las OTAs en tu propia marca y mostramos la tarifa del sitio oficial en Maps y Google Travel.</p>
-          <ul class="do">
-            <li><i><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></i>Search de marca y de zona</li>
-            <li><i><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></i>Hotel Ads y Performance Max</li>
-          </ul>
+          <p>Te ponemos arriba de las OTAs y mostramos la tarifa de tu sitio oficial.</p>
           <span class="a1-nx" aria-hidden="true"><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
         </article>
         <article class="a1-goal" data-r=".3">
           <span class="ax-med"><img src="/alternativas/assets/pxsol-isotipo.svg" alt="Pxsol"></span>
           <span class="mom">Reserva</span>
           <h3>En tu sitio oficial, <em>sin intermediarios.</em></h3>
-          <p>La reserva entra por tu motor y queda medida: sabés qué canal la trajo y cuántas noches vendiste.</p>
+          <p>Entra por tu motor y sabés qué canal la trajo.</p>
           <div class="z"><b>0%</b><span>comisión<br>por reserva</span></div>
         </article>
       </div>
@@ -4787,23 +4837,19 @@ html.pxnv-lock, html.pxnv-lock body { overflow:hidden; }
     </div>
   </section>
 
-  <!-- ===================== ECOSISTEMA ===================== -->
+  <!-- ===================== POR QUÉ CON PXSOL (copy de Sofi) ===================== -->
   <section class="ax-sec a1-eco" id="ecosistema">
     <div class="ax-wrap">
-      <div>
-        <p class="ax-eyebrow" data-r>Por qué con Pxsol</p>
-        <h2 class="ax-h2" data-r=".08">Una agencia ve clics. <em>Nosotros vemos tu hotel.</em></h2>
-        <p class="ax-lead" style="margin-top:14px" data-r=".16">Somos un ecosistema integral: la diferencia no es el Ads, es la integración total con tu operación hotelera.</p>
-        <div class="a1-vs" data-r=".22">
-          <div><span class="ax-med sm"><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></span><p><b>Una agencia externa</b>Mira impresiones y clics, sin saber si tenés lugar.</p></div>
-          <div class="on"><span class="ax-med sm"><img src="/alternativas/assets/pxsol-isotipo.svg" alt=""></span><p><b>Pxsol</b>Ve tu disponibilidad, tus tarifas, tus reservas y tus huéspedes.</p></div>
-        </div>
+      <div class="ax-head ax-center">
+        <p class="ax-eyebrow" data-r>¿Por qué hacer tu publicidad con Pxsol?</p>
+        <h2 class="ax-h2" data-r=".08">Conocemos tu hotel.<br><em>Y usamos esa información<br>para ayudarte a vender más.</em></h2>
+        <p class="ax-lead" data-r=".16">Sabemos qué habitaciones tenés disponibles, cuáles son tus tarifas y qué anuncios te traen reservas. Así, tu publicidad acompaña lo que tu hotel necesita vender.</p>
       </div>
       <div class="a1-eco-grid eco-set">
-<article class="eco-c ax-card" data-r=""><div class="pr"><span class="ax-med"><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8"/><path d="M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4"/><path d="M12 4v6"/><path d="M2 18h20"/></svg></span><span><b>PMS</b> <em>+ Ads</em></span></div><h3 class="ax-h3">Tarifas y disponibilidad reales</h3><p>Sincronización total de disponibilidad y tarifas en tiempo real: tus campañas siempre con información actualizada.</p><div class="live"><div><span class="e"><i class="dt"></i>Quedan 2 habitaciones para el finde largo</span><small><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>La campaña se ajusta a tu disponibilidad</small></div></div></article>
-<article class="eco-c ax-card" data-r=".9"><div class="pr"><span class="ax-med"><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg></span><span><b>Channel Manager</b> <em>+ Ads</em></span></div><h3 class="ax-h3">Sin overbooking ni errores de paridad</h3><p>Tu inventario siempre actualizado en Google Hotel Ads. Eliminamos el riesgo de overbooking y errores de paridad.</p><div class="live"><div><span class="e"><i class="dt"></i>Cambiaste la tarifa del fin de semana</span><small><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>Hotel Ads muestra la misma tarifa</small></div></div></article>
-<article class="eco-c ax-card" data-r=".18"><div class="pr"><span class="ax-med"><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v3"/><path d="M16 2v3"/><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M8 13h.01"/><path d="M12 13h.01"/><path d="M16 13h.01"/><path d="M8 17h.01"/><path d="M12 17h.01"/><path d="M16 17h.01"/></svg></span><span><b>Motor de reservas</b> <em>+ Ads</em></span></div><h3 class="ax-h3">Sin fugas de conversión</h3><p>El tráfico llega a una plataforma optimizada para convertir visitas en huéspedes, y cada reserva vuelve medida.</p><div class="live"><div><span class="e"><i class="dt"></i>Nueva reserva directa, 3 noches</span><small><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>Atribuida a la campaña que la trajo</small></div></div></article>
-<article class="eco-c ax-card" data-r=".27"><div class="pr"><span class="ax-med"><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></svg></span><span><b>CRM</b> <em>+ Ads</em></span></div><h3 class="ax-h3">Fidelización alineada con tus anuncios</h3><p>Campañas de email marketing y fidelización alineadas con tus anuncios, para un ecosistema de conversión completo.</p><div class="live"><div><span class="e"><i class="dt"></i>Huésped nuevo en tu base</span><small><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>Se suma a tus campañas de fidelización</small></div></div></article>
+<article class="eco-c ax-card" data-r=""><span class="ax-med"><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v3"/><path d="M16 2v3"/><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M8 13h.01"/><path d="M12 13h.01"/><path d="M16 13h.01"/><path d="M8 17h.01"/><path d="M12 17h.01"/><path d="M16 17h.01"/></svg></span><h3 class="ax-h3">Promocionamos las fechas que necesitás llenar</h3><p>Organizamos la publicidad según las habitaciones que tenés libres y las fechas en las que necesitás más huéspedes.</p><div class="live"><div><span class="e"><i class="dt"></i>¿Tenés lugar para el próximo finde?</span><small><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>Enfocamos los anuncios en esas fechas</small></div></div></article>
+<article class="eco-c ax-card" data-r=".09"><span class="ax-med"><img src="/alternativas/assets/google-g.svg" alt=""></span><h3 class="ax-h3">Mostramos tus precios actualizados en Google</h3><p>Conectamos tus tarifas y disponibilidad para que el viajero vea cuánto cuesta alojarse y si hay lugar para sus fechas.</p><div class="live"><div><span class="e"><i class="dt"></i>Cambiás una tarifa en tu sistema</span><small><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>Ese precio se actualiza en Google</small></div></div></article>
+<article class="eco-c ax-card" data-r=".18"><span class="ax-med"><img src="/alternativas/assets/pxsol-isotipo.svg" alt="" style="width:56%"></span><h3 class="ax-h3">Llevamos al viajero a reservar en tu web</h3><p>Tus anuncios llevan a tu página para que el huésped reserve directamente con vos. Además, podés saber qué publicidad generó esa reserva.</p><div class="live"><div><span class="e"><i class="dt"></i>Entró una reserva de tres noches</span><small><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>Sabés de qué anuncio vino</small></div></div></article>
+<article class="eco-c ax-card" data-r=".27"><span class="ax-med"><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></svg></span><h3 class="ax-h3">Te ayudamos a que tus huéspedes vuelvan</h3><p>Aprovechamos los contactos de quienes ya se alojaron para enviarles promociones y darles un motivo para volver a reservar.</p><div class="live"><div><span class="e"><i class="dt"></i>Se acerca un finde largo</span><small><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>Les enviás una propuesta para volver</small></div></div></article>
       </div>
     </div>
   </section>
@@ -4811,7 +4857,7 @@ html.pxnv-lock, html.pxnv-lock body { overflow:hidden; }
   <!-- ===================== RESULTADOS ===================== -->
   <section class="ax-sec" id="resultados">
     <div class="ax-wrap">
-      <div class="ax-head">
+      <div class="ax-head ax-center">
         <p class="ax-eyebrow" data-r>Resultados</p>
         <h2 class="ax-h2" data-r=".08">Hoteles que <em>ya lo están haciendo.</em></h2>
       </div>
@@ -4832,6 +4878,60 @@ html.pxnv-lock, html.pxnv-lock body { overflow:hidden; }
             <div class="ax-stats"><div><b data-count="9130">9.130</b><span>clics</span></div><div><b data-count="150614">150.614</b><span>impresiones</span></div><div><b data-count="2039">2.039</b><span>conversiones</span></div></div>
           </div>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROCESO · línea de tiempo: 3 opciones para que elija Sofi (dejar una) ===================== -->
+  <section class="ax-sec a1-proc" id="proceso">
+    <div class="ax-wrap">
+      <p class="a1-opt"><span>Opción A · centrada</span></p>
+      <div class="ax-head ax-center">
+        <p class="ax-eyebrow" data-r>El proceso</p>
+        <h2 class="ax-h2" data-r=".08">De cero a canal directo <em>en menos de 7 días.</em></h2>
+        <p class="ax-lead" data-r=".16">Un especialista dedicado se ocupa de todo, sin que tengas que tocar nada. Las campañas necesitan un período de aprendizaje antes de estabilizarse.</p>
+      </div>
+      <div class="a1-tl tl-a">
+        <div class="trk" aria-hidden="true"><i class="fill"></i></div>
+        <div class="st" style="--r:1"><span class="ax-med" data-r="0.0"><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg></span><div class="tx" data-r="0.05"><span class="wk">Sin costo</span><h3>Análisis gratuito</h3><p>Auditamos tu presencia online, tu canal directo y tu set competitivo.</p></div></div>
+        <div class="st" style="--r:2"><span class="ax-med" data-r="0.1"><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"/></svg></span><div class="tx" data-r="0.15"><span class="wk">Primera semana</span><h3>Estrategia y activación</h3><p>Diseñamos y lanzamos tus campañas, conectadas con tu motor de reservas.</p></div></div>
+        <div class="st" style="--r:3"><span class="ax-med" data-r="0.2"><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 5H3"/><path d="M12 19H3"/><path d="M14 3v4"/><path d="M16 17v4"/><path d="M21 12h-9"/><path d="M21 19h-5"/><path d="M21 5h-7"/><path d="M8 10v4"/><path d="M8 12H3"/></svg></span><div class="tx" data-r="0.25"><span class="wk">Todos los días</span><h3>Gestión diaria</h3><p>Optimizamos pujas, presupuesto y anuncios según tu disponibilidad y tarifa.</p></div></div>
+        <div class="st" style="--r:4"><span class="ax-med fin" data-r="0.3"><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 7h6v6"/><path d="m22 7-8.5 8.5-5-5L2 17"/></svg></span><div class="tx" data-r="0.35"><span class="wk">Cada mes</span><h3>Resultados y escala</h3><p>Reporte de reservas y ahorro en comisiones, y escalamos juntos lo que funciona.</p></div></div>
+      </div>
+    </div>
+  </section>
+  <section class="ax-sec a1-proc" id="proceso-b">
+    <div class="ax-wrap">
+      <p class="a1-opt"><span>Opción B · con el hito de los 7 días</span></p>
+      <div class="ax-head ax-center">
+        <p class="ax-eyebrow" data-r>El proceso</p>
+        <h2 class="ax-h2" data-r=".08">De cero a canal directo <em>en menos de 7 días.</em></h2>
+        <p class="ax-lead" data-r=".16">Un especialista dedicado se ocupa de todo, sin que tengas que tocar nada. Las campañas necesitan un período de aprendizaje antes de estabilizarse.</p>
+      </div>
+      <div class="a1-tl tl-b ax-card">
+        <div class="brk" aria-hidden="true"><span><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Menos de 7 días</span></div>
+        <div class="trk" aria-hidden="true"><i class="fill"></i></div>
+        <div class="st" style="--r:1"><span class="ax-med" data-r="0.0"><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg></span><div class="tx" data-r="0.05"><span class="wk">Sin costo</span><h3>Análisis gratuito</h3><p>Auditamos tu presencia online, tu canal directo y tu set competitivo.</p></div></div>
+        <div class="st" style="--r:2"><span class="ax-med" data-r="0.1"><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"/></svg></span><div class="tx" data-r="0.15"><span class="wk">Primera semana</span><h3>Estrategia y activación</h3><p>Diseñamos y lanzamos tus campañas, conectadas con tu motor de reservas.</p></div></div>
+        <div class="st" style="--r:3"><span class="ax-med" data-r="0.2"><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 5H3"/><path d="M12 19H3"/><path d="M14 3v4"/><path d="M16 17v4"/><path d="M21 12h-9"/><path d="M21 19h-5"/><path d="M21 5h-7"/><path d="M8 10v4"/><path d="M8 12H3"/></svg></span><div class="tx" data-r="0.25"><span class="wk">Todos los días</span><h3>Gestión diaria</h3><p>Optimizamos pujas, presupuesto y anuncios según tu disponibilidad y tarifa.</p></div></div>
+        <div class="st" style="--r:4"><span class="ax-med fin" data-r="0.3"><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 7h6v6"/><path d="m22 7-8.5 8.5-5-5L2 17"/></svg></span><div class="tx" data-r="0.35"><span class="wk">Cada mes</span><h3>Resultados y escala</h3><p>Reporte de reservas y ahorro en comisiones, y escalamos juntos lo que funciona.</p></div></div>
+      </div>
+    </div>
+  </section>
+  <section class="ax-sec a1-proc" id="proceso-c">
+    <div class="ax-wrap">
+      <p class="a1-opt"><span>Opción C · columna al centro</span></p>
+      <div class="ax-head ax-center">
+        <p class="ax-eyebrow" data-r>El proceso</p>
+        <h2 class="ax-h2" data-r=".08">De cero a canal directo <em>en menos de 7 días.</em></h2>
+        <p class="ax-lead" data-r=".16">Un especialista dedicado se ocupa de todo, sin que tengas que tocar nada. Las campañas necesitan un período de aprendizaje antes de estabilizarse.</p>
+      </div>
+      <div class="a1-tl tl-c">
+        <div class="trk" aria-hidden="true"><i class="fill"></i></div>
+        <div class="st l" style="--r:1"><span class="ax-med" data-r="0.0"><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg></span><div class="tx" data-r="0.05"><span class="wk">Sin costo</span><h3>Análisis gratuito</h3><p>Auditamos tu presencia online, tu canal directo y tu set competitivo.</p></div></div>
+        <div class="st r" style="--r:2"><span class="ax-med" data-r="0.1"><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"/></svg></span><div class="tx" data-r="0.15"><span class="wk">Primera semana</span><h3>Estrategia y activación</h3><p>Diseñamos y lanzamos tus campañas, conectadas con tu motor de reservas.</p></div></div>
+        <div class="st l" style="--r:3"><span class="ax-med" data-r="0.2"><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 5H3"/><path d="M12 19H3"/><path d="M14 3v4"/><path d="M16 17v4"/><path d="M21 12h-9"/><path d="M21 19h-5"/><path d="M21 5h-7"/><path d="M8 10v4"/><path d="M8 12H3"/></svg></span><div class="tx" data-r="0.25"><span class="wk">Todos los días</span><h3>Gestión diaria</h3><p>Optimizamos pujas, presupuesto y anuncios según tu disponibilidad y tarifa.</p></div></div>
+        <div class="st r" style="--r:4"><span class="ax-med fin" data-r="0.3"><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 7h6v6"/><path d="m22 7-8.5 8.5-5-5L2 17"/></svg></span><div class="tx" data-r="0.35"><span class="wk">Cada mes</span><h3>Resultados y escala</h3><p>Reporte de reservas y ahorro en comisiones, y escalamos juntos lo que funciona.</p></div></div>
       </div>
     </div>
   </section>

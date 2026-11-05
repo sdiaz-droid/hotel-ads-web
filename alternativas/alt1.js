@@ -92,6 +92,19 @@
     });
   }
 
+  /* ---------- PROCESO: la línea se pinta con el scroll y cada nodo se enciende al pasar ---------- */
+  $$('.a1-tl').forEach(function(t){
+    var f = t.querySelector('.fill'), v = t.classList.contains('tl-c');
+    var meds = [].slice.call(t.querySelectorAll('.ax-med:not(.fin)'));
+    function paint(p){
+      gsap.set(f, v ? {scaleY:p} : {scaleX:p});
+      meds.forEach(function(m,i){ m.classList.toggle('on', p >= i/3 - .001); });
+    }
+    if(AX.rm){ paint(1); return; }
+    paint(0);
+    ScrollTrigger.create({trigger:t,start:'top 72%',end:'bottom 62%',onUpdate:AX.monotonic(paint)});
+  });
+
   /* ---------- CIERRE: pila de avisos tipo iPhone ---------- */
   var stack = $$('#a1-stack .m-notif');
   function layout(n){
