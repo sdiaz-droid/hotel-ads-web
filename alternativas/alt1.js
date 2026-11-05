@@ -124,3 +124,10 @@
     }});
   }
 })();
+
+/* ---------- ¿Por qué con Pxsol?: al entrar el hub, Pxsol Ads late dos veces (consecuencia del scroll, no bucle) ---------- */
+(function(){
+  var hub=document.getElementById('a1-hub'); if(!hub || !('IntersectionObserver' in window)) { if(hub) hub.classList.add('on'); return; }
+  var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ setTimeout(function(){ hub.classList.add('on'); },600); io.disconnect(); } }); },{threshold:.45});
+  io.observe(hub);
+})();

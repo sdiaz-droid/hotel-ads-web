@@ -473,8 +473,69 @@
 #ax .a1-loop p{font-size:15px}
 #ax .a1-close .ax-wrap{padding:26px 20px;border-radius:26px}
 #ax .a1-stack{height:214px;font-size:14.5px}
-#ax .a1-plans-note{flex-direction:column;align-items:flex-start;gap:12px}}</style>
-<style>.pxsite{background:#F6F7FB}#ax .trial.ax-trial{position:relative;isolation:isolate;overflow:hidden;background:#F6F7FB;padding:clamp(44px,6.5vh,84px) 0 clamp(64px,9vh,110px);border-radius:0;margin:0}
+#ax .a1-plans-note{flex-direction:column;align-items:flex-start;gap:12px}}
+#ax .ax-eyebrow{min-height:44px;padding:0 16px;border-radius:100px;background:rgba(0,177,237,.14);color:#0089b8;font-size:16px;line-height:24px;font-weight:500;letter-spacing:0;text-transform:none;margin-bottom:20px}
+#ax .ax-h2{font-weight:600;font-size:46px;line-height:52px;letter-spacing:-.01em;color:#000017;max-width:20em}
+#ax .ax-h2 em,#ax .ax-h3 em{font-style:normal;font-weight:600;color:#00B1ED}
+#ax .ax-h3{font-weight:600;font-size:20px;line-height:28px;letter-spacing:0;color:#000017}
+#ax .ax-lead{font-weight:400;font-size:18px;line-height:28px;color:#3F3F46}
+#ax .ax-lead strong{font-weight:600}
+#ax .ax-card{background:linear-gradient(74.79deg,rgba(255,255,255,.3) 11.38%,#E7F1FA 119.35%),#fff;border:1px solid rgba(28,17,131,.08);border-radius:24px;box-shadow:0 10px 15px -3px rgba(0,0,0,.08)}
+#ax .ax-card::before{display:none}
+#ax .ax-med{background:#fff;border:1px solid rgba(28,17,131,.08);box-shadow:0 4px 10px -4px rgba(0,0,23,.10)}
+#ax .ax-med .lc{color:#00B1ED}
+#ax .a1-tl .fill{background:#00B1ED}
+#ax .a1-tl .ax-med.on .lc{color:#00B1ED}
+#ax .a1-tl .ax-med.fin{background:#00B1ED}
+#ax .a1-tl .ax-med.fin .lc{color:#fff}
+#ax .a1-eco .ax-head .ax-h2{max-width:20em;font-size:46px}
+#ax .a1-hub{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.78fr) minmax(0,1fr);gap:0 56px;align-items:stretch;max-width:1180px;margin:0 auto}
+#ax .hub-col{display:flex;flex-direction:column;gap:22px;justify-content:center}
+#ax .hub-c{position:relative;display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start;padding:24px 26px;text-align:left}
+#ax .hub-c .ic{width:28px;height:28px;color:#00B1ED;margin-top:2px}
+#ax .hub-c .ic .lc{width:28px;height:28px;stroke-width:1.6}
+#ax .hub-c .k{font-size:14px;line-height:20px;font-weight:600;color:#0089b8;margin:0 0 4px}
+#ax .hub-c .ax-h3{font-size:18px;line-height:24px;margin:0}
+#ax .hub-c p.t{font-size:15px;line-height:24px;color:#3F3F46;margin:6px 0 0}
+#ax .hub-c .ex{display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px;margin:12px 0 0;font-size:13.5px;line-height:20px;color:#5A5A6E}
+#ax .hub-c .ex .lc{width:15px;height:15px;color:#00B1ED;flex:none}
+#ax .hub-c .ex b{font-weight:500;color:#000017}
+#ax .hub-c::after{content:"";position:absolute;top:50%;width:56px;border-top:2px dashed rgba(0,177,237,.45)}
+#ax .hub-col.l .hub-c::after{left:100%}
+#ax .hub-col.r .hub-c::after{right:100%}
+#ax .hub-core{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;padding:40px 24px;background:linear-gradient(180deg,#F2FAFE,#E7F1FA);text-align:center}
+#ax .hub-core .logo{width:150px;height:auto}
+#ax .hub-core .plats{display:flex;gap:12px}
+#ax .hub-core .plats span{width:54px;height:54px;border-radius:50%;background:#fff;border:1px solid rgba(28,17,131,.08);display:grid;place-items:center;box-shadow:0 6px 14px -6px rgba(0,0,23,.16)}
+#ax .hub-core .plats img{width:26px;height:26px;object-fit:contain}
+#ax .hub-core .pill{display:inline-flex;align-items:center;height:48px;padding:0 28px;border-radius:999px;background:#00B1ED;color:#fff;font-size:17px;font-weight:600}
+#ax .hub-core small{font-size:14px;line-height:20px;color:#5A5A6E;max-width:16em}
+#ax .hub-core .pulse{position:absolute;inset:-1px;border-radius:24px;box-shadow:0 0 0 0 rgba(0,177,237,.0);pointer-events:none}
+#ax .a1-hub.on .hub-core .pulse{animation:hubp 2.4s var(--ease) 2}
+@keyframes hubp{0%{box-shadow:0 0 0 0 rgba(0,177,237,.35)}100%{box-shadow:0 0 0 18px rgba(0,177,237,0)}}
+@media (max-width:1100px){#ax .a1-hub{grid-template-columns:1fr;gap:18px;max-width:640px}
+#ax .hub-core{order:-1;padding:28px 20px}
+#ax .hub-c::after{display:none}
+#ax .a1-eco .ax-head .ax-h2{font-size:32px;line-height:38px}}
+@media (max-width:760px){#ax .ax-h2{font-size:32px;line-height:38px}
+#ax .hub-c{padding:20px}}
+#ax .a1-goal{background:#131328}
+#ax .a1-goal h3{font-weight:600;font-style:normal}
+#ax .a1-goal h3 em{font-style:normal;font-weight:600;color:#00B1ED}
+#ax .ax-case h3{font-weight:600}
+#ax .hub-mid{display:flex;flex-direction:column;gap:22px}
+#ax .hub-mid .hub-core{flex:1}
+#ax .hub-mid .hub-c::after{top:auto;bottom:100%;left:50%;width:0;height:22px;border-top:0;border-left:2px dashed rgba(0,177,237,.45)}
+@media (max-width:1100px){#ax .hub-mid{display:contents}
+#ax .hub-mid .hub-c{order:5}}
+#ax .hub-c .ic{display:grid;place-items:center;width:52px;height:52px;margin:0;border-radius:50%;background:#fff;border:1px solid rgba(28,17,131,.10);color:var(--pc)}
+#ax .hub-c .ic .lc{width:24px;height:24px;color:var(--pc)}
+#ax .hub-c .k{color:var(--pcd)}
+#ax .ax-bg{display:none}
+#ax .a1-road .rail .lit{stroke:#00B1ED}
+#ax .a1-nx.on{background:#00B1ED}
+#ax .a1-orbit .sync{fill:#00B1ED}</style>
+<style>.pxsite{background:#F7F8F8}#ax .trial.ax-trial{position:relative;isolation:isolate;overflow:hidden;background:#F6F7FB;padding:clamp(44px,6.5vh,84px) 0 clamp(64px,9vh,110px);border-radius:0;margin:0}
 #ax .ax-trial::before{content:"";position:absolute;z-index:-1;width:1100px;height:900px;left:-360px;top:-200px;border-radius:50%;background:radial-gradient(closest-side,rgba(204,231,255,.62),rgba(204,231,255,.24) 55%,rgba(204,231,255,0))}
 #ax .ax-trial::after{content:"";position:absolute;z-index:-1;width:900px;height:800px;right:-300px;bottom:-300px;border-radius:50%;background:radial-gradient(closest-side,rgba(255,174,174,.24),rgba(255,174,174,.08) 55%,rgba(255,174,174,0))}
 #ax .ax-trial .wrap.trial-grid{max-width:1240px;margin:0 auto;padding:0 clamp(16px,5vw,96px);box-sizing:content-box;grid-template-columns:minmax(0,1fr) 460px;gap:clamp(28px,5vw,80px)}
@@ -491,7 +552,14 @@
 #ax .ax-trial .formcard button[type=submit]{background:#D20A11;border-color:#D20A11;box-shadow:0 18px 40px -12px rgba(210,10,17,.34);letter-spacing:.06em;text-transform:uppercase;font-weight:500;font-size:15px}
 @media (max-width:900px){#ax .ax-trial .wrap.trial-grid{grid-template-columns:1fr;box-sizing:border-box;padding:0 16px}
 #ax .ax-tc h2{font-size:clamp(29px,8vw,34px);line-height:1.1}
-#ax .ax-tc .lead{font-size:17px}}</style>
+#ax .ax-tc .lead{font-size:17px}}
+#ax .trial.ax-trial{background:#F7F8F8}
+#ax .ax-trial::before,#ax .ax-trial::after{display:none}
+#ax .ax-tc .ey{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border-radius:100px;background:rgba(0,177,237,.14);color:#0089b8;font-size:16px;line-height:24px;font-weight:500;letter-spacing:0;text-transform:none}
+#ax .ax-tc h2{font-weight:600;font-size:46px;line-height:52px;letter-spacing:-.01em;margin-top:20px}
+#ax .ax-tc h2 em{font-style:normal;font-weight:600;color:#00B1ED}
+#ax .ax-tc .lead{font-weight:400;font-size:18px;line-height:28px;color:#3F3F46}
+@media (max-width:760px){#ax .ax-tc h2{font-size:32px;line-height:38px}}</style>
 </head><body><div hidden=""><!--$--><!--/$--></div><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Square+Peg&amp;display=swap"><div class="pxsite pxsite--light pxsite--reveal" data-page="hotel-ads" style="--page-acc:#00B1ED;--page-glow:rgba(0,177,237,.28)"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap"><style>
 .pxsite{
   --ink:#0B0B12;--title:#212529;--body:#4A4F57;--muted:#8A9099;
@@ -4821,11 +4889,19 @@ html.pxnv-lock, html.pxnv-lock body { overflow:hidden; }
         <h2 class="ax-h2" data-r=".08">Conocemos tu hotel.<br><em>Y usamos esa información<br>para ayudarte a vender más.</em></h2>
         <p class="ax-lead" data-r=".16">Sabemos qué habitaciones tenés disponibles, cuáles son tus tarifas y qué anuncios te traen reservas. Así, tu publicidad acompaña lo que tu hotel necesita vender.</p>
       </div>
-      <div class="a1-eco-grid eco-set">
-<article class="eco-c ax-card" data-r=""><span class="ax-med"><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v3"/><path d="M16 2v3"/><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M8 13h.01"/><path d="M12 13h.01"/><path d="M16 13h.01"/><path d="M8 17h.01"/><path d="M12 17h.01"/><path d="M16 17h.01"/></svg></span><h3 class="ax-h3">Promocionamos las fechas que necesitás llenar</h3><p>Organizamos la publicidad según las habitaciones que tenés libres y las fechas en las que necesitás más huéspedes.</p><div class="live"><div><span class="e"><i class="dt"></i>¿Tenés lugar para el próximo finde?</span><small><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>Enfocamos los anuncios en esas fechas</small></div></div></article>
-<article class="eco-c ax-card" data-r=".09"><span class="ax-med"><img src="/alternativas/assets/google-g.svg" alt=""></span><h3 class="ax-h3">Mostramos tus precios actualizados en Google</h3><p>Conectamos tus tarifas y disponibilidad para que el viajero vea cuánto cuesta alojarse y si hay lugar para sus fechas.</p><div class="live"><div><span class="e"><i class="dt"></i>Cambiás una tarifa en tu sistema</span><small><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>Ese precio se actualiza en Google</small></div></div></article>
-<article class="eco-c ax-card" data-r=".18"><span class="ax-med"><img src="/alternativas/assets/pxsol-isotipo.svg" alt="" style="width:56%"></span><h3 class="ax-h3">Llevamos al viajero a reservar en tu web</h3><p>Tus anuncios llevan a tu página para que el huésped reserve directamente con vos. Además, podés saber qué publicidad generó esa reserva.</p><div class="live"><div><span class="e"><i class="dt"></i>Entró una reserva de tres noches</span><small><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>Sabés de qué anuncio vino</small></div></div></article>
-<article class="eco-c ax-card" data-r=".27"><span class="ax-med"><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></svg></span><h3 class="ax-h3">Te ayudamos a que tus huéspedes vuelvan</h3><p>Aprovechamos los contactos de quienes ya se alojaron para enviarles promociones y darles un motivo para volver a reservar.</p><div class="live"><div><span class="e"><i class="dt"></i>Se acerca un finde largo</span><small><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>Les enviás una propuesta para volver</small></div></div></article>
+      <div class="a1-hub" id="a1-hub">
+        <div class="hub-col l">
+<article style="--pc:#67B09D;--pcd:#327664" class="hub-c ax-card" data-r=""><span class="ic"><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8"/><path d="M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4"/><path d="M12 4v6"/><path d="M2 18h20"/></svg></span><div><p class="k">PMS + Ads</p><h3 class="ax-h3">Promocionamos las fechas que necesitás llenar</h3><p class="t">Organizamos la publicidad según las habitaciones que tenés libres y las fechas en las que necesitás más huéspedes.</p><p class="ex"><b>¿Tenés lugar para el próximo finde?</b><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>Enfocamos los anuncios en esas fechas</p></div></article>
+<article style="--pc:#FF7316;--pcd:#A34100" class="hub-c ax-card" data-r=".09"><span class="ic"><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg></span><div><p class="k">Channel Manager + Ads</p><h3 class="ax-h3">Mostramos tus precios actualizados en Google</h3><p class="t">Conectamos tus tarifas y disponibilidad para que el viajero vea cuánto cuesta alojarse y si hay lugar para sus fechas.</p><p class="ex"><b>Cambiás una tarifa en tu sistema</b><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>Ese precio se actualiza en Google</p></div></article>
+        </div>
+        <div class="hub-mid">
+  <div class="hub-core ax-card" data-r=".05"><i class="pulse" aria-hidden="true"></i><img class="logo" src="/alternativas/assets/pxsol-logo.svg" alt="Pxsol"><div class="plats"><span><img src="/alternativas/assets/google-g.svg" alt="Google"></span><span><img src="/alternativas/assets/meta.png" alt="Meta"></span><span><img src="/alternativas/assets/chatgpt.svg" alt="ChatGPT"></span></div><span class="pill">Pxsol Ads</span><small>Conectado con tu operación hotelera</small></div>
+<article style="--pc:#8519D9;--pcd:#470877" class="hub-c ax-card" data-r=".12"><span class="ic"><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 7h6v6"/><path d="m22 7-8.5 8.5-5-5L2 17"/></svg></span><div><p class="k">RMS + Ads</p><h3 class="ax-h3">Si tu tarifa cambia, tu publicidad se ajusta</h3><p class="t">Cuando bajás una tarifa para llenar fechas, los anuncios aprovechan esa información y muestran tu mejor precio.</p><p class="ex"><b>Bajó la tarifa del martes</b><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>Tus anuncios lo destacan</p></div></article>
+        </div>
+        <div class="hub-col r">
+<article style="--pc:#F64545;--pcd:#CB0101" class="hub-c ax-card" data-r=".18"><span class="ic"><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4.1 12 6"/><path d="m5.1 8-2.9-.8"/><path d="m6 12-1.9 2"/><path d="M7.2 2.2 8 5.1"/><path d="M9.037 9.69a.498.498 0 0 1 .653-.653l11 4.5a.5.5 0 0 1-.074.949l-4.349 1.041a1 1 0 0 0-.74.739l-1.04 4.35a.5.5 0 0 1-.95.074z"/></svg></span><div><p class="k">Motor + Ads</p><h3 class="ax-h3">Llevamos al viajero a reservar en tu web</h3><p class="t">Tus anuncios llevan a tu página para que el huésped reserve directamente con vos. Además, podés saber qué publicidad generó esa reserva.</p><p class="ex"><b>Entró una reserva de tres noches</b><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>Sabés de qué anuncio vino</p></div></article>
+<article style="--pc:#EAC300;--pcd:#7A6600" class="hub-c ax-card" data-r=".27"><span class="ic"><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></svg></span><div><p class="k">CRM + Ads</p><h3 class="ax-h3">Te ayudamos a que tus huéspedes vuelvan</h3><p class="t">Aprovechamos los contactos de quienes ya se alojaron para enviarles promociones y darles un motivo para volver a reservar.</p><p class="ex"><b>Se acerca un finde largo</b><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>Les enviás una propuesta para volver</p></div></article>
+        </div>
       </div>
     </div>
   </section>

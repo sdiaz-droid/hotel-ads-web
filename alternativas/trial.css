@@ -19,3 +19,12 @@
   .ax-tc h2{font-size:clamp(29px,8vw,34px);line-height:1.1}
   .ax-tc .lead{font-size:17px}
 }
+
+/* WEB-PXSOL.md (05/11): el bloque del formulario con el sistema de la web, sin washes inventados */
+.trial.ax-trial{background:#F7F8F8}
+.ax-trial::before,.ax-trial::after{display:none}
+.ax-tc .ey{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border-radius:100px;background:rgba(0,177,237,.14);color:#0089b8;font-size:16px;line-height:24px;font-weight:500;letter-spacing:0;text-transform:none}
+.ax-tc h2{font-weight:600;font-size:46px;line-height:52px;letter-spacing:-.01em;margin-top:20px}
+.ax-tc h2 em{font-style:normal;font-weight:600;color:#00B1ED}
+.ax-tc .lead{font-weight:400;font-size:18px;line-height:28px;color:#3F3F46}
+@media (max-width:760px){ .ax-tc h2{font-size:32px;line-height:38px} }

@@ -56,7 +56,7 @@ for n in sys.argv[1:] or ['1', '2']:
                           '<section class="trial trial--light ax-trial" id="prueba-gratis">', 1)
         suf = re.sub(r'<div class="trial-copy[^"]*"[^>]*>.*?</ul></div>', lambda _: m.group(1).strip(),
                      suf, count=1, flags=re.S)
-        head_extra += '<style>.pxsite{background:#F6F7FB}' + scope((R/'alternativas/trial.css').read_text(encoding='utf8')) + '</style>'
+        head_extra += '<style>.pxsite{background:#F7F8F8}' + scope((R/'alternativas/trial.css').read_text(encoding='utf8')) + '</style>'
         # el formulario queda DENTRO de #ax para heredar el sistema (avisos, tipografía)
         body = body.rstrip()
         assert body.endswith('</div>'), 'el cuerpo tiene que cerrar con el </div> de .ax'
