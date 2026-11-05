@@ -1,0 +1,658 @@
+<!-- Menú v2 de Pxsol, copiado tal cual de www.pxsol.com/es-ar/producto/hotel-ads el 04/11/2026 (módulo global «header»). Links pasados a absolutos. -->
+<div data-pxsol-global="header"><style>
+[data-pxsol-global] img,
+[data-pxsol-global] svg {
+  display: inline;
+  vertical-align: middle;
+}
+</style><style>/* ─────────────────────────────────────────────────────────────────────────────
+   NAVBAR GLOBAL DE PXSOL — menú v2 (29/10/2026, handoff «Menú Pxsol v2»)
+
+   Fuente del CSS. `$` es el scope del módulo (`[data-pxsol-global] .pxnv`) y lo
+   expande `construir-html.py` al escribir `navbar.css`: se edita ESTE archivo.
+
+   El scope no es decorativo: el módulo vive dentro de páginas con su propio CSS
+   (`.pxsite a`, el preflight de Tailwind) y con la especificidad del scope le gana
+   a esas reglas sin `!important`.
+
+   Todos los valores salen del prototipo del handoff; si algo difiere, manda el
+   HTML del handoff (`Menu Pxsol final v2.dc.html` / `Menu Pxsol mobile.dc.html`).
+   Tipografía Work Sans 400/500/600: nunca 700 o más (regla de marca).
+   ───────────────────────────────────────────────────────────────────────────── */
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap");
+
+[data-pxsol-global] .pxnv { --bg:#000017; --card:#12121C; --card2:#1B1B26; --fg:#FAFAFA; --desc:#A6A6B4; --mut:#84849B; color:var(--fg); font-family:'Work Sans',sans-serif; -webkit-font-smoothing:antialiased; }
+[data-pxsol-global] .pxnv, [data-pxsol-global] .pxnv *, [data-pxsol-global] .pxnv *::before, [data-pxsol-global] .pxnv *::after { box-sizing:border-box; }
+/* El reset de los links va con `:where()` a propósito: deja la regla con la MISMA
+   especificidad que `[data-pxsol-global] .pxnv .pxnv-row` y compañía, así que el color de cada clase (que
+   viene después) gana también sobre un link VISITADO. Con `[data-pxsol-global] .pxnv a:visited` a secas
+   (0,3,1) le ganaba a todas las clases, el link heredaba el texto oscuro de la
+   página y todo lo que Sofi ya había visitado salía gris (29/10/2026). */
+[data-pxsol-global] .pxnv :where(a), [data-pxsol-global] .pxnv :where(a):hover, [data-pxsol-global] .pxnv :where(a):focus, [data-pxsol-global] .pxnv :where(a):visited { color:inherit; text-decoration:none; }
+[data-pxsol-global] .pxnv button { font:inherit; color:inherit; background:none; border:0; margin:0; padding:0; cursor:pointer; -webkit-appearance:none; appearance:none; }
+[data-pxsol-global] .pxnv img, [data-pxsol-global] .pxnv svg { display:block; max-width:none; }
+[data-pxsol-global] .pxnv ul { list-style:none; margin:0; padding:0; }
+[data-pxsol-global] .pxnv p, [data-pxsol-global] .pxnv h4 { margin:0; }
+[data-pxsol-global] .pxnv b { font-weight:600; }
+[data-pxsol-global] .pxnv :focus-visible { outline:2px solid #7FB2FF; outline-offset:2px; }
+
+/* ── La barra ──────────────────────────────────────────────────────────────── */
+[data-pxsol-global] .pxnv .pxnv-bar-main { position:fixed; z-index:9999; top:10px; left:50%; transform:translateX(-50%); width:calc(100% - 20px); display:flex; align-items:center; height:96px; padding:0 66px 0 76px; border-radius:20px; border:1px solid transparent; transition:all .45s cubic-bezier(.4,0,.2,1); }
+[data-pxsol-global] .pxnv.is-stuck .pxnv-bar-main { top:21px; width:min(1180px, calc(100% - 20px)); height:53px; padding:0 8px 0 34px; border-radius:999px; background:rgba(20,20,28,.55); border-color:rgba(255,255,255,.12); -webkit-backdrop-filter:blur(20px); backdrop-filter:blur(20px); }
+
+[data-pxsol-global] .pxnv .pxnv-logo { display:flex; align-items:center; flex:none; color:#fff; }
+[data-pxsol-global] .pxnv .pxnv-lgb { display:block; overflow:hidden; flex:none; transition:max-width .45s cubic-bezier(.4,0,.2,1); }
+[data-pxsol-global] .pxnv .pxnv-lgb--full { max-width:64px; }
+[data-pxsol-global] .pxnv .pxnv-lgb--iso { max-width:0; }
+[data-pxsol-global] .pxnv.is-stuck .pxnv-lgb--full { max-width:0; }
+[data-pxsol-global] .pxnv.is-stuck .pxnv-lgb--iso { max-width:28px; }
+
+[data-pxsol-global] .pxnv .pxnv-nav { position:relative; display:flex; align-items:center; gap:4px; margin-left:44px; margin-right:auto; }
+[data-pxsol-global] .pxnv.is-stuck .pxnv-nav { margin-left:28px; gap:2px; }
+
+[data-pxsol-global] .pxnv .pxnv-i { flex:none; display:inline-flex; align-items:center; gap:10px; height:41px; padding:0 14px; border-radius:999px; font-size:16px; font-weight:400; line-height:1; color:var(--fg); white-space:nowrap; cursor:pointer; transition:background .2s cubic-bezier(.22,.61,.36,1); }
+[data-pxsol-global] .pxnv .pxnv-i--dd { padding-right:18px; }
+[data-pxsol-global] .pxnv.is-stuck .pxnv-i { padding:0 11px; }
+[data-pxsol-global] .pxnv.is-stuck .pxnv-i--dd { padding-right:16px; gap:6px; }
+[data-pxsol-global] .pxnv .pxnv-i:hover, [data-pxsol-global] .pxnv a.pxnv-i:hover { background:rgba(255,255,255,.10); color:var(--fg); }
+[data-pxsol-global] .pxnv .pxnv-i.is-on { background:rgba(255,255,255,.20); color:#E4E4E7; }
+[data-pxsol-global] .pxnv .pxnv-chev { color:#A1A1AA; transition:transform .25s cubic-bezier(.22,.61,.36,1); }
+[data-pxsol-global] .pxnv .pxnv-i.is-on .pxnv-chev { transform:rotate(180deg); color:#E4E4E7; }
+[data-pxsol-global] .pxnv .pxnv-ext { color:#A1A1AA; }
+
+/* La cápsula de públicos: Hoteles · Alquiler temporario · Agencias. */
+[data-pxsol-global] .pxnv .pxnv-grp { flex:none; display:flex; align-items:center; gap:2px; padding:4px; border-radius:999px; background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.14); transition:padding .45s cubic-bezier(.4,0,.2,1); }
+[data-pxsol-global] .pxnv.is-stuck .pxnv-grp { padding:2px; background:rgba(255,255,255,.05); }
+[data-pxsol-global] .pxnv.is-stuck .pxnv-grp .pxnv-i { height:35px; }
+[data-pxsol-global] .pxnv .pxnv-gap { width:14px; flex:none; }
+
+/* Selector de país. */
+[data-pxsol-global] .pxnv .pxnv-lang { position:relative; display:inline-flex; flex:none; }
+[data-pxsol-global] .pxnv .pxnv-globe { width:28px; height:28px; border-radius:999px; display:inline-flex; align-items:center; justify-content:center; background:rgba(255,255,255,.08); color:#E4E4E7; margin-right:14px; }
+[data-pxsol-global] .pxnv.is-stuck .pxnv-globe { margin-right:10px; }
+[data-pxsol-global] .pxnv .pxnv-flag { width:22px; height:22px; border-radius:50%; background-size:cover; background-position:center; }
+[data-pxsol-global] .pxnv .pxnv-globe__ic { display:none; }
+[data-pxsol-global] .pxnv .pxnv-globe.is-otros .pxnv-flag { display:none; }
+[data-pxsol-global] .pxnv .pxnv-globe.is-otros .pxnv-globe__ic { display:block; }
+[data-pxsol-global] .pxnv .pxnv-langs { color:var(--fg); position:absolute; top:calc(100% + 10px); right:0; width:180px; padding:6px; border-radius:12px; background:var(--bg); border:1px solid var(--card); box-shadow:0 20px 44px rgba(0,0,23,.5); display:flex; flex-direction:column; opacity:0; visibility:hidden; transform:translateY(-6px); pointer-events:none; transition:opacity .16s, transform .2s, visibility 0s .2s; z-index:60; }
+[data-pxsol-global] .pxnv .pxnv-langs.is-open { opacity:1; visibility:visible; transform:none; pointer-events:auto; transition:opacity .16s, transform .2s, visibility 0s; }
+[data-pxsol-global] .pxnv .pxnv-li { display:flex; align-items:center; gap:10px; height:32px; padding:0 10px; border-radius:8px; font-size:13px; color:var(--fg); white-space:nowrap; }
+[data-pxsol-global] .pxnv .pxnv-li:hover { background:rgba(255,255,255,.08); color:var(--fg); }
+[data-pxsol-global] .pxnv .pxnv-fl { width:16px; height:16px; border-radius:50%; background-size:cover; background-position:center; flex:none; }
+[data-pxsol-global] .pxnv .pxnv-fl--otros { display:inline-flex; align-items:center; justify-content:center; background:rgba(255,255,255,.10); color:var(--desc); }
+[data-pxsol-global] .pxnv .pxnv-ck { margin-left:auto; color:#7FB2FF; display:none; }
+[data-pxsol-global] .pxnv .is-sel .pxnv-ck { display:block; }
+
+/* Botones. */
+[data-pxsol-global] .pxnv .pxnv-btn-o, [data-pxsol-global] .pxnv .pxnv-btn-w { flex:none; white-space:nowrap; display:inline-flex; align-items:center; height:42px; padding:0 21px; border-radius:999px; font-size:14.5px; font-weight:500; line-height:1; }
+[data-pxsol-global] .pxnv .pxnv-btn-o, [data-pxsol-global] .pxnv .pxnv-btn-o:hover { background:#000017; border:1px solid rgba(255,255,255,.14); color:#fff; }
+[data-pxsol-global] .pxnv .pxnv-btn-w, [data-pxsol-global] .pxnv .pxnv-btn-w:hover { position:relative; margin-left:8px; background:#fff; color:#262728; }
+[data-pxsol-global] .pxnv .pxnv-halo { position:absolute; top:50%; width:55%; height:80%; transform:translateY(-50%); border-radius:999px; filter:blur(14px); opacity:.7; z-index:-1; pointer-events:none; }
+[data-pxsol-global] .pxnv .pxnv-halo--r { left:0; background:#D20A11; }
+[data-pxsol-global] .pxnv .pxnv-halo--b { right:0; background:#2B7FFF; }
+[data-pxsol-global] .pxnv.is-stuck .pxnv-btn-o, [data-pxsol-global] .pxnv.is-stuck .pxnv-btn-w { padding:0 18px; }
+[data-pxsol-global] .pxnv .pxnv-burger { display:none; }
+
+/* ── Modo claro: la barra pasa sobre una sección blanca ──────────────────────── */
+[data-pxsol-global] .pxnv.is-light.is-stuck .pxnv-bar-main { background:rgba(255,255,255,.86); border-color:#ECECF1; box-shadow:0 10px 30px rgba(0,0,23,.07); }
+[data-pxsol-global] .pxnv.is-light .pxnv-logo { color:#000017; }
+[data-pxsol-global] .pxnv.is-light .pxnv-i, [data-pxsol-global] .pxnv.is-light a.pxnv-i:hover { color:#000017; }
+[data-pxsol-global] .pxnv.is-light .pxnv-i:hover { background:rgba(0,0,23,.05); }
+[data-pxsol-global] .pxnv.is-light .pxnv-i.is-on { background:rgba(0,0,23,.08); }
+[data-pxsol-global] .pxnv.is-light .pxnv-chev, [data-pxsol-global] .pxnv.is-light .pxnv-ext { color:#6E6E85; }
+[data-pxsol-global] .pxnv.is-light .pxnv-i.is-on .pxnv-chev { color:#000017; }
+[data-pxsol-global] .pxnv.is-light .pxnv-grp { background:rgba(0,0,23,.03); border-color:#E4E4E7; }
+[data-pxsol-global] .pxnv.is-light .pxnv-globe { background:rgba(0,0,23,.06); color:#000017; }
+[data-pxsol-global] .pxnv.is-light .pxnv-btn-o, [data-pxsol-global] .pxnv.is-light .pxnv-btn-o:hover { background:#fff; border-color:#E4E4E7; color:#000017; }
+[data-pxsol-global] .pxnv.is-light .pxnv-btn-w, [data-pxsol-global] .pxnv.is-light .pxnv-btn-w:hover { background:#000017; color:#fff; }
+[data-pxsol-global] .pxnv.is-light .pxnv-halo { opacity:.35; }
+[data-pxsol-global] .pxnv.is-light .pxnv-burger { color:#000017; }
+[data-pxsol-global] .pxnv.is-light .pxnv-pnl, [data-pxsol-global] .pxnv.is-light .pxnv-langs { --bg:#fff; --card:#F6F7FB; --card2:#ECECF1; --fg:#000017; --desc:#54546A; --mut:#6E6E85; border-color:#ECECF1; box-shadow:0 22px 50px rgba(0,0,23,.12); }
+[data-pxsol-global] .pxnv.is-light .pxnv-pill { background:#fff; border-color:#E4E4E7; }
+[data-pxsol-global] .pxnv.is-light .pxnv-rc:hover .pxnv-pill { background:#fff; border-color:#D2D2D2; }
+[data-pxsol-global] .pxnv.is-light .pxnv-lk { background:#ECECF1; }
+[data-pxsol-global] .pxnv.is-light .pxnv-pnl .pxnv-row:hover { color:#000017; opacity:.7; }
+[data-pxsol-global] .pxnv.is-light .pxnv-help { background:#E8F2FF; }
+[data-pxsol-global] .pxnv.is-light .pxnv-wa { background:#fff; border-color:#E4E4E7; }
+[data-pxsol-global] .pxnv.is-light .pxnv-li:hover { background:rgba(0,0,23,.05); }
+[data-pxsol-global] .pxnv.is-light .pxnv-ck { color:#2A6FDB; }
+[data-pxsol-global] .pxnv.is-light .pxnv-langs .pxnv-fl--otros { background:rgba(0,0,23,.06); }
+
+/* ── Paneles ───────────────────────────────────────────────────────────────── */
+[data-pxsol-global] .pxnv .pxnv-drop { position:absolute; top:calc(100% + 14px); left:0; opacity:0; visibility:hidden; transform:translateY(-6px); pointer-events:none; transition:opacity .18s cubic-bezier(.22,.61,.36,1), transform .22s cubic-bezier(.22,.61,.36,1), visibility 0s .22s; }
+[data-pxsol-global] .pxnv .pxnv-drop.is-open { opacity:1; visibility:visible; transform:none; pointer-events:auto; transition:opacity .18s cubic-bezier(.22,.61,.36,1), transform .22s cubic-bezier(.22,.61,.36,1), visibility 0s; }
+[data-pxsol-global] .pxnv .pxnv-pnl { color:var(--fg); background:var(--bg); border:1px solid #0E0E1E; border-radius:16px; padding:12px; box-shadow:0 24px 60px rgba(0,0,23,.55); display:flex; flex-direction:column; gap:9px; max-width:calc(100vw - 160px); max-height:calc(100vh - 130px); overflow-y:auto; overscroll-behavior:contain; }
+[data-pxsol-global] .pxnv.is-stuck .pxnv-pnl--hot { max-width:min(789px, calc(100vw - 200px)); }
+[data-pxsol-global] .pxnv .pxnv-pnl--hot { width:789px; }
+[data-pxsol-global] .pxnv .pxnv-pnl--rec { width:731px; gap:10px; }
+[data-pxsol-global] .pxnv .pxnv-pnl--nos { width:789px; }
+
+/* Hoteles. */
+[data-pxsol-global] .pxnv .pxnv-top { display:flex; }
+[data-pxsol-global] .pxnv .pxnv-left { width:250px; flex:none; display:flex; flex-direction:column; gap:9px; margin-right:9px; }
+[data-pxsol-global] .pxnv .pxnv-hcard { flex:1; display:flex; flex-direction:column; border-radius:12px; overflow:hidden; background:var(--card); }
+[data-pxsol-global] .pxnv .pxnv-hcard__ph { flex:1; min-height:150px; overflow:hidden; background:var(--card2); }
+[data-pxsol-global] .pxnv .pxnv-hcard__ph img { width:100%; height:100%; object-fit:cover; object-position:60% center; }
+[data-pxsol-global] .pxnv .pxnv-hcard__bd { padding:16px 18px 18px; display:flex; flex-direction:column; gap:8px; }
+[data-pxsol-global] .pxnv .pxnv-hcard__bd b { font-size:13px; font-weight:600; color:var(--fg); }
+[data-pxsol-global] .pxnv .pxnv-hcard__bd p { font-size:12px; line-height:16px; color:var(--desc); text-wrap:pretty; }
+[data-pxsol-global] .pxnv .pxnv-prods { flex:1; min-width:0; display:flex; gap:22px; padding:16px 18px 16px 20px; border-radius:12px; background-color:var(--card); background-image:radial-gradient(90% 70% at 100% 100%, rgba(60,100,200,.20), rgba(60,100,200,0) 70%), radial-gradient(60% 50% at 100% 0%, rgba(124,19,205,.10), rgba(124,19,205,0) 70%); }
+[data-pxsol-global] .pxnv .pxnv-col { flex:1; min-width:0; display:flex; flex-direction:column; gap:10px; }
+[data-pxsol-global] .pxnv .pxnv-g { display:flex; flex-direction:column; }
+[data-pxsol-global] .pxnv .pxnv-g + .pxnv-g { padding-top:10px; border-top:1px solid var(--card2); }
+[data-pxsol-global] .pxnv .pxnv-cap { display:flex; align-items:center; gap:7px; height:20px; margin-bottom:2px; font-size:9px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--desc); white-space:nowrap; }
+[data-pxsol-global] .pxnv .pxnv-cap svg { color:var(--mut); }
+[data-pxsol-global] .pxnv .pxnv-row { display:flex; align-items:center; gap:10px; height:26px; font-size:12.5px; font-weight:500; letter-spacing:.01em; color:var(--fg); white-space:nowrap; }
+[data-pxsol-global] .pxnv .pxnv-row:hover { color:var(--fg); opacity:.8; }
+[data-pxsol-global] .pxnv .pxnv-new { font-size:8px; font-weight:600; letter-spacing:.08em; line-height:15px; padding:0 7px; border-radius:999px; background:#13915A; color:#fff; }
+[data-pxsol-global] .pxnv .pxnv-band { display:flex; gap:9px; }
+[data-pxsol-global] .pxnv .pxnv-bar { height:37px; display:flex; align-items:center; gap:10px; padding:0 14px; border-radius:10px; background:var(--card); min-width:0; color:var(--fg); transition:background .18s cubic-bezier(.22,.61,.36,1); }
+[data-pxsol-global] .pxnv .pxnv-bar:hover { background:var(--card2); color:var(--fg); }
+[data-pxsol-global] .pxnv .pxnv-bar b { font-size:12px; font-weight:600; color:var(--fg); white-space:nowrap; }
+[data-pxsol-global] .pxnv .pxnv-bar > span { font-size:11px; color:var(--mut); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; min-width:0; flex:1; }
+[data-pxsol-global] .pxnv .pxnv-bar svg { flex:none; }
+[data-pxsol-global] .pxnv .pxnv-bar__ic { color:var(--desc); }
+[data-pxsol-global] .pxnv .pxnv-bar--pagos { width:250px; flex:none; }
+[data-pxsol-global] .pxnv .pxnv-bar--integ { flex:1; }
+[data-pxsol-global] .pxnv .pxnv-vr { height:auto; padding:7px 14px 7px 7px; gap:12px; border-radius:12px; }
+[data-pxsol-global] .pxnv .pxnv-vr img { width:40px; height:40px; border-radius:8px; object-fit:cover; flex:none; background:var(--card2); }
+[data-pxsol-global] .pxnv .pxnv-vr__tx { display:flex; flex-direction:column; gap:2px; min-width:0; flex:1; }
+[data-pxsol-global] .pxnv .pxnv-vr__tx span { font-size:11px; line-height:14px; color:var(--mut); white-space:normal; }
+
+/* Recursos y Nosotros. */
+[data-pxsol-global] .pxnv .pxnv-grid { display:grid; gap:9px; }
+[data-pxsol-global] .pxnv .pxnv-grid--rec { grid-template-columns:251px 219px 219px; grid-template-rows:143px 127px; }
+[data-pxsol-global] .pxnv .pxnv-grid--nos { grid-template-columns:204px 178px 178px 178px; grid-template-rows:160px 144px; }
+[data-pxsol-global] .pxnv .pxnv-lead { grid-row:span 2; background:var(--card); border-radius:12px; padding:16px 14px 12px; display:flex; flex-direction:column; }
+[data-pxsol-global] .pxnv .pxnv-lead h4 { margin:0 0 10px; font-size:13px; font-weight:600; color:var(--fg); }
+[data-pxsol-global] .pxnv .pxnv-lead p { font-size:12px; line-height:17px; letter-spacing:.01em; color:var(--desc); }
+[data-pxsol-global] .pxnv .pxnv-lead__sp { margin-top:auto; }
+[data-pxsol-global] .pxnv .pxnv-team { width:100%; height:82px; border-radius:8px; object-fit:cover; background:var(--card2); }
+[data-pxsol-global] .pxnv .pxnv-lk { margin-top:5px; height:36px; display:flex; align-items:center; gap:12px; padding:0 12px; border-radius:8px; background:var(--card2); font-size:12px; font-weight:500; color:var(--fg); }
+[data-pxsol-global] .pxnv .pxnv-lk:hover { color:var(--fg); }
+[data-pxsol-global] .pxnv .pxnv-lk--team { margin-top:15px; }
+[data-pxsol-global] .pxnv .pxnv-lk__ar { margin-left:auto; color:var(--desc); }
+[data-pxsol-global] .pxnv .pxnv-rc { background:var(--card); border-radius:12px; padding:16px 14px 12px; display:flex; flex-direction:column; color:var(--fg); transition:background .18s cubic-bezier(.22,.61,.36,1); }
+[data-pxsol-global] .pxnv .pxnv-rc:hover { background:var(--card2); color:var(--fg); }
+[data-pxsol-global] .pxnv .pxnv-rc b { font-size:13px; font-weight:600; color:var(--fg); }
+[data-pxsol-global] .pxnv .pxnv-rc p { margin:9px 0 0; font-size:12px; line-height:17px; letter-spacing:.01em; color:var(--desc); }
+[data-pxsol-global] .pxnv .pxnv-rf { margin-top:auto; padding-top:12px; display:flex; align-items:center; gap:13px; }
+[data-pxsol-global] .pxnv .pxnv-rf img { width:14px; height:14px; margin-left:5px; }
+[data-pxsol-global] .pxnv .pxnv-pill { display:inline-flex; align-items:center; height:33px; padding:0 16px; border-radius:999px; border:1px solid rgba(255,255,255,.22); font-size:12px; font-weight:500; color:var(--fg); white-space:nowrap; }
+[data-pxsol-global] .pxnv .pxnv-rc:hover .pxnv-pill { background:rgba(255,255,255,.08); }
+[data-pxsol-global] .pxnv .pxnv-help { height:52px; display:flex; align-items:center; justify-content:space-between; padding:0 10px 0 17px; border-radius:12px; background:#0B1236; }
+[data-pxsol-global] .pxnv .pxnv-help b { font-size:13px; font-weight:500; color:var(--fg); letter-spacing:.01em; }
+[data-pxsol-global] .pxnv .pxnv-wa { display:inline-flex; align-items:center; gap:9px; height:34px; padding:0 9px 0 17px; border-radius:999px; border:1px solid rgba(255,255,255,.14); background:#000017; font-size:12px; font-weight:500; color:var(--fg); }
+[data-pxsol-global] .pxnv .pxnv-wa:hover { color:var(--fg); }
+
+/* ── Responsive (escritorio) ───────────────────────────────────────────────────
+   Los escalones son los del handoff, pero CORRIDOS: con sus cortes (1200 y 1100)
+   la barra no entra entre ~1100 y ~1380px y «Cotizar» queda afuera. Medido el
+   29/10/2026 con «Alquiler temporario» (el rótulo más largo, Argentina), arriba y
+   en la píldora: el escalón de 16px necesita ≥1383px, el de 15px ≥1180 (sin aire; rige desde 1220) y el de
+   14px ≥1051. Los valores de cada escalón no cambian; cambia desde dónde rigen.
+   Lo cuida `navbar-compresion.test.ts`. */
+@media (max-width:1399px) {
+  [data-pxsol-global] .pxnv .pxnv-bar-main { padding:0 24px 0 32px; }
+  [data-pxsol-global] .pxnv .pxnv-i { padding:0 10px; font-size:15px; }
+  [data-pxsol-global] .pxnv .pxnv-i--dd { padding-right:14px; gap:6px; }
+  [data-pxsol-global] .pxnv .pxnv-nav { margin-left:24px; }
+}
+@media (max-width:1219px) {
+  [data-pxsol-global] .pxnv .pxnv-i, [data-pxsol-global] .pxnv.is-stuck .pxnv-i { padding:0 8px; font-size:14px; }
+  [data-pxsol-global] .pxnv .pxnv-i--dd, [data-pxsol-global] .pxnv.is-stuck .pxnv-i--dd { padding-right:10px; gap:4px; }
+  [data-pxsol-global] .pxnv .pxnv-nav, [data-pxsol-global] .pxnv.is-stuck .pxnv-nav { margin-left:14px; gap:0; }
+  [data-pxsol-global] .pxnv .pxnv-btn-o, [data-pxsol-global] .pxnv .pxnv-btn-w, [data-pxsol-global] .pxnv.is-stuck .pxnv-btn-o, [data-pxsol-global] .pxnv.is-stuck .pxnv-btn-w { padding:0 14px; font-size:13.5px; }
+  [data-pxsol-global] .pxnv .pxnv-globe, [data-pxsol-global] .pxnv.is-stuck .pxnv-globe { margin-right:8px; }
+}
+@media (max-width:1060px) {
+  [data-pxsol-global] .pxnv .pxnv-i--lo { display:none; }
+}
+
+/* ── Mobile ───────────────────────────────────────────────────────────────── */
+@media (max-width:960px) {
+  [data-pxsol-global] .pxnv .pxnv-bar-main, [data-pxsol-global] .pxnv.is-stuck .pxnv-bar-main { height:60px; padding:0 8px 0 20px; }
+  [data-pxsol-global] .pxnv .pxnv-bar-main { border-radius:16px; }
+  [data-pxsol-global] .pxnv.is-stuck .pxnv-bar-main { top:10px; width:calc(100% - 20px); }
+  [data-pxsol-global] .pxnv .pxnv-nav, [data-pxsol-global] .pxnv .pxnv-lang, [data-pxsol-global] .pxnv .pxnv-btn-o, [data-pxsol-global] .pxnv .pxnv-btn-w { display:none; }
+  [data-pxsol-global] .pxnv .pxnv-lgb--full, [data-pxsol-global] .pxnv.is-stuck .pxnv-lgb--full { max-width:64px; }
+  [data-pxsol-global] .pxnv .pxnv-lgb--iso, [data-pxsol-global] .pxnv.is-stuck .pxnv-lgb--iso { max-width:0; }
+  [data-pxsol-global] .pxnv .pxnv-burger { display:inline-flex; align-items:center; justify-content:center; width:44px; height:44px; margin-left:auto; border-radius:999px; color:#FAFAFA; }
+}
+
+/* El overlay a pantalla completa. Vive fuera de `@media` porque el JS es quien lo
+   abre; si la ventana se agranda con el menú abierto, el JS lo cierra. */
+[data-pxsol-global] .pxnv .pxnv-m { position:fixed; inset:0; z-index:10000; display:flex; flex-direction:column; background:#000017; color:#FAFAFA; --card:#12121C; --card2:#1B1B26; --fg:#FAFAFA; --desc:#A6A6B4; --mut:#84849B; }
+[data-pxsol-global] .pxnv .pxnv-m[hidden] { display:none; }
+[data-pxsol-global] .pxnv .pxnv-m__h { height:60px; flex:none; display:flex; align-items:center; justify-content:space-between; padding:0 20px; border-bottom:1px solid rgba(255,255,255,.08); }
+[data-pxsol-global] .pxnv .pxnv-m__logo { color:#fff; }
+[data-pxsol-global] .pxnv .pxnv-m__x { width:44px; height:44px; display:inline-flex; align-items:center; justify-content:center; margin-right:-10px; color:#FAFAFA; }
+[data-pxsol-global] .pxnv .pxnv-m__l { flex:1; min-height:0; overflow-y:auto; overscroll-behavior:contain; padding:6px 16px 16px; }
+[data-pxsol-global] .pxnv .pxnv-ms { display:flex; flex-direction:column; border-bottom:1px solid rgba(255,255,255,.08); }
+[data-pxsol-global] .pxnv .pxnv-ms--sep { margin-top:14px; }
+[data-pxsol-global] .pxnv .pxnv-ms__h { width:100%; min-height:60px; display:flex; align-items:center; justify-content:space-between; gap:12px; padding:0 4px; font-size:18px; font-weight:400; letter-spacing:-.005em; color:#FAFAFA; text-align:left; }
+[data-pxsol-global] .pxnv .pxnv-ms__h:hover { color:#FAFAFA; }
+[data-pxsol-global] .pxnv .pxnv-ms__ic { color:#A6A6B4; transition:transform .25s cubic-bezier(.22,.61,.36,1); }
+[data-pxsol-global] .pxnv .pxnv-ms__h[aria-expanded="true"] .pxnv-ms__ic { transform:rotate(180deg); }
+[data-pxsol-global] .pxnv .pxnv-ms__b { display:flex; flex-direction:column; gap:10px; padding:2px 0 18px; }
+[data-pxsol-global] .pxnv .pxnv-ms__b[hidden] { display:none; }
+[data-pxsol-global] .pxnv .pxnv-ms__pais { display:inline-flex; align-items:center; gap:12px; }
+[data-pxsol-global] .pxnv .pxnv-ms__pais .pxnv-flag.is-otros { display:none; }
+[data-pxsol-global] .pxnv .pxnv-mhero { display:flex; align-items:center; gap:12px; padding:8px; border-radius:14px; background:#12121C; color:#FAFAFA; }
+[data-pxsol-global] .pxnv .pxnv-mhero img { width:56px; height:56px; border-radius:10px; object-fit:cover; object-position:60% center; flex:none; background:#1B1B26; }
+[data-pxsol-global] .pxnv .pxnv-mhero > span { display:flex; flex-direction:column; gap:3px; }
+[data-pxsol-global] .pxnv .pxnv-mhero b { font-size:14px; font-weight:600; }
+[data-pxsol-global] .pxnv .pxnv-mhero span span { font-size:12.5px; line-height:17px; color:#A6A6B4; }
+[data-pxsol-global] .pxnv .pxnv-mblk { display:flex; flex-direction:column; border-radius:14px; background:#12121C; padding:6px 14px; }
+[data-pxsol-global] .pxnv .pxnv-mblk .pxnv-g { padding:10px 0 6px; }
+[data-pxsol-global] .pxnv .pxnv-mblk .pxnv-g + .pxnv-g { border-top:1px solid rgba(255,255,255,.07); }
+[data-pxsol-global] .pxnv .pxnv-mblk .pxnv-cap { height:22px; gap:8px; margin-bottom:0; font-size:10px; color:#A6A6B4; }
+[data-pxsol-global] .pxnv .pxnv-mblk .pxnv-cap svg { color:#84849B; }
+[data-pxsol-global] .pxnv .pxnv-mblk .pxnv-row { height:auto; min-height:44px; font-size:15.5px; letter-spacing:0; color:#FAFAFA; white-space:normal; }
+[data-pxsol-global] .pxnv .pxnv-mblk .pxnv-new { font-size:9px; line-height:17px; padding:0 8px; }
+[data-pxsol-global] .pxnv .pxnv-mblk .pxnv-fl { width:20px; height:20px; }
+[data-pxsol-global] .pxnv .pxnv-mblk .pxnv-ck { color:#7FB2FF; }
+[data-pxsol-global] .pxnv .pxnv-mduo { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+[data-pxsol-global] .pxnv .pxnv-mt { display:flex; flex-direction:column; gap:6px; padding:12px 14px; border-radius:14px; background:#12121C; color:#FAFAFA; }
+[data-pxsol-global] .pxnv .pxnv-mt:hover { color:#FAFAFA; }
+[data-pxsol-global] .pxnv .pxnv-mt__top { display:flex; align-items:center; justify-content:space-between; }
+[data-pxsol-global] .pxnv .pxnv-mt__top svg:first-child { color:#A6A6B4; }
+[data-pxsol-global] .pxnv .pxnv-mt b { font-size:14px; font-weight:600; }
+[data-pxsol-global] .pxnv .pxnv-mt > span:last-child { font-size:11.5px; line-height:15px; color:#84849B; }
+[data-pxsol-global] .pxnv .pxnv-m__f { flex:none; display:flex; flex-direction:column; gap:10px; padding:14px 20px calc(30px + env(safe-area-inset-bottom)); border-top:1px solid rgba(255,255,255,.08); background:#000017; }
+[data-pxsol-global] .pxnv .pxnv-m__o, [data-pxsol-global] .pxnv .pxnv-m__w { height:50px; display:flex; align-items:center; justify-content:center; border-radius:999px; font-size:16px; font-weight:500; }
+[data-pxsol-global] .pxnv .pxnv-m__o, [data-pxsol-global] .pxnv .pxnv-m__o:hover { border:1px solid rgba(255,255,255,.22); color:#FAFAFA; }
+[data-pxsol-global] .pxnv .pxnv-m__w, [data-pxsol-global] .pxnv .pxnv-m__w:hover { background:#fff; color:#262728; }
+html.pxnv-lock, html.pxnv-lock body { overflow:hidden; }
+
+@media (prefers-reduced-motion:reduce) {
+  [data-pxsol-global] .pxnv *, [data-pxsol-global] .pxnv *::before, [data-pxsol-global] .pxnv *::after { transition:none !important; }
+}
+</style><style>
+[data-pxsol-global="header"] { position: relative; }
+[data-pxsol-global="header"] .px-header { position: absolute; inset: 0 0 auto; }
+[data-pxsol-global="header"] .px-header:not(.--transparent) { background-color: transparent; }
+</style><style>
+[data-pxsol-global="header"] .px-header.--transparent .px-header__btnLangs img {
+  filter: brightness(0) invert(1);
+}
+</style><header class="pxnv" data-pxnv="">
+<nav class="pxnv-bar-main" aria-label="Principal">
+<a class="pxnv-logo" href="https://www.pxsol.com/es-ar/" aria-label="Pxsol, inicio"><span class="pxnv-lgb pxnv-lgb--iso"><svg class="pxnv-svg" aria-hidden="true" focusable="false" width="28" height="28" viewBox="352 10 256 236" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M437.184 90.9367C437.184 102.253 433.06 110.92 424.813 116.946C416.565 122.973 404.824 125.991 389.6 125.991H377.063V166.519H357.353V58.1845H392.07C407.139 58.1845 418.415 60.9574 425.929 66.4826C433.432 72.018 437.184 80.1626 437.184 90.9367ZM377.063 111.094H387.533C397.651 111.094 405.072 109.518 409.795 106.346C414.529 103.184 416.885 98.2423 416.885 91.5302C416.885 85.3092 414.767 80.6639 410.539 77.5944C406.312 74.5351 399.708 73.0003 390.747 73.0003H377.053V111.083L377.063 111.094Z" fill="currentColor"></path>
+<path d="M438.008 57.966L474.286 107.12L416.8 185.107L442.349 192.689L489.83 128.208L564.1 228.961L603.179 240.554L505.199 107.355L572.627 15.8824L532.743 27.8025L489.499 86.2981L463.041 50.4047L438.008 57.966Z" fill="#D20A11"></path>
+</svg></span><span class="pxnv-lgb pxnv-lgb--full"><svg class="pxnv-svg" aria-hidden="true" focusable="false" width="64" height="30" viewBox="352 10 484 234" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M437.184 90.9367C437.184 102.253 433.06 110.92 424.813 116.946C416.565 122.973 404.824 125.991 389.6 125.991H377.063V166.519H357.353V58.1845H392.07C407.139 58.1845 418.415 60.9574 425.929 66.4826C433.432 72.018 437.184 80.1626 437.184 90.9367ZM377.063 111.094H387.533C397.651 111.094 405.072 109.518 409.795 106.346C414.529 103.184 416.885 98.2423 416.885 91.5302C416.885 85.3092 414.767 80.6639 410.539 77.5944C406.312 74.5351 399.708 73.0003 390.747 73.0003H377.053V111.083L377.063 111.094Z" fill="currentColor"></path>
+<path d="M632.131 137.093C632.131 146.731 628.255 154.282 620.504 159.767C612.752 165.251 602.055 167.993 588.422 167.993C574.79 167.993 563.628 166.09 554.936 162.294V145.544C560.434 147.867 566.274 149.688 572.465 151.029C578.645 152.359 584.412 153.024 589.745 153.024C597.549 153.024 603.316 151.694 607.026 149.023C610.737 146.353 612.597 142.771 612.597 138.28C612.597 134.228 610.892 130.79 607.481 127.976C604.07 125.162 597.032 121.827 586.366 117.969C575.369 113.969 567.617 109.395 563.111 104.259C558.605 99.1224 556.352 92.9423 556.352 85.7391C556.352 76.6941 559.928 69.583 567.069 64.3954C574.211 59.2079 583.813 56.6192 595.854 56.6192C607.894 56.6192 618.891 58.8907 630.322 63.4336L624.049 77.881C613.331 73.8292 603.76 71.8033 595.347 71.8033C588.97 71.8033 584.133 73.0516 580.836 75.5482C577.539 78.0447 575.886 81.3394 575.886 85.4424C575.886 88.2561 576.547 90.6709 577.87 92.6661C579.193 94.6715 581.363 96.5542 584.381 98.3345C587.41 100.115 592.846 102.458 600.711 105.374C609.558 108.679 616.049 111.769 620.173 114.634C624.297 117.499 627.315 120.732 629.247 124.344C631.17 127.946 632.131 132.202 632.131 137.093Z" fill="currentColor"></path>
+<path d="M749.851 112.204C749.851 129.844 744.942 143.544 735.133 153.326C725.325 163.108 711.424 167.999 693.451 167.999C675.477 167.999 661.277 163.149 651.51 153.439C641.753 143.729 636.875 129.936 636.875 112.051C636.875 94.1654 641.784 80.4343 651.592 70.847C661.401 61.2598 675.415 56.4713 693.606 56.4713C711.796 56.4713 725.387 61.3416 735.175 71.0721C744.962 80.8026 749.851 94.5133 749.851 112.194V112.204ZM657.814 112.204C657.814 125.547 660.811 135.656 666.806 142.552C672.801 149.448 681.679 152.896 693.44 152.896C705.202 152.896 713.987 149.489 719.951 142.664C725.914 135.85 728.901 125.7 728.901 112.214C728.901 98.7289 725.945 88.8449 720.033 81.9793C714.122 75.1137 705.316 71.6758 693.606 71.6758C681.896 71.6758 672.863 75.1137 666.847 81.9793C660.822 88.8449 657.814 98.9233 657.814 112.214V112.204Z" fill="currentColor"></path>
+<path d="M763.068 166.519V58.1845H782.778V151.325H833.824V166.519H763.068Z" fill="currentColor"></path>
+<path d="M438.008 57.966L474.286 107.12L416.8 185.107L442.349 192.689L489.83 128.208L564.1 228.961L603.179 240.554L505.199 107.355L572.627 15.8824L532.743 27.8025L489.499 86.2981L463.041 50.4047L438.008 57.966Z" fill="#D20A11"></path>
+</svg></span></a>
+<div class="pxnv-nav">
+<span class="pxnv-grp">
+<button class="pxnv-i pxnv-i--dd" type="button" data-pxnv-menu="hoteles" aria-expanded="false" aria-controls="pxnv-p-hoteles">Hoteles <svg class="pxnv-chev" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></button>
+<a class="pxnv-i" href="https://pxsolvr.com" target="_blank" rel="noopener"><span data-pxnv-vr="">Alquiler temporario</span><svg class="pxnv-ext" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></a>
+<a class="pxnv-i" href="https://agencias.pxsol.com" target="_blank" rel="noopener">Agencias<svg class="pxnv-ext" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></a>
+</span>
+<span class="pxnv-gap" aria-hidden="true"></span>
+<a class="pxnv-i pxnv-i--lo" href="https://www.pxsol.com/es-ar/precios">Precios</a>
+<button class="pxnv-i pxnv-i--dd" type="button" data-pxnv-menu="recursos" aria-expanded="false" aria-controls="pxnv-p-recursos">Recursos <svg class="pxnv-chev" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></button>
+<button class="pxnv-i pxnv-i--dd pxnv-i--lo" type="button" data-pxnv-menu="nosotros" aria-expanded="false" aria-controls="pxnv-p-nosotros">Nosotros <svg class="pxnv-chev" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></button>
+<div class="pxnv-drop" id="pxnv-p-hoteles" data-pxnv-panel="hoteles"><div class="pxnv-pnl pxnv-pnl--hot">
+<div class="pxnv-top">
+<div class="pxnv-left">
+<div class="pxnv-hcard"><div class="pxnv-hcard__ph"><img data-src="https://www.pxsol.com/producto/assets/navbar-v2-hoteles.jpg?v=2" alt="" width="250" height="196"></div>
+<div class="pxnv-hcard__bd"><b>Hoteles</b><p>Centralizá la operación de tu hotel y maximizá tus ingresos directos.</p></div></div>
+<a class="pxnv-bar pxnv-vr" href="https://pxsolvr.com" target="_blank" rel="noopener"><img data-src="https://www.pxsol.com/producto/assets/navbar-v2-alquiler.jpg?v=2" alt="" width="40" height="40">
+<span class="pxnv-vr__tx"><b data-pxnv-vr="">Alquiler temporario</b><span>Gestioná tus propiedades de alquiler temporario.</span></span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></a>
+</div>
+<div class="pxnv-prods"><div class="pxnv-col"><div class="pxnv-g"><span class="pxnv-cap"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"></path><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"></path><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"></path><path d="M10 6h4"></path><path d="M10 10h4"></path><path d="M10 14h4"></path><path d="M10 18h4"></path></svg>Gestión hotelera</span><a class="pxnv-row" href="https://www.pxsol.com/es-ar/producto/pms-para-hoteles">PMS</a><a class="pxnv-row" href="https://www.pxsol.com/es-ar/producto/motor-de-reservas-hoteles">Motor de reservas</a><a class="pxnv-row" href="https://www.pxsol.com/es-ar/producto/crm-hoteles">CRM</a><a class="pxnv-row" href="https://www.pxsol.com/es-ar/producto/rms-para-hoteles">RMS<span class="pxnv-new">NUEVO</span></a></div><div class="pxnv-g"><span class="pxnv-cap"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path><path d="M20 3v4"></path><path d="M22 5h-4"></path><path d="M4 17v2"></path><path d="M5 18H3"></path></svg>Inteligencia artificial</span><a class="pxnv-row" href="https://www.pxsol.com/es-ar/producto/agentes-ia">Agentes de IA<span class="pxnv-new">NUEVO</span></a><a class="pxnv-row" href="https://www.pxsol.com/es-ar/producto/aplicacion-conversaciones">Asistente WhatsApp IA</a></div><div class="pxnv-g"><span class="pxnv-cap"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 11 18-5v12L3 14v-3z"></path><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"></path></svg>Marketing digital</span><a class="pxnv-row" href="https://www.pxsol.com/es-ar/producto/pagina-web-hoteles">Página Web</a><a class="pxnv-row" href="https://www.pxsol.com/es-ar/producto/hotel-ads">Publicidad</a><a class="pxnv-row" href="https://www.pxsol.com/es-ar/producto/redes-sociales-hoteles">Gestor de RRSS<span class="pxnv-new">NUEVO</span></a></div></div><div class="pxnv-col"><div class="pxnv-g"><span class="pxnv-cap"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="16" y="16" width="6" height="6" rx="1"></rect><rect x="2" y="16" width="6" height="6" rx="1"></rect><rect x="9" y="2" width="6" height="6" rx="1"></rect><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"></path><path d="M12 12V8"></path></svg>Distribución</span><a class="pxnv-row" href="https://www.pxsol.com/es-ar/producto/channel-manager-hoteles">Channel Manager</a><a class="pxnv-row" href="https://www.pxsol.com/es-ar/producto/pxsol-b2b">Pxsol B2B</a><a class="pxnv-row" href="https://www.pxsol.com/es-ar/producto/gds">GDS</a></div><div class="pxnv-g"><span class="pxnv-cap"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" x2="9.01" y1="9" y2="9"></line><line x1="15" x2="15.01" y1="9" y2="9"></line></svg>Experiencia huésped</span><a class="pxnv-row" href="https://www.pxsol.com/es-ar/producto/huesped-gest-app">Huésped+<span class="pxnv-new">NUEVO</span></a></div><div class="pxnv-g"><span class="pxnv-cap"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><path d="M12 11h4"></path><path d="M12 16h4"></path><path d="M8 11h.01"></path><path d="M8 16h.01"></path></svg>Operaciones</span><a class="pxnv-row" href="https://www.pxsol.com/es-ar/producto/erp-para-hoteles">ERP Control de Costos</a><a class="pxnv-row" href="https://www.pxsol.com/es-ar/producto/pos-para-hoteles">POS Punto de Venta</a></div><div class="pxnv-g"><span class="pxnv-cap"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="14" x="2" y="5" rx="2"></rect><line x1="2" x2="22" y1="10" y2="10"></line></svg>Soluciones de pago</span><a class="pxnv-row" href="https://www.pxsol.com/es-ar/producto/soluciones-de-pago">Pxsol Pay</a></div></div></div>
+</div>
+<div class="pxnv-band"><a class="pxnv-bar pxnv-bar--pagos" href="https://www.pxsol.com/es-ar/producto/soluciones-de-pago"><svg class="pxnv-bar__ic" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="14" x="2" y="5" rx="2"></rect><line x1="2" x2="22" y1="10" y2="10"></line></svg><b>Pagos</b><span>Pxsol Pay · WebPay · Mercado Pago</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a><a class="pxnv-bar pxnv-bar--integ" href="https://www.pxsol.com/es/integraciones-ota"><svg class="pxnv-bar__ic" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="7" height="7" x="14" y="3" rx="1"></rect><path d="M10 21V8a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1H3"></path></svg><b>Integraciones</b><span>Booking.com · Expedia · Despegar&nbsp;&nbsp;+195 más</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a></div>
+</div></div>
+<div class="pxnv-drop" id="pxnv-p-recursos" data-pxnv-panel="recursos"><div class="pxnv-pnl pxnv-pnl--rec">
+<div class="pxnv-grid pxnv-grid--rec">
+<div class="pxnv-lead"><h4>Centro de Recursos</h4><p>Conocimiento, herramientas y actualizaciones para tu alojamiento.</p>
+<div class="pxnv-lead__sp"></div><a class="pxnv-lk" href="https://www.pxsol.com/es/demos"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="14" x="2" y="3" rx="2"></rect><line x1="8" x2="16" y1="21" y2="21"></line><line x1="12" x2="12" y1="17" y2="21"></line></svg>Demos grabados<svg class="pxnv-lk__ar" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a><a class="pxnv-lk" href="https://www.pxsol.com/actualizaciones-de-sistema-2026"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 13v8"></path><path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"></path><path d="m8 17 4-4 4 4"></path></svg>Updates<svg class="pxnv-lk__ar" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a></div>
+<a class="pxnv-rc" href="https://www.pxsol.com/blog"><b>Blog Hotelero</b><p>Estrategias, tendencias y consejos para optimizar tu gestión.</p><span class="pxnv-rf"><img data-src="https://www.pxsol.com/api/marketing-asset/pencil.png" alt="" width="14" height="14"><span class="pxnv-pill">Ver más</span></span></a><a class="pxnv-rc" href="https://www.pxsol.com/es/ebooksdehoteleria"><b>Recursos digitales</b><p>Ebooks, guías, casos de estudio y más.</p><span class="pxnv-rf"><img data-src="https://www.pxsol.com/api/marketing-asset/folder.png" alt="" width="14" height="14"><span class="pxnv-pill">Ver más</span></span></a><a class="pxnv-rc" href="https://www.pxsol.com/es/eventos-pxsol"><b>Eventos para Hoteles</b><p>Encuentro para líderes de la industria hotelera.</p><span class="pxnv-rf"><img data-src="https://www.pxsol.com/api/marketing-asset/calendar.png" alt="" width="14" height="14"><span class="pxnv-pill">¡Inscribirme!</span></span></a><a class="pxnv-rc" href="https://www.pxsol.com/es/webinars"><b>Capacitaciones</b><p>Consejos prácticos e información actualizada.</p><span class="pxnv-rf"><img data-src="https://www.pxsol.com/api/marketing-asset/chat.png" alt="" width="14" height="14"><span class="pxnv-pill">Ver más</span></span></a>
+</div>
+<div class="pxnv-help"><b>¿Necesitas ayuda para elegir un plan?</b>
+<a class="pxnv-wa" href="https://wa.me/5492612130380" target="_blank" rel="noopener">Contactanos por Whatsapp<img data-src="https://www.pxsol.com/producto/assets/navbar-whatsapp.png" alt="" width="17" height="17"></a></div>
+</div></div>
+<div class="pxnv-drop" id="pxnv-p-nosotros" data-pxnv-panel="nosotros"><div class="pxnv-pnl pxnv-pnl--nos">
+<div class="pxnv-grid pxnv-grid--nos">
+<div class="pxnv-lead"><h4>Quiénes somos</h4><p>Conoce nuestra historia, misión y el equipo detrás de nuestras soluciones hoteleras. Trabajamos cada día para brindarte herramientas que impulsan tu negocio.</p>
+<div class="pxnv-lead__sp"></div><img class="pxnv-team" data-src="https://www.pxsol.com/producto/assets/menu-nosotros.jpg" alt="El equipo de Pxsol" width="176" height="82">
+<a class="pxnv-lk pxnv-lk--team" href="https://www.pxsol.com/es/sobre_nosotros"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>Nuestro equipo<svg class="pxnv-lk__ar" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a></div>
+<a class="pxnv-rc" href="https://www.pxsol.com/embajadores-de-pxsol"><b>Embajadores Pxsol</b><p>Expertos que potencian tu alojamiento.</p><span class="pxnv-rf"><img data-src="https://www.pxsol.com/api/marketing-asset/profile.png" alt="" width="14" height="14"><span class="pxnv-pill">Ver más</span></span></a><a class="pxnv-rc" href="https://www.pxsol.com/es/sobre_nosotros"><b>Quienes somos</b><p>Nuestra misión es ayudarte a crecer y optimizar tus operaciones.</p><span class="pxnv-rf"><img data-src="https://www.pxsol.com/api/marketing-asset/home.png" alt="" width="14" height="14"><span class="pxnv-pill">Ver más</span></span></a><a class="pxnv-rc" href="https://www.pxsol.com/trabaja-en-pxsol"><b>Trabaja en Pxsol</b><p>Únete a nuestro equipo y sé parte del cambio en la industria hotelera.</p><span class="pxnv-rf"><img data-src="https://www.pxsol.com/api/marketing-asset/suitcase.png" alt="" width="14" height="14"><span class="pxnv-pill">Ver más</span></span></a><a class="pxnv-rc" href="https://www.pxsol.com/es-ar/programa-de-referidos"><b>Programa de referidos</b><p>Únete a nuestro equipo y sé parte del cambio en la industria hotelera.</p><span class="pxnv-rf"><img data-src="https://www.pxsol.com/api/marketing-asset/share.png" alt="" width="14" height="14"><span class="pxnv-pill">¡Únete!</span></span></a><a class="pxnv-rc" href="https://www.pxsol.com/es/plantar-un-arbol"><b>Plantar un árbol</b><p>Contribuye a reducir la huella de carbono y cuida nuestro planeta.</p><span class="pxnv-rf"><img data-src="https://www.pxsol.com/api/marketing-asset/security.png" alt="" width="14" height="14"><span class="pxnv-pill">Ver más</span></span></a><a class="pxnv-rc" href="https://www.pxsol.com/es/clientes"><b>Nuestros clientes</b><p>Estos son los hoteles que confían en nosotros.</p><span class="pxnv-rf"><img data-src="https://www.pxsol.com/api/marketing-asset/locations.png" alt="" width="14" height="14"><span class="pxnv-pill">Ver más</span></span></a>
+</div>
+</div></div>
+</div>
+<span class="pxnv-lang"><button class="pxnv-globe" type="button" aria-label="Elegir país" aria-haspopup="true" aria-expanded="false" data-pxnv-lang=""><span class="pxnv-flag" data-pxnv-flag="" style="background-image: url(&quot;https://www.pxsol.com/producto/assets/flag-argentina.svg&quot;);"></span><svg class="pxnv-globe__ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg></button><ul class="pxnv-langs px-header__langsList"><li><a class="pxnv-li is-sel" href="https://www.pxsol.com/es-ar/producto/hotel-ads" data-pxnv-loc="es-ar" aria-current="true"><span class="pxnv-fl" style="background-image:url(https://www.pxsol.com/producto/assets/flag-argentina.svg)"></span>Argentina<svg class="pxnv-ck" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></a></li><li><a class="pxnv-li" href="https://www.pxsol.com/es-cl/producto/hotel-ads" data-pxnv-loc="es-cl"><span class="pxnv-fl" style="background-image:url(https://www.pxsol.com/producto/assets/flag-chile.svg)"></span>Chile<svg class="pxnv-ck" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></a></li><li><a class="pxnv-li" href="https://www.pxsol.com/es-co/producto/hotel-ads" data-pxnv-loc="es-co"><span class="pxnv-fl" style="background-image:url(https://www.pxsol.com/producto/assets/flag-colombia.svg)"></span>Colombia<svg class="pxnv-ck" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></a></li><li><a class="pxnv-li" href="https://www.pxsol.com/es-mx/producto/hotel-ads" data-pxnv-loc="es-mx"><span class="pxnv-fl" style="background-image:url(https://www.pxsol.com/producto/assets/flag-mexico.svg)"></span>México<svg class="pxnv-ck" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></a></li><li><a class="pxnv-li" href="https://www.pxsol.com/es-pe/producto/hotel-ads" data-pxnv-loc="es-pe"><span class="pxnv-fl" style="background-image:url(https://www.pxsol.com/producto/assets/flag-peru.svg)"></span>Perú<svg class="pxnv-ck" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></a></li><li><a class="pxnv-li" href="https://www.pxsol.com/es-uy/producto/hotel-ads" data-pxnv-loc="es-uy"><span class="pxnv-fl" style="background-image:url(https://www.pxsol.com/producto/assets/flag-uruguay.svg)"></span>Uruguay<svg class="pxnv-ck" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></a></li><li><a class="pxnv-li" href="https://www.pxsol.com/es-py/producto/hotel-ads" data-pxnv-loc="es-py"><span class="pxnv-fl" style="background-image:url(https://www.pxsol.com/producto/assets/flag-paraguay.svg)"></span>Paraguay<svg class="pxnv-ck" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></a></li><li><a class="pxnv-li" href="https://www.pxsol.com/es/producto/hotel-ads" data-pxnv-loc="es"><span class="pxnv-fl pxnv-fl--otros"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg></span>Otros países<svg class="pxnv-ck" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></a></li></ul></span>
+<a class="pxnv-btn-o" href="https://pms.pxsol.com/">Iniciar sesión</a>
+<a class="pxnv-btn-w" href="https://www.pxsol.com/es/crearcuenta">Cotizar<span class="pxnv-halo pxnv-halo--r"></span><span class="pxnv-halo pxnv-halo--b"></span></a>
+<button class="pxnv-burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="pxnv-m" data-pxnv-abrir=""><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button>
+</nav>
+<div class="pxnv-m" id="pxnv-m" role="dialog" aria-modal="true" aria-label="Menú" hidden="">
+<div class="pxnv-m__h"><a class="pxnv-m__logo" href="https://www.pxsol.com/es-ar/" aria-label="Pxsol, inicio"><svg class="pxnv-svg" aria-hidden="true" focusable="false" width="74" height="34" viewBox="352 10 484 234" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M437.184 90.9367C437.184 102.253 433.06 110.92 424.813 116.946C416.565 122.973 404.824 125.991 389.6 125.991H377.063V166.519H357.353V58.1845H392.07C407.139 58.1845 418.415 60.9574 425.929 66.4826C433.432 72.018 437.184 80.1626 437.184 90.9367ZM377.063 111.094H387.533C397.651 111.094 405.072 109.518 409.795 106.346C414.529 103.184 416.885 98.2423 416.885 91.5302C416.885 85.3092 414.767 80.6639 410.539 77.5944C406.312 74.5351 399.708 73.0003 390.747 73.0003H377.053V111.083L377.063 111.094Z" fill="currentColor"></path>
+<path d="M632.131 137.093C632.131 146.731 628.255 154.282 620.504 159.767C612.752 165.251 602.055 167.993 588.422 167.993C574.79 167.993 563.628 166.09 554.936 162.294V145.544C560.434 147.867 566.274 149.688 572.465 151.029C578.645 152.359 584.412 153.024 589.745 153.024C597.549 153.024 603.316 151.694 607.026 149.023C610.737 146.353 612.597 142.771 612.597 138.28C612.597 134.228 610.892 130.79 607.481 127.976C604.07 125.162 597.032 121.827 586.366 117.969C575.369 113.969 567.617 109.395 563.111 104.259C558.605 99.1224 556.352 92.9423 556.352 85.7391C556.352 76.6941 559.928 69.583 567.069 64.3954C574.211 59.2079 583.813 56.6192 595.854 56.6192C607.894 56.6192 618.891 58.8907 630.322 63.4336L624.049 77.881C613.331 73.8292 603.76 71.8033 595.347 71.8033C588.97 71.8033 584.133 73.0516 580.836 75.5482C577.539 78.0447 575.886 81.3394 575.886 85.4424C575.886 88.2561 576.547 90.6709 577.87 92.6661C579.193 94.6715 581.363 96.5542 584.381 98.3345C587.41 100.115 592.846 102.458 600.711 105.374C609.558 108.679 616.049 111.769 620.173 114.634C624.297 117.499 627.315 120.732 629.247 124.344C631.17 127.946 632.131 132.202 632.131 137.093Z" fill="currentColor"></path>
+<path d="M749.851 112.204C749.851 129.844 744.942 143.544 735.133 153.326C725.325 163.108 711.424 167.999 693.451 167.999C675.477 167.999 661.277 163.149 651.51 153.439C641.753 143.729 636.875 129.936 636.875 112.051C636.875 94.1654 641.784 80.4343 651.592 70.847C661.401 61.2598 675.415 56.4713 693.606 56.4713C711.796 56.4713 725.387 61.3416 735.175 71.0721C744.962 80.8026 749.851 94.5133 749.851 112.194V112.204ZM657.814 112.204C657.814 125.547 660.811 135.656 666.806 142.552C672.801 149.448 681.679 152.896 693.44 152.896C705.202 152.896 713.987 149.489 719.951 142.664C725.914 135.85 728.901 125.7 728.901 112.214C728.901 98.7289 725.945 88.8449 720.033 81.9793C714.122 75.1137 705.316 71.6758 693.606 71.6758C681.896 71.6758 672.863 75.1137 666.847 81.9793C660.822 88.8449 657.814 98.9233 657.814 112.214V112.204Z" fill="currentColor"></path>
+<path d="M763.068 166.519V58.1845H782.778V151.325H833.824V166.519H763.068Z" fill="currentColor"></path>
+<path d="M438.008 57.966L474.286 107.12L416.8 185.107L442.349 192.689L489.83 128.208L564.1 228.961L603.179 240.554L505.199 107.355L572.627 15.8824L532.743 27.8025L489.499 86.2981L463.041 50.4047L438.008 57.966Z" fill="#D20A11"></path>
+</svg></a>
+<button class="pxnv-m__x" type="button" aria-label="Cerrar menú" data-pxnv-cerrar=""><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button></div>
+<div class="pxnv-m__l"><div class="pxnv-ms "><button class="pxnv-ms__h" type="button" aria-expanded="false" data-pxnv-acc=""><span>Hoteles</span><svg class="pxnv-ms__ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></button><div class="pxnv-ms__b" hidden=""><a class="pxnv-mhero" href="https://www.pxsol.com/es-ar/"><img data-src="https://www.pxsol.com/producto/assets/navbar-v2-hoteles.jpg?v=2" alt="" width="56" height="56"><span><b>Soluciones para hoteles</b><span>Centralizá la operación de tu hotel y maximizá tus ingresos directos.</span></span></a><div class="pxnv-mblk"><div class="pxnv-g"><span class="pxnv-cap"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"></path><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"></path><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"></path><path d="M10 6h4"></path><path d="M10 10h4"></path><path d="M10 14h4"></path><path d="M10 18h4"></path></svg>Gestión hotelera</span><a class="pxnv-row" href="https://www.pxsol.com/es-ar/producto/pms-para-hoteles">PMS</a><a class="pxnv-row" href="https://www.pxsol.com/es-ar/producto/motor-de-reservas-hoteles">Motor de reservas</a><a class="pxnv-row" href="https://www.pxsol.com/es-ar/producto/crm-hoteles">CRM</a><a class="pxnv-row" href="https://www.pxsol.com/es-ar/producto/rms-para-hoteles">RMS<span class="pxnv-new">NUEVO</span></a></div><div class="pxnv-g"><span class="pxnv-cap"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path><path d="M20 3v4"></path><path d="M22 5h-4"></path><path d="M4 17v2"></path><path d="M5 18H3"></path></svg>Inteligencia artificial</span><a class="pxnv-row" href="https://www.pxsol.com/es-ar/producto/agentes-ia">Agentes de IA<span class="pxnv-new">NUEVO</span></a><a class="pxnv-row" href="https://www.pxsol.com/es-ar/producto/aplicacion-conversaciones">Asistente WhatsApp IA</a></div><div class="pxnv-g"><span class="pxnv-cap"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 11 18-5v12L3 14v-3z"></path><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"></path></svg>Marketing digital</span><a class="pxnv-row" href="https://www.pxsol.com/es-ar/producto/pagina-web-hoteles">Página Web</a><a class="pxnv-row" href="https://www.pxsol.com/es-ar/producto/hotel-ads">Publicidad</a><a class="pxnv-row" href="https://www.pxsol.com/es-ar/producto/redes-sociales-hoteles">Gestor de RRSS<span class="pxnv-new">NUEVO</span></a></div><div class="pxnv-g"><span class="pxnv-cap"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="16" y="16" width="6" height="6" rx="1"></rect><rect x="2" y="16" width="6" height="6" rx="1"></rect><rect x="9" y="2" width="6" height="6" rx="1"></rect><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"></path><path d="M12 12V8"></path></svg>Distribución</span><a class="pxnv-row" href="https://www.pxsol.com/es-ar/producto/channel-manager-hoteles">Channel Manager</a><a class="pxnv-row" href="https://www.pxsol.com/es-ar/producto/pxsol-b2b">Pxsol B2B</a><a class="pxnv-row" href="https://www.pxsol.com/es-ar/producto/gds">GDS</a></div><div class="pxnv-g"><span class="pxnv-cap"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" x2="9.01" y1="9" y2="9"></line><line x1="15" x2="15.01" y1="9" y2="9"></line></svg>Experiencia huésped</span><a class="pxnv-row" href="https://www.pxsol.com/es-ar/producto/huesped-gest-app">Huésped+<span class="pxnv-new">NUEVO</span></a></div><div class="pxnv-g"><span class="pxnv-cap"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><path d="M12 11h4"></path><path d="M12 16h4"></path><path d="M8 11h.01"></path><path d="M8 16h.01"></path></svg>Operaciones</span><a class="pxnv-row" href="https://www.pxsol.com/es-ar/producto/erp-para-hoteles">ERP Control de Costos</a><a class="pxnv-row" href="https://www.pxsol.com/es-ar/producto/pos-para-hoteles">POS Punto de Venta</a></div><div class="pxnv-g"><span class="pxnv-cap"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="14" x="2" y="5" rx="2"></rect><line x1="2" x2="22" y1="10" y2="10"></line></svg>Soluciones de pago</span><a class="pxnv-row" href="https://www.pxsol.com/es-ar/producto/soluciones-de-pago">Pxsol Pay</a></div></div><div class="pxnv-mduo"><a class="pxnv-mt" href="https://www.pxsol.com/es-ar/producto/soluciones-de-pago"><span class="pxnv-mt__top"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="14" x="2" y="5" rx="2"></rect><line x1="2" x2="22" y1="10" y2="10"></line></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span><b>Pagos</b><span>Pxsol Pay · WebPay · Mercado Pago</span></a><a class="pxnv-mt" href="https://www.pxsol.com/es/integraciones-ota"><span class="pxnv-mt__top"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="7" height="7" x="14" y="3" rx="1"></rect><path d="M10 21V8a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1H3"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span><b>Integraciones</b><span>Booking.com · Expedia · Despegar +195</span></a></div></div></div><div class="pxnv-ms "><a class="pxnv-ms__h" href="https://pxsolvr.com" target="_blank" rel="noopener"><span><span data-pxnv-vr="">Alquiler temporario</span></span><svg class="pxnv-ms__ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></a></div><div class="pxnv-ms "><a class="pxnv-ms__h" href="https://agencias.pxsol.com" target="_blank" rel="noopener"><span>Agencias</span><svg class="pxnv-ms__ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></a></div><div class="pxnv-ms pxnv-ms--sep"><a class="pxnv-ms__h" href="https://www.pxsol.com/es-ar/precios"><span>Precios</span><svg class="pxnv-ms__ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg></a></div><div class="pxnv-ms "><button class="pxnv-ms__h" type="button" aria-expanded="false" data-pxnv-acc=""><span>Recursos</span><svg class="pxnv-ms__ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></button><div class="pxnv-ms__b" hidden=""><div class="pxnv-mblk"><div class="pxnv-g"><a class="pxnv-row" href="https://www.pxsol.com/blog">Blog Hotelero</a><a class="pxnv-row" href="https://www.pxsol.com/es/ebooksdehoteleria">Recursos digitales</a><a class="pxnv-row" href="https://www.pxsol.com/es/eventos-pxsol">Eventos para Hoteles</a><a class="pxnv-row" href="https://www.pxsol.com/es/webinars">Capacitaciones</a><a class="pxnv-row" href="https://www.pxsol.com/actualizaciones-de-sistema-2026">Updates</a></div></div></div></div><div class="pxnv-ms "><button class="pxnv-ms__h" type="button" aria-expanded="false" data-pxnv-acc=""><span>Nosotros</span><svg class="pxnv-ms__ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></button><div class="pxnv-ms__b" hidden=""><div class="pxnv-mblk"><div class="pxnv-g"><a class="pxnv-row" href="https://www.pxsol.com/es/sobre_nosotros">Quiénes somos</a><a class="pxnv-row" href="https://www.pxsol.com/es/sobre_nosotros">Nuestro equipo</a><a class="pxnv-row" href="https://www.pxsol.com/embajadores-de-pxsol">Embajadores Pxsol</a><a class="pxnv-row" href="https://www.pxsol.com/es/clientes">Nuestros clientes</a><a class="pxnv-row" href="https://www.pxsol.com/trabaja-en-pxsol">Trabaja en Pxsol</a><a class="pxnv-row" href="https://www.pxsol.com/es-ar/programa-de-referidos">Programa de referidos</a><a class="pxnv-row" href="https://www.pxsol.com/es/plantar-un-arbol">Plantar un árbol</a></div></div></div></div><div class="pxnv-ms "><button class="pxnv-ms__h" type="button" aria-expanded="false" data-pxnv-acc=""><span><span class="pxnv-ms__pais"><span class="pxnv-flag" data-pxnv-flag="" style="background-image: url(&quot;https://www.pxsol.com/producto/assets/flag-argentina.svg&quot;);"></span><span data-pxnv-pais="">Argentina</span></span></span><svg class="pxnv-ms__ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></button><div class="pxnv-ms__b" hidden=""><div class="pxnv-mblk"><div class="pxnv-g"><a class="pxnv-row is-sel" href="https://www.pxsol.com/es-ar/producto/hotel-ads" data-pxnv-loc="es-ar" aria-current="true"><span class="pxnv-fl" style="background-image:url(https://www.pxsol.com/producto/assets/flag-argentina.svg)"></span>Argentina<svg class="pxnv-ck" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></a><a class="pxnv-row" href="https://www.pxsol.com/es-cl/producto/hotel-ads" data-pxnv-loc="es-cl"><span class="pxnv-fl" style="background-image:url(https://www.pxsol.com/producto/assets/flag-chile.svg)"></span>Chile<svg class="pxnv-ck" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></a><a class="pxnv-row" href="https://www.pxsol.com/es-co/producto/hotel-ads" data-pxnv-loc="es-co"><span class="pxnv-fl" style="background-image:url(https://www.pxsol.com/producto/assets/flag-colombia.svg)"></span>Colombia<svg class="pxnv-ck" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></a><a class="pxnv-row" href="https://www.pxsol.com/es-mx/producto/hotel-ads" data-pxnv-loc="es-mx"><span class="pxnv-fl" style="background-image:url(https://www.pxsol.com/producto/assets/flag-mexico.svg)"></span>México<svg class="pxnv-ck" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></a><a class="pxnv-row" href="https://www.pxsol.com/es-pe/producto/hotel-ads" data-pxnv-loc="es-pe"><span class="pxnv-fl" style="background-image:url(https://www.pxsol.com/producto/assets/flag-peru.svg)"></span>Perú<svg class="pxnv-ck" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></a><a class="pxnv-row" href="https://www.pxsol.com/es-uy/producto/hotel-ads" data-pxnv-loc="es-uy"><span class="pxnv-fl" style="background-image:url(https://www.pxsol.com/producto/assets/flag-uruguay.svg)"></span>Uruguay<svg class="pxnv-ck" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></a><a class="pxnv-row" href="https://www.pxsol.com/es-py/producto/hotel-ads" data-pxnv-loc="es-py"><span class="pxnv-fl" style="background-image:url(https://www.pxsol.com/producto/assets/flag-paraguay.svg)"></span>Paraguay<svg class="pxnv-ck" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></a><a class="pxnv-row" href="https://www.pxsol.com/es/producto/hotel-ads" data-pxnv-loc="es"><span class="pxnv-fl pxnv-fl--otros"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg></span>Otros países<svg class="pxnv-ck" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></a></div></div></div></div></div>
+<div class="pxnv-m__f"><a class="pxnv-m__o" href="https://pms.pxsol.com/">Iniciar sesión</a><a class="pxnv-m__w" href="https://www.pxsol.com/es/crearcuenta">Cotizar</a></div>
+</div>
+</header>
+<script>/* ─────────────────────────────────────────────────────────────────────────────
+   NAVBAR GLOBAL DE PXSOL — comportamiento del menú v2 (29/10/2026)
+
+   Es TODO el JS del módulo: ya no queda nada del tema de HubSpot (el menú mobile y
+   el selector de país son propios desde esta versión).
+
+   Todo cuelga de la raíz del módulo (`[data-pxsol-global]`), nunca de `document`:
+   si no, un elemento de la página con la misma clase entraría en esta lógica.
+   ───────────────────────────────────────────────────────────────────────────── */
+;(function () {
+  "use strict"
+
+  // El <script> va DENTRO del wrapper y DESPUÉS del markup: todo lo del módulo ya
+  // existe. Lo que NO existe todavía es el resto de la página (ver el final).
+  var raiz = document.currentScript && document.currentScript.closest("[data-pxsol-global]")
+  if (!raiz) raiz = document.querySelector('[data-pxsol-global="header"]')
+  if (!raiz) return
+  var nv = raiz.querySelector("[data-pxnv]")
+  var barra = raiz.querySelector(".pxnv-bar-main")
+  if (!nv || !barra) return
+  var $$ = function (sel, ctx) { return [].slice.call((ctx || raiz).querySelectorAll(sel)) }
+
+  // ── País de la página ──────────────────────────────────────────────────────
+  // En una página nativa `localizarChrome` ya reescribió el logo a `/{locale}/`, así
+  // que el locale sale de ahí. En una página del CMS el logo queda absoluto: ahí se
+  // mira el primer segmento de la URL. Sin ninguno de los dos, es el `es` neutro.
+  var LOCALES = ["es-ar", "es-cl", "es-co", "es-mx", "es-pe", "es-py", "es-uy", "es"]
+  function localeDe(ruta) {
+    var m = /^\/(es(?:-[a-z]{2})?)(?:\/|$)/.exec(ruta || "")
+    return m && LOCALES.indexOf(m[1]) >= 0 ? m[1] : null
+  }
+  var logo = raiz.querySelector(".pxnv-logo")
+  var locale = localeDe(logo && logo.getAttribute("href")) || localeDe(location.pathname) || "es"
+
+  // El segmento de alquileres no se llama igual en todos lados (handoff v2).
+  var VR = { "es-ar": "Alquiler temporario", "es-cl": "Renta corta", "es-co": "Renta corta" }
+  var nombreVr = VR[locale] || "Vacation Rentals"
+  $$("[data-pxnv-vr]").forEach(function (el) { el.textContent = nombreVr })
+
+  // El selector lista los ocho y marca el propio con un check.
+  var propio = null
+  $$("[data-pxnv-loc]").forEach(function (a) {
+    var sel = a.getAttribute("data-pxnv-loc") === locale
+    a.classList.toggle("is-sel", sel)
+    if (sel) {
+      a.setAttribute("aria-current", "true")
+      if (!propio) propio = a
+    }
+  })
+  var fl = propio && propio.querySelector(".pxnv-fl")
+  var fondo = fl && fl.style.backgroundImage
+  $$("[data-pxnv-flag]").forEach(function (f) {
+    if (fondo) f.style.backgroundImage = fondo
+    else f.classList.add("is-otros")
+  })
+  var globo = raiz.querySelector("[data-pxnv-lang]")
+  if (globo && !fondo) globo.classList.add("is-otros")
+  var nombrePais = propio ? propio.textContent.replace(/\s+/g, " ").trim() : ""
+  $$("[data-pxnv-pais]").forEach(function (el) { el.textContent = nombrePais || "País" })
+
+  // ── Imágenes diferidas ─────────────────────────────────────────────────────
+  // Las de los paneles llevan `data-src`: no se bajan hasta que alguien abre un
+  // menú. El módulo va en TODAS las páginas, así que una foto acá la pagaba cada
+  // visita aunque nadie abriera nada.
+  var cargadas = false
+  function cargarImagenes() {
+    if (cargadas) return
+    cargadas = true
+    $$("img[data-src]").forEach(function (img) {
+      img.src = img.getAttribute("data-src")
+      img.removeAttribute("data-src")
+    })
+  }
+
+  // ── Paneles de escritorio ──────────────────────────────────────────────────
+  var abierto = null
+  var langs = raiz.querySelector(".pxnv-langs")
+  var disparadores = $$("[data-pxnv-menu]")
+  var paneles = $$("[data-pxnv-panel]")
+
+  function pintar() {
+    disparadores.forEach(function (t) {
+      var on = t.getAttribute("data-pxnv-menu") === abierto
+      t.classList.toggle("is-on", on)
+      t.setAttribute("aria-expanded", on ? "true" : "false")
+    })
+    paneles.forEach(function (p) { p.classList.toggle("is-open", p.getAttribute("data-pxnv-panel") === abierto) })
+    var langAbierto = abierto === "lang"
+    if (langs) langs.classList.toggle("is-open", langAbierto)
+    if (globo) globo.setAttribute("aria-expanded", langAbierto ? "true" : "false")
+  }
+
+  // Abrir un panel cierra el selector de país, y al revés: es UN solo estado.
+  function alternar(id) {
+    abierto = abierto === id ? null : id
+    if (abierto && abierto !== "lang") cargarImagenes()
+    pintar()
+  }
+  disparadores.forEach(function (t) {
+    t.addEventListener("click", function (e) {
+      e.preventDefault()
+      e.stopPropagation()
+      alternar(t.getAttribute("data-pxnv-menu"))
+    })
+  })
+  if (globo) {
+    globo.addEventListener("click", function (e) {
+      e.preventDefault()
+      e.stopPropagation()
+      alternar("lang")
+    })
+  }
+
+  // Clic afuera cierra. Un clic DENTRO de un panel no (salvo en un link, que navega).
+  document.addEventListener("click", function (e) {
+    if (abierto === null) return
+    var dentro = paneles.some(function (p) { return p.contains(e.target) }) || (langs && langs.contains(e.target))
+    if (!dentro) { abierto = null; pintar() }
+  })
+  document.addEventListener("keydown", function (e) {
+    if (e.key !== "Escape") return
+    if (abierto !== null) {
+      var volver = abierto === "lang" ? globo : raiz.querySelector('[data-pxnv-menu="' + abierto + '"]')
+      abierto = null
+      pintar()
+      if (volver) volver.focus()
+    }
+    if (menuMobile && !menuMobile.hidden) cerrarMobile()
+  })
+
+  // ── Menú mobile ────────────────────────────────────────────────────────────
+  var menuMobile = raiz.querySelector("#pxnv-m")
+  var abrirBtn = raiz.querySelector("[data-pxnv-abrir]")
+  var MOBILE = window.matchMedia ? window.matchMedia("(max-width: 960px)") : null
+
+  function abrirMobile() {
+    cargarImagenes()
+    menuMobile.hidden = false
+    document.documentElement.classList.add("pxnv-lock")
+    if (abrirBtn) abrirBtn.setAttribute("aria-expanded", "true")
+    var x = menuMobile.querySelector("[data-pxnv-cerrar]")
+    if (x) x.focus()
+  }
+  function cerrarMobile() {
+    menuMobile.hidden = true
+    document.documentElement.classList.remove("pxnv-lock")
+    if (abrirBtn) {
+      abrirBtn.setAttribute("aria-expanded", "false")
+      abrirBtn.focus()
+    }
+  }
+  if (menuMobile) {
+    if (abrirBtn) abrirBtn.addEventListener("click", abrirMobile)
+    $$("[data-pxnv-cerrar]", menuMobile).forEach(function (b) { b.addEventListener("click", cerrarMobile) })
+    // Acordeón: una sección abierta a la vez; tocar la abierta la cierra.
+    var acordeones = $$("[data-pxnv-acc]", menuMobile)
+    acordeones.forEach(function (h) {
+      h.addEventListener("click", function () {
+        var abrir = h.getAttribute("aria-expanded") !== "true"
+        acordeones.forEach(function (o) {
+          var on = abrir && o === h
+          o.setAttribute("aria-expanded", on ? "true" : "false")
+          var cuerpo = o.nextElementSibling
+          if (cuerpo) cuerpo.hidden = !on
+        })
+      })
+    })
+    // Si la ventana pasa a escritorio con el menú abierto, el overlay no tiene botón
+    // para cerrarse: se cierra solo.
+    if (MOBILE) {
+      var alCambiar = function () { if (!MOBILE.matches && !menuMobile.hidden) cerrarMobile() }
+      if (MOBILE.addEventListener) MOBILE.addEventListener("change", alCambiar)
+      else if (MOBILE.addListener) MOBILE.addListener(alCambiar)
+    }
+  }
+
+  // ── Estados de la barra: píldora y modo claro ──────────────────────────────
+  /**
+   * La píldora entra pasando los 48px y NO sale hasta bajar de 12: dos umbrales,
+   * no uno. Con uno solo, un scroll lento alrededor del umbral prende y apaga la
+   * clase muchas veces por segundo y la barra queda temblando a mitad de la
+   * transición; y una banda pegada al cero la dispara el rebote elástico de macOS
+   * al llegar al tope (los dos casos, grabados por Sofi en agosto). El handoff dice
+   * `scrollY > 40`: 48/12 se ve igual y no tiembla. Ver el README.
+   */
+  var UMBRAL_ENTRADA = 48
+  var UMBRAL_SALIDA = 12
+
+  function actualizarPegada() {
+    var y = window.scrollY
+    var antes = nv.classList.contains("is-stuck")
+    if (y > UMBRAL_ENTRADA) nv.classList.add("is-stuck")
+    else if (y < UMBRAL_SALIDA) nv.classList.remove("is-stuck")
+    return nv.classList.contains("is-stuck") !== antes
+  }
+
+  var claros = []
+  function releerClaros() {
+    // `[data-nav="light"]` es el contrato explícito del handoff: si una página marca
+    // sus secciones, mandan ellas. El caso normal lo resuelve el muestreo de abajo.
+    claros = [].slice.call(document.querySelectorAll('[data-nav="light"]'))
+  }
+
+  /**
+   * ¿Qué tan claro es lo que se ve DETRÁS de la barra?
+   *
+   * Ninguna página marca sus secciones, así que se mira el color real: tres puntos
+   * a la ALTURA DEL CONTENIDO de la barra (su línea media, donde están el logo y los
+   * links) y, en cada uno, el primer elemento con fondo opaco que no sea del header.
+   * Medir por DEBAJO de la barra miente cuando el hero oscuro no arranca en el borde
+   * de la ventana (las páginas migradas lo llevan con 12px de margen): pasó en
+   * Agentes de IA el 08/08/2026, navbar blanco sobre blanco.
+   */
+  function fondoDetrasEsClaro() {
+    var b = barra.getBoundingClientRect()
+    var y = (b.top + b.bottom) / 2
+    var xs = [b.left + 60, (b.left + b.right) / 2, b.right - 60]
+    var claros_ = 0
+    var vistos = 0
+    for (var i = 0; i < xs.length; i++) {
+      var lum = luminanciaEn(xs[i], y)
+      if (lum === null) continue
+      vistos++
+      if (lum > 0.62) claros_++
+    }
+    return vistos > 0 && claros_ * 2 >= vistos
+  }
+
+  function luminanciaEn(x, y) {
+    if (!document.elementsFromPoint) return null
+    var pila = document.elementsFromPoint(x, y)
+    for (var i = 0; i < pila.length; i++) {
+      var el = pila[i]
+      if (raiz.contains(el) || el === raiz) continue
+      var lum = luminanciaDe(getComputedStyle(el).backgroundColor)
+      if (lum !== null) return lum
+    }
+    // Ninguna capa pinta nada: se ve el fondo del body, y si tampoco, blanco
+    // (es el caso de /precios, que no tiene ningún contenedor opaco arriba).
+    var delBody = luminanciaDe(getComputedStyle(document.body).backgroundColor)
+    return delBody === null ? 1 : delBody
+  }
+
+  /** Luminancia relativa aproximada de un color CSS; null si no pinta (translúcido). */
+  function luminanciaDe(col) {
+    var m = /rgba?\(([^)]+)\)/.exec(col)
+    if (!m) return null
+    var p = m[1].split(",")
+    var a = p.length > 3 ? parseFloat(p[3]) : 1
+    if (!(a > 0.5)) return null
+    return (0.2126 * +p[0] + 0.7152 * +p[1] + 0.0722 * +p[2]) / 255
+  }
+
+  /**
+   * El muestreo es CARO (tres `elementsFromPoint`, cada uno recalcula layout): en
+   * cada frame se come el hilo justo mientras la barra se anima. Cada 100ms se ve
+   * igual. Lo que no espera es el frame en que la barra cambia de forma (se mueven
+   * los puntos de muestreo) ni el arranque: van forzados.
+   */
+  var MUESTREO_MS = 100
+  var ultimoMuestreo = -Infinity
+  function actualizarClaro(forzar) {
+    var ahora = Date.now()
+    if (!forzar && ahora - ultimoMuestreo < MUESTREO_MS) return
+    ultimoMuestreo = ahora
+    var b = barra.getBoundingClientRect()
+    var marcada = claros.some(function (el) {
+      var r = el.getBoundingClientRect()
+      return r.top < b.bottom - 4 && r.bottom > b.top + 4
+    })
+    nv.classList.toggle("is-light", marcada || fondoDetrasEsClaro())
+  }
+
+  function sincronizar(forzar) {
+    var cambio = actualizarPegada()
+    actualizarClaro(forzar || cambio)
+  }
+
+  // Un solo listener de scroll, pasivo y con UN cálculo por frame.
+  var pendiente = false
+  window.addEventListener("scroll", function () {
+    if (pendiente) return
+    pendiente = true
+    requestAnimationFrame(function () {
+      pendiente = false
+      sincronizar()
+    })
+  }, { passive: true })
+  window.addEventListener("resize", function () { releerClaros(); sincronizar(true) })
+  // La barra cambia de forma con animación (450ms): al terminar, se vuelve a mirar
+  // el fondo con la caja ya en su lugar.
+  barra.addEventListener("transitionend", function (e) {
+    // Con `transition: all` llega un evento por propiedad: se mira una sola vez.
+    if (e.target === barra && e.propertyName === "width") actualizarClaro(true)
+  })
+
+  releerClaros()
+  pintar()
+  sincronizar(true)
+
+  // El <script> corre ANTES de que exista el resto de la página: lo que dependa del
+  // contenido (las secciones claras, el color de fondo) se relee cuando termina.
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", function () {
+      releerClaros()
+      sincronizar(true)
+    })
+  }
+})()
+</script></div>
