@@ -16,6 +16,7 @@
     lit.style.strokeDashoffset = L*(1-p);
   }
   lit.style.strokeDasharray = L;
+  lit.style.strokeDashoffset = L; /* oculto hasta que arranca el recorrido: si no, se veía entero 0,9 s y saltaba */
   function on(i){ steps.forEach(function(s,k){ s.classList.toggle('on',k===i); }); }
 
   if(AX.rm){

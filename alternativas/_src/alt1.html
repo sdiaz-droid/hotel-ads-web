@@ -23,6 +23,8 @@
 .a1-scene .path{position:absolute;inset:0;width:100%;height:100%;overflow:visible;z-index:0}
 .a1-scene .path .base{fill:none;stroke:#AEB6C4;stroke-width:2.2;stroke-dasharray:2 7;stroke-linecap:round}
 .a1-scene .path .lit{fill:none;stroke:var(--red);stroke-width:2.2;stroke-linecap:round}
+/* arranca sin trazo: el JS le pone su largo al cargar (sin esto, el primer cuadro mostraba el camino entero y saltaba) */
+.a1-scene .path .lit{stroke-dasharray:0 100000}
 .a1-scene .path .dot{fill:var(--red)}
 .a1-scene .path .halo{fill:rgba(210,10,17,.16)}
 .a1-mo{position:absolute;z-index:1;transition:transform 500ms var(--ease),box-shadow 500ms var(--ease)}
