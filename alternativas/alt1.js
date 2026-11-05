@@ -94,7 +94,7 @@
 
   /* ---------- PROCESO: la línea se pinta con el scroll y cada nodo se enciende al pasar ---------- */
   $$('.a1-tl').forEach(function(t){
-    var f = t.querySelector('.fill'), v = t.classList.contains('tl-c');
+    var f = t.querySelector('.fill'), v = false;
     var meds = [].slice.call(t.querySelectorAll('.ax-med:not(.fin)'));
     function paint(p){
       gsap.set(f, v ? {scaleY:p} : {scaleX:p});

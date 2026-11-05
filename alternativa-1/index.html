@@ -365,8 +365,6 @@
 @media (max-width:1100px){#ax .a1-eco-grid{grid-template-columns:1fr 1fr;row-gap:50px}}
 #ax .a1-st .q{min-height:4.15em}
 #ax .a1-road{max-width:1180px;margin:0 auto}
-#ax .a1-opt{display:flex;justify-content:center;margin-bottom:22px}
-#ax .a1-opt span{font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ads-d);background:#EAF5FD;border-radius:999px;padding:6px 14px;font-weight:500}
 #ax .a1-tl{position:relative;--n:72px}
 #ax .a1-tl .trk{position:absolute;pointer-events:none;z-index:0;background:repeating-linear-gradient(90deg,#C5CAD6 0 2px,transparent 2px 10px)}
 #ax .a1-tl .fill{position:absolute;inset:0;background:var(--red);border-radius:2px;transform-origin:0 50%;transform:scaleX(0)}
@@ -381,35 +379,16 @@
 #ax .a1-tl .wk{display:inline-block;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--grey);margin-bottom:6px}
 #ax .a1-tl h3{font-weight:400;font-size:20px;color:var(--ink);line-height:1.25}
 #ax .a1-tl p{margin-top:8px;font-size:15.5px;line-height:1.5;color:var(--body)}
-#ax .tl-a,#ax .tl-b{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
-#ax .tl-a .st,#ax .tl-b .st{text-align:center;padding:0 clamp(10px,1.4vw,22px);display:flex;flex-direction:column;align-items:center}
-#ax .tl-a .ax-med,#ax .tl-b .ax-med{margin-bottom:22px}
-#ax .tl-a .tx p,#ax .tl-b .tx p{max-width:17em;margin-left:auto;margin-right:auto}
-#ax .tl-a .trk,#ax .tl-b .trk{left:12.5%;right:12.5%;top:calc(var(--n)/2 - 1px);height:2px}
-#ax .tl-b{padding:96px clamp(10px,2vw,28px) 34px;border-radius:28px}
-#ax .tl-b .trk{top:calc(96px + var(--n)/2 - 1px);left:calc(12.5% + 6px);right:calc(12.5% + 6px)}
-#ax .tl-b .brk{position:absolute;top:44px;left:calc(12.5% + 4px);width:calc(25% - 8px);height:34px;border:1.5px solid rgba(210,10,17,.55);border-bottom:0;border-radius:14px 14px 0 0}
-#ax .tl-b .brk span{position:absolute;left:50%;top:0;transform:translate(-50%,-50%);display:inline-flex;align-items:center;gap:7px;height:32px;padding:0 14px;border-radius:999px;background:var(--red);color:#fff;font-size:13.5px;font-weight:500;white-space:nowrap;box-shadow:0 8px 18px -8px rgba(210,10,17,.6)}
-#ax .tl-b .brk .lc{font-size:15px}
-#ax .tl-c{display:grid;grid-template-columns:minmax(0,1fr) var(--n) minmax(0,1fr);column-gap:clamp(20px,3vw,40px);row-gap:clamp(26px,4vh,44px);max-width:900px;margin:0 auto}
-#ax .tl-c .st{display:contents}
-#ax .tl-c .st > *{grid-row:var(--r)}
-#ax .tl-c .ax-med{grid-column:2;position:relative;z-index:1}
-#ax .tl-c .st.l .tx{grid-column:1;text-align:right}
-#ax .tl-c .st.r .tx{grid-column:3;text-align:left}
-#ax .tl-c .tx{align-self:center}
-#ax .tl-c .trk{left:50%;margin-left:-1px;width:2px;top:calc(var(--n)/2);bottom:calc(var(--n)/2);background:repeating-linear-gradient(180deg,#C5CAD6 0 2px,transparent 2px 10px)}
-#ax .tl-c .fill{transform-origin:50% 0;transform:scaleY(0)}
-@media (max-width:900px){#ax .tl-a,#ax .tl-b{grid-template-columns:1fr;row-gap:44px}
-#ax .tl-a .trk,#ax .tl-b .trk,#ax .tl-b .brk{display:none}
-#ax .tl-b{padding:34px 16px}
-#ax .tl-a .st:not(:last-child)::after,#ax .tl-b .st:not(:last-child)::after{content:"";position:absolute;left:50%;bottom:-36px;height:28px;border-left:2px dotted #C5CAD6}
+#ax .tl-a{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+#ax .tl-a .st{text-align:center;padding:0 clamp(10px,1.4vw,22px);display:flex;flex-direction:column;align-items:center}
+#ax .tl-a .ax-med{margin-bottom:22px}
+#ax .tl-a .tx p{max-width:17em;margin-left:auto;margin-right:auto}
+#ax .tl-a .trk{left:12.5%;right:12.5%;top:calc(var(--n)/2 - 1px);height:2px}
+@media (max-width:900px){#ax .tl-a{grid-template-columns:1fr;row-gap:44px}
+#ax .tl-a .trk{display:none}
+#ax .tl-a .st:not(:last-child)::after{content:"";position:absolute;left:50%;bottom:-36px;height:28px;border-left:2px dotted #C5CAD6}
 #ax .a1-tl{--n:60px}
 #ax .a1-tl .ax-med .lc{font-size:24px}}
-@media (max-width:640px){#ax .tl-c{grid-template-columns:var(--n) minmax(0,1fr);column-gap:18px}
-#ax .tl-c .ax-med{grid-column:1}
-#ax .tl-c .st.l .tx,#ax .tl-c .st.r .tx{grid-column:2;text-align:left}
-#ax .tl-c .trk{left:calc(var(--n)/2)}}
 #ax .a1-eco-grid .eco-c .ax-med img{width:52%}
 #ax .a1-vs{display:flex;flex-direction:column;gap:12px;margin-top:26px}
 #ax .a1-vs > div{display:flex;align-items:center;gap:14px;padding:14px 18px;border-radius:16px;background:rgba(255,255,255,.55);box-shadow:inset 0 0 0 1px var(--stroke)}
@@ -4882,10 +4861,9 @@ html.pxnv-lock, html.pxnv-lock body { overflow:hidden; }
     </div>
   </section>
 
-  <!-- ===================== PROCESO · línea de tiempo: 3 opciones para que elija Sofi (dejar una) ===================== -->
+  <!-- ===================== PROCESO · línea de tiempo (opción A, elegida por Sofi) ===================== -->
   <section class="ax-sec a1-proc" id="proceso">
     <div class="ax-wrap">
-      <p class="a1-opt"><span>Opción A · centrada</span></p>
       <div class="ax-head ax-center">
         <p class="ax-eyebrow" data-r>El proceso</p>
         <h2 class="ax-h2" data-r=".08">De cero a canal directo <em>en menos de 7 días.</em></h2>
@@ -4897,41 +4875,6 @@ html.pxnv-lock, html.pxnv-lock body { overflow:hidden; }
         <div class="st" style="--r:2"><span class="ax-med" data-r="0.1"><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"/></svg></span><div class="tx" data-r="0.15"><span class="wk">Primera semana</span><h3>Estrategia y activación</h3><p>Diseñamos y lanzamos tus campañas, conectadas con tu motor de reservas.</p></div></div>
         <div class="st" style="--r:3"><span class="ax-med" data-r="0.2"><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 5H3"/><path d="M12 19H3"/><path d="M14 3v4"/><path d="M16 17v4"/><path d="M21 12h-9"/><path d="M21 19h-5"/><path d="M21 5h-7"/><path d="M8 10v4"/><path d="M8 12H3"/></svg></span><div class="tx" data-r="0.25"><span class="wk">Todos los días</span><h3>Gestión diaria</h3><p>Optimizamos pujas, presupuesto y anuncios según tu disponibilidad y tarifa.</p></div></div>
         <div class="st" style="--r:4"><span class="ax-med fin" data-r="0.3"><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 7h6v6"/><path d="m22 7-8.5 8.5-5-5L2 17"/></svg></span><div class="tx" data-r="0.35"><span class="wk">Cada mes</span><h3>Resultados y escala</h3><p>Reporte de reservas y ahorro en comisiones, y escalamos juntos lo que funciona.</p></div></div>
-      </div>
-    </div>
-  </section>
-  <section class="ax-sec a1-proc" id="proceso-b">
-    <div class="ax-wrap">
-      <p class="a1-opt"><span>Opción B · con el hito de los 7 días</span></p>
-      <div class="ax-head ax-center">
-        <p class="ax-eyebrow" data-r>El proceso</p>
-        <h2 class="ax-h2" data-r=".08">De cero a canal directo <em>en menos de 7 días.</em></h2>
-        <p class="ax-lead" data-r=".16">Un especialista dedicado se ocupa de todo, sin que tengas que tocar nada. Las campañas necesitan un período de aprendizaje antes de estabilizarse.</p>
-      </div>
-      <div class="a1-tl tl-b ax-card">
-        <div class="brk" aria-hidden="true"><span><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Menos de 7 días</span></div>
-        <div class="trk" aria-hidden="true"><i class="fill"></i></div>
-        <div class="st" style="--r:1"><span class="ax-med" data-r="0.0"><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg></span><div class="tx" data-r="0.05"><span class="wk">Sin costo</span><h3>Análisis gratuito</h3><p>Auditamos tu presencia online, tu canal directo y tu set competitivo.</p></div></div>
-        <div class="st" style="--r:2"><span class="ax-med" data-r="0.1"><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"/></svg></span><div class="tx" data-r="0.15"><span class="wk">Primera semana</span><h3>Estrategia y activación</h3><p>Diseñamos y lanzamos tus campañas, conectadas con tu motor de reservas.</p></div></div>
-        <div class="st" style="--r:3"><span class="ax-med" data-r="0.2"><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 5H3"/><path d="M12 19H3"/><path d="M14 3v4"/><path d="M16 17v4"/><path d="M21 12h-9"/><path d="M21 19h-5"/><path d="M21 5h-7"/><path d="M8 10v4"/><path d="M8 12H3"/></svg></span><div class="tx" data-r="0.25"><span class="wk">Todos los días</span><h3>Gestión diaria</h3><p>Optimizamos pujas, presupuesto y anuncios según tu disponibilidad y tarifa.</p></div></div>
-        <div class="st" style="--r:4"><span class="ax-med fin" data-r="0.3"><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 7h6v6"/><path d="m22 7-8.5 8.5-5-5L2 17"/></svg></span><div class="tx" data-r="0.35"><span class="wk">Cada mes</span><h3>Resultados y escala</h3><p>Reporte de reservas y ahorro en comisiones, y escalamos juntos lo que funciona.</p></div></div>
-      </div>
-    </div>
-  </section>
-  <section class="ax-sec a1-proc" id="proceso-c">
-    <div class="ax-wrap">
-      <p class="a1-opt"><span>Opción C · columna al centro</span></p>
-      <div class="ax-head ax-center">
-        <p class="ax-eyebrow" data-r>El proceso</p>
-        <h2 class="ax-h2" data-r=".08">De cero a canal directo <em>en menos de 7 días.</em></h2>
-        <p class="ax-lead" data-r=".16">Un especialista dedicado se ocupa de todo, sin que tengas que tocar nada. Las campañas necesitan un período de aprendizaje antes de estabilizarse.</p>
-      </div>
-      <div class="a1-tl tl-c">
-        <div class="trk" aria-hidden="true"><i class="fill"></i></div>
-        <div class="st l" style="--r:1"><span class="ax-med" data-r="0.0"><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg></span><div class="tx" data-r="0.05"><span class="wk">Sin costo</span><h3>Análisis gratuito</h3><p>Auditamos tu presencia online, tu canal directo y tu set competitivo.</p></div></div>
-        <div class="st r" style="--r:2"><span class="ax-med" data-r="0.1"><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"/></svg></span><div class="tx" data-r="0.15"><span class="wk">Primera semana</span><h3>Estrategia y activación</h3><p>Diseñamos y lanzamos tus campañas, conectadas con tu motor de reservas.</p></div></div>
-        <div class="st l" style="--r:3"><span class="ax-med" data-r="0.2"><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 5H3"/><path d="M12 19H3"/><path d="M14 3v4"/><path d="M16 17v4"/><path d="M21 12h-9"/><path d="M21 19h-5"/><path d="M21 5h-7"/><path d="M8 10v4"/><path d="M8 12H3"/></svg></span><div class="tx" data-r="0.25"><span class="wk">Todos los días</span><h3>Gestión diaria</h3><p>Optimizamos pujas, presupuesto y anuncios según tu disponibilidad y tarifa.</p></div></div>
-        <div class="st r" style="--r:4"><span class="ax-med fin" data-r="0.3"><svg class="lc " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 7h6v6"/><path d="m22 7-8.5 8.5-5-5L2 17"/></svg></span><div class="tx" data-r="0.35"><span class="wk">Cada mes</span><h3>Resultados y escala</h3><p>Reporte de reservas y ahorro en comisiones, y escalamos juntos lo que funciona.</p></div></div>
       </div>
     </div>
   </section>
